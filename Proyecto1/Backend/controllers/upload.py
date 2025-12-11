@@ -48,6 +48,21 @@ def upload_csv():
     if not file.filename.lower().endswith(".csv"):
         return jsonify({"error": "Formato inválido. Solo se aceptan archivos .csv"}), 400
 
+    # Verificar si un archivo con el mismo nombre ya fue subido previamente
+    data_raw_dir = _paths()
+    safe_name = os.path.basename(file.filename)
+    try:
+        existing = [fname for fname in os.listdir(data_raw_dir) if fname.endswith(f"_{safe_name}")]
+    except Exception:
+        existing = []
+
+    if existing:
+        return jsonify({
+            "error": "Archivo ya fue subido previamente",
+            "filename": safe_name,
+            "existing_entries": existing,
+        }), 409
+
     # Intentar leer CSV con pandas para validar estructura
     try:
         df = pd.read_csv(file)
@@ -65,9 +80,8 @@ def upload_csv():
             "required": sorted(list(REQUIRED_COLUMNS)),
         }), 400
 
-    data_raw_dir = _paths()
+    # Se guarda el archivo con un timestamp para evitar colisiones
     timestamp = datetime.utcnow().strftime("%Y%m%dT%H%M%S%fZ")
-    safe_name = os.path.basename(file.filename)
     out_name = f"upload_{timestamp}_{safe_name}"
     out_path = os.path.join(data_raw_dir, out_name)
     try:
