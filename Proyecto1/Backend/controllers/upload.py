@@ -2,6 +2,7 @@ import os
 from datetime import datetime
 from flask import Blueprint, jsonify, request
 import pandas as pd
+from models import DataStore
 
 
 upload_bp = Blueprint("upload", __name__)
@@ -66,6 +67,7 @@ def upload_csv():
     # Intentar leer CSV con pandas para validar estructura
     try:
         df = pd.read_csv(file)
+        DataStore.df_ra=df
     except Exception as e:
         return jsonify({"error": "No se pudo leer el CSV", "detail": str(e)}), 400
 
