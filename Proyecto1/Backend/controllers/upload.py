@@ -67,7 +67,7 @@ def upload_csv():
     # Intentar leer CSV con pandas para validar estructura
     try:
         df = pd.read_csv(file)
-        DataStore.df_ra=df
+        DataStore.df_raw=df
     except Exception as e:
         return jsonify({"error": "No se pudo leer el CSV", "detail": str(e)}), 400
 
