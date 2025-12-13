@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 
 
 
@@ -8,6 +9,9 @@ def create_app():
 	# Configuración básica
 	app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024  # 50MB
 
+	# Habilitar CORS para permitir llamadas desde el frontend (Vite)
+	CORS(app, resources={r"/api/*": {"origins": "*"}})
+
 	# Registrar blueprints de controllers
 	try:
 		from controllers.upload import upload_bp  # noqa: E402
@@ -16,7 +20,8 @@ def create_app():
 		from .controllers.upload import upload_bp  # type: ignore
 		from .controllers.clean import clean_bp  # type: ignore
 	app.register_blueprint(upload_bp, url_prefix="/api")
-	app.register_blueprint (clean_bp, url_prefix="/api")
+	app.register_blueprint (clean_bp, url_prefix="/api")	
+
 	return app
 
 
