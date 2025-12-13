@@ -32,5 +32,15 @@ export const cargaMasiva = async (file) => {
     }
 };
 
+// Limpieza de datos
+export const clean = async () => {
+    try {
+        const response = await instance.get('/clean');
+        return response.data; // { message: "Se han limpiado los datos correctamente" }
+    } catch (error) {
+        throw error.response?.data || error.message;
+    }
+};
+
 // Aquí se pueden agregar más funciones de comunicación con el backend
 // export const otraFuncion = async (data) => { ... }

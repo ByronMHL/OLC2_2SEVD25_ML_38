@@ -131,7 +131,15 @@ export default function CargaMasiva() {
 						<button
 							type="button"
 							className="inline-flex items-center rounded-md bg-rose-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-rose-700"
-							onClick={() => { /* pendiente: limpieza */ }}
+							onClick={async () => {
+								try {
+									const res = await Service.clean();
+									setAlert({ type: "success", message: res?.message || "Datos limpiados." });
+								} catch (err) {
+									const msg = typeof err === "string" ? err : (err?.error || err?.message || "Error al limpiar datos.");
+									setAlert({ type: "error", message: msg });
+								}
+							}}
 						>
 							Limpiar datos
 						</button>
