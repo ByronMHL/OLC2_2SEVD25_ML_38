@@ -1,11 +1,22 @@
-import CargaMasiva from "./pages/CargaMasiva.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import DashboardLayout from "./layout/DashboardLayout.jsx";
+import CargaMasiva from "./pages/cargaMasiva.jsx";
+import Ajuste from "./pages/Ajuste.jsx";
+import Evaluacion from "./pages/Evaluacion.jsx";
+import Prediccion from "./pages/Prediccion.jsx";
+
+const router = createBrowserRouter([
+  {
+    element: <DashboardLayout />,
+    children: [
+      { path: "/", element: <CargaMasiva /> },
+      { path: "/ajuste", element: <Ajuste /> },
+      { path: "/evaluacion", element: <Evaluacion /> },
+      { path: "/prediccion", element: <Prediccion /> },
+    ],
+  },
+]);
 
 export default function App() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <main className="max-w-6xl mx-auto px-4 py-6">
-        <CargaMasiva />
-      </main>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
