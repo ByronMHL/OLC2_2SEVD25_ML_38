@@ -50,24 +50,24 @@ def upload_csv():
         return jsonify({"error": "Formato inválido. Solo se aceptan archivos .csv"}), 400
 
     # Verificar si un archivo con el mismo nombre ya fue subido previamente
-    data_raw_dir = _paths()
-    safe_name = os.path.basename(file.filename)
-    try:
-        existing = [fname for fname in os.listdir(data_raw_dir) if fname.endswith(f"_{safe_name}")]
-    except Exception:
-        existing = []
+    # data_raw_dir = _paths()
+    # safe_name = os.path.basename(file.filename)
+    # try:
+    #     existing = [fname for fname in os.listdir(data_raw_dir) if fname.endswith(f"_{safe_name}")]
+    # except Exception:
+    #     existing = []
 
-    if existing:
-        return jsonify({
-            "error": "Archivo ya fue subido previamente",
-            "filename": safe_name,
-            "existing_entries": existing,
-        }), 409
+    # if existing:
+    #     return jsonify({
+    #         "error": "Archivo ya fue subido previamente",
+    #         "filename": safe_name,
+    #         "existing_entries": existing,
+    #     }), 409
 
     # Intentar leer CSV con pandas para validar estructura
     try:
         df = pd.read_csv(file)
-        DataStore.df_ra=df
+        DataStore.df_raw=df
     except Exception as e:
         return jsonify({"error": "No se pudo leer el CSV", "detail": str(e)}), 400
 
@@ -83,19 +83,21 @@ def upload_csv():
         }), 400
 
     # Se guarda el archivo con un timestamp para evitar colisiones
-    timestamp = datetime.utcnow().strftime("%Y%m%dT%H%M%S%fZ")
-    out_name = f"upload_{timestamp}_{safe_name}"
-    out_path = os.path.join(data_raw_dir, out_name)
-    try:
-        df.to_csv(out_path, index=False)
-    except Exception:
-        file.stream.seek(0)
-        with open(out_path, "wb") as f:
-            f.write(file.read())
+    # timestamp = datetime.utcnow().strftime("%Y%m%dT%H%M%S%fZ")
+    # out_name = f"upload_{timestamp}_{safe_name}"
+    # out_path = os.path.join(data_raw_dir, out_name)
+
+
+    # try:
+    #     df.to_csv(out_path, index=False)
+    # except Exception:
+    #     file.stream.seek(0)
+    #     with open(out_path, "wb") as f:
+    #         f.write(file.read())
 
     return jsonify({
         "message": "Archivo CSV recibido y validado",
-        "saved_to": out_path,
+        "saved_to": 'Test',
         "rows": int(df.shape[0]),
         "columns": sorted(list(received_columns)),
         "extra_columns": extra,
