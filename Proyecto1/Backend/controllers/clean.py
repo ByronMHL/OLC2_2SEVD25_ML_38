@@ -31,8 +31,27 @@ def cleanDataFrame():
     DataStore.df_cleaned["horas_estudio"] = pd.to_numeric(DataStore.df_cleaned["horas_estudio"], errors='coerce').fillna(0).astype('float32') #
     DataStore.df_cleaned["promedio_actual"] = pd.to_numeric(DataStore.df_cleaned["promedio_actual"], errors='coerce').fillna(0).astype('float32') #
 
-    DataStore.df_cleaned["actividades_extracurriculares"]=DataStore.df_cleaned["actividades_extracurriculares"].str.strip().replace('"', '')
-    DataStore.df_cleaned["actividades_extracurriculares"]=DataStore.df_cleaned["actividades_extracurriculares"].apply(eval)
+    # Normalización y codificación de actividades_extracurriculares
+    # Paso 1: limpiar strings (quitar espacios y comillas)
+    DataStore.df_cleaned["actividades_extracurriculares"] = (
+        DataStore.df_cleaned["actividades_extracurriculares"].astype(str).str.strip().str.replace('"', '', regex=False)
+    )
+    # Paso 2: convertir a listas cuando sea posible; si está vacío o es '[]', mantener como lista vacía
+    def _to_list_safe(val):
+        if val in [None, "", "[]", "None"]:
+            return []
+        try:
+            parsed = eval(val)
+            if isinstance(parsed, list):
+                return parsed
+            return []
+        except Exception:
+            return []
+    DataStore.df_cleaned["actividades_extracurriculares"] = DataStore.df_cleaned["actividades_extracurriculares"].apply(_to_list_safe)
+    # Paso 3: codificar a binario 0/1 (lista vacía -> 0; uno o más elementos -> 1)
+    DataStore.df_cleaned["actividades_extracurriculares"] = (
+        DataStore.df_cleaned["actividades_extracurriculares"].apply(lambda x: 0 if (x is None or len(x) == 0) else 1).astype('int32')
+    )
 
     DataStore.df_cleaned["riesgo"]= DataStore.df_cleaned["riesgo"].str.strip().replace('riesgo','1', regex=False)
     DataStore.df_cleaned["riesgo"]= DataStore.df_cleaned["riesgo"].str.strip().replace('no riesgo', '0', regex=False)
@@ -54,5 +73,44 @@ def cleanDataFrame():
 
     return jsonify({
         "message": "Se han limpiado los datos correctamente",
+    }), 200
+
+
+@clean_bp.get("/preprocess")
+def preprocess_and_split():
+    # Validar que exista df_cleaned del proceso de limpieza
+    if getattr(DataStore, 'df_cleaned', None) is None:
+        return jsonify({"error": "Primero ejecute la limpieza de datos (/clean)"}), 400
+
+    df_model = DataStore.df_cleaned.copy()
+
+    # 5. Separar X e y
+    if "riesgo" not in df_model.columns:
+        return jsonify({"error": "La columna 'riesgo' es obligatoria para el entrenamiento"}), 400
+
+    X = df_model.drop(columns=["riesgo"])
+    y = df_model["riesgo"]
+
+    # 6. Validaciones finales
+    if X.isnull().any().any():
+        return jsonify({"error": "Existen valores nulos en X después del preprocesamiento"}), 400
+
+    if y.isnull().any():
+        return jsonify({"error": "Existen valores nulos en y después del preprocesamiento"}), 400
+
+    # Guardar en DataStore para uso posterior
+    DataStore.X = X
+    DataStore.y = y
+
+    metadata = {
+        "rows": int(df_model.shape[0]),
+        "cols_X": list(X.columns),
+        "target": "riesgo",
+        "class_balance": y.value_counts().to_dict(),
+    }
+
+    return jsonify({
+        "message": "Preprocesamiento completado y separación X/y realizada",
+        "metadata": metadata,
     }), 200
 
