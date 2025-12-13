@@ -9,7 +9,7 @@ export default function Sidebar() {
     <aside className="w-64 bg-slate-900 h-screen text-white border-r border-slate-800 p-4 fixed left-0 top-0">
       <div className="mb-6">
         <h1 className="text-lg font-semibold">StudentGuard</h1>
-        <p className="text-xs text-slate-400">Panel administrativo</p>
+        <p className="text-xs text-slate-400">Panel</p>
       </div>
       <nav className="space-y-2">
         <NavLink to="/" end className={({ isActive }) => `${base} ${isActive ? active : inactive}`}>
