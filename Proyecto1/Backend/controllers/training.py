@@ -149,9 +149,25 @@ def preprocess_and_split():
         "target": "riesgo",
         "class_balance": y.value_counts().to_dict(),
     }
+    # Preparar salida para frontend: métricas y tabla (muestra de 20 filas)
+    metrics = {
+        "accuracy": float(accuracy),
+        "precision": float(precision),
+        "recall": float(recall),
+        "f1": float(f1),
+    }
+
+    sample = resultados.head(20)
+    results = {
+        "columns": list(sample.columns),
+        "rows": sample.to_dict(orient="records"),
+    }
+
     return jsonify({
-        "message": "Preprocesamiento completado y separación X/y realizada",
+        "message": "Entrenamiento completado",
         "metadata": metadata,
+        "metrics": metrics,
+        "results": results,
     }), 200
 
 

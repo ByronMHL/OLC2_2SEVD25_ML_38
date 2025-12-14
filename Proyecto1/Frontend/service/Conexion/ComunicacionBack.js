@@ -42,5 +42,15 @@ export const clean = async () => {
     }
 };
 
+// Entrenamiento del modelo
+export const train = async () => {
+    try {
+        const response = await instance.get('/training');
+        return response.data; // { message, metadata }
+    } catch (error) {
+        throw error.response?.data || error.message;
+    }
+};
+
 // Aquí se pueden agregar más funciones de comunicación con el backend
 // export const otraFuncion = async (data) => { ... }
