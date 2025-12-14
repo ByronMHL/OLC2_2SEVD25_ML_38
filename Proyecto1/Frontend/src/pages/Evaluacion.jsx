@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 // No llamamos al endpoint de entrenamiento aquí.
 
 export default function Evaluacion() {
@@ -11,6 +11,7 @@ export default function Evaluacion() {
   const [isLoading, setIsLoading] = useState(false);
   const [alert, setAlert] = useState(null);
   const [table, setTable] = useState({ columns: [], rows: [] });
+  const [tuning, setTuning] = useState({ best_params: null, best_score_cv: null, metrics: null, table: null });
 
   const loadResults = () => {
     try {
@@ -42,30 +43,36 @@ export default function Evaluacion() {
     }
   };
 
-  // Cargar automáticamente los resultados guardados al montar la página
-  useEffect(() => {
-    const raw = localStorage.getItem("trainingResults");
-    if (raw) {
-      try {
-        const res = JSON.parse(raw);
-        const m = res?.metrics || {};
-        setMetrics([
-          { key: "accuracy", title: "Exactitud", value: m.accuracy != null ? `${(m.accuracy * 100).toFixed(2)}%` : "--%" },
-          { key: "precision", title: "Precisión", value: m.precision != null ? `${(m.precision * 100).toFixed(2)}%` : "--%" },
-          { key: "recall", title: "Recall", value: m.recall != null ? `${(m.recall * 100).toFixed(2)}%` : "--%" },
-          { key: "f1", title: "F1-Score", value: m.f1 != null ? `${(m.f1 * 100).toFixed(2)}%` : "--%" },
-        ]);
-        if (Array.isArray(res?.results?.rows) && Array.isArray(res?.results?.columns)) {
-          setTable({ columns: res.results.columns, rows: res.results.rows });
-        } else {
-          setTable({ columns: [], rows: [] });
-        }
-        setAlert({ type: "success", message: res?.message || "Resultados listos." });
-      } catch (err) {
-        // Si falla el parse, no romper la vista
+  const loadTuning = () => {
+    try {
+      setIsLoading(true);
+      setAlert(null);
+      const raw = localStorage.getItem("tuningResults");
+      if (!raw) {
+        setAlert({ type: "error", message: "No hay resultados de tuning. Ejecuta Grid/Random en Ajuste." });
+        return;
       }
+      const res = JSON.parse(raw);
+      const m = res?.metrics || {};
+      // Actualizar métricas secundarias del tuning en panel aparte
+      const tuningTable = Array.isArray(res?.results?.rows) && Array.isArray(res?.results?.columns)
+        ? { columns: res.results.columns, rows: res.results.rows }
+        : null;
+      setTuning({
+        best_params: res?.best_params || null,
+        best_score_cv: res?.best_score_cv ?? null,
+        metrics: m,
+        table: tuningTable,
+      });
+      setAlert({ type: "success", message: res?.message || "Resultados de tuning cargados." });
+    } catch (err) {
+      setAlert({ type: "error", message: "Error al leer tuningResults." });
+    } finally {
+      setIsLoading(false);
     }
-  }, []);
+  };
+
+  // No auto-cargar nada al montar: se mostrará solo al presionar botones
 
   return (
     <div className="w-full px-2 md:px-6 py-6">
@@ -79,6 +86,13 @@ export default function Evaluacion() {
           className="inline-flex items-center rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 disabled:opacity-60"
         >
           {isLoading ? "Cargando..." : "Refrescar resultados"}
+        </button>
+        <button
+          onClick={loadTuning}
+          disabled={isLoading}
+          className="ml-3 inline-flex items-center rounded-md bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700 disabled:opacity-60"
+        >
+          {isLoading ? "Cargando..." : "Cargar tuning"}
         </button>
       </div>
 
@@ -121,6 +135,68 @@ export default function Evaluacion() {
               ))}
             </tbody>
           </table>
+        </div>
+      )}
+
+      {/* Panel de Tuning: mejores hiperparámetros y F1 de CV */}
+      {tuning.best_params && (
+        <div className="mt-6 rounded-xl border border-slate-700 bg-slate-900/50 shadow-md p-5">
+          <div className="mb-3">
+            <h2 className="text-lg font-semibold text-slate-100">Resultados de Tuning</h2>
+            <p className="text-sm text-slate-300">Mejores hiperparámetros y métrica de validación cruzada.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3">
+              <div className="text-slate-300 text-sm">F1 (CV)</div>
+              <div className="text-slate-100 text-xl font-bold">
+                {tuning.best_score_cv != null ? (Number(tuning.best_score_cv).toFixed(4)) : "--"}
+              </div>
+            </div>
+            {Object.entries(tuning.best_params || {}).map(([k, v]) => (
+              <div key={k} className="rounded-lg border border-slate-700 bg-slate-800/50 p-3">
+                <div className="text-slate-300 text-sm">{k}</div>
+                <div className="text-slate-100 text-xl font-bold">{String(v)}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Métricas del modelo con esos hiperparámetros en test */}
+          {tuning.metrics && (
+            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {["accuracy","precision","recall","f1"].map(key => (
+                <div key={key} className="rounded-xl border border-slate-700 bg-slate-900/40 shadow-md p-4 text-center">
+                  <div className="text-slate-300 text-sm capitalize">{key}</div>
+                  <div className="text-slate-100 text-2xl font-bold">
+                    {tuning.metrics[key] != null ? `${(tuning.metrics[key] * 100).toFixed(2)}%` : "--%"}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Tabla de muestra del tuning (opcional) */}
+          {tuning.table?.columns?.length > 0 && (
+            <div className="mt-4 rounded-xl border border-slate-700 bg-slate-900/50 shadow-md overflow-auto">
+              <table className="min-w-full text-left text-sm text-slate-200">
+                <thead className="bg-slate-800">
+                  <tr>
+                    {tuning.table.columns.map((col) => (
+                      <th key={col} className="px-4 py-2 font-medium text-slate-100 border-b border-slate-700">{col}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {tuning.table.rows.map((row, idx) => (
+                    <tr key={idx} className="border-b border-slate-800">
+                      {tuning.table.columns.map((col) => (
+                        <td key={col} className="px-4 py-2">{row[col]}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
         </div>
       )}
     </div>

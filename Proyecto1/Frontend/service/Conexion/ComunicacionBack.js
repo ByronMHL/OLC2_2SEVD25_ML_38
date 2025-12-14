@@ -46,11 +46,23 @@ export const clean = async () => {
 export const train = async () => {
     try {
         const response = await instance.get('/training');
-        return response.data; // { message, metadata }
+        return response.data; // { message, metadata, metrics, results }
     } catch (error) {
+        // Propagar el mensaje del backend (por ejemplo: "Primero ejecute la limpieza de datos (/clean)")
         throw error.response?.data || error.message;
     }
 };
 
 // Aquí se pueden agregar más funciones de comunicación con el backend
 // export const otraFuncion = async (data) => { ... }
+
+// Reentrenamiento con hiperparámetros
+// RandomizedSearchCV (POST con parámetros ajustables)
+export const randomSearch = async (params) => {
+    try {
+        const response = await instance.post('/training/randomsearch', params);
+        return response.data; // { message, best_params, best_score_cv, metrics, results }
+    } catch (error) {
+        throw error.response?.data || error.message;
+    }
+};

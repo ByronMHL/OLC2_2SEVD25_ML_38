@@ -17,13 +17,16 @@ def create_app():
 		from controllers.upload import upload_bp  # noqa: E402
 		from controllers.clean import clean_bp  
 		from controllers.training import training_bp
+		from controllers.hyperparameters import hyper_bp
 	except ModuleNotFoundError:
 		from .controllers.upload import upload_bp  # type: ignore
 		from .controllers.clean import clean_bp  # type: ignore
 		from .controllers.training import training_bp  # type: ignore
+		from .controllers.hyperparameters import hyper_bp  # type: ignore
 	app.register_blueprint(upload_bp, url_prefix="/api")
 	app.register_blueprint (clean_bp, url_prefix="/api")	
 	app.register_blueprint (training_bp, url_prefix="/api")	
+	app.register_blueprint (hyper_bp, url_prefix="/api")
 
 	return app
 
