@@ -65,6 +65,7 @@ def upload_csv():
     #     }), 409
 
     # Intentar leer CSV con pandas para validar estructura
+    DataStore.df_raw = None    
     try:
         df = pd.read_csv(file)
         DataStore.df_raw=df
