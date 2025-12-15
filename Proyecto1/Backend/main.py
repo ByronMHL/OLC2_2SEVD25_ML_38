@@ -1,8 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
 
-
-
 def create_app():
 	app = Flask(__name__)
 
@@ -18,6 +16,7 @@ def create_app():
 		from controllers.clean import clean_bp  
 		from controllers.training import training_bp
 		from controllers.hyperparameters import hyper_bp
+		from controllers.predict import predict_bp
 	except ModuleNotFoundError:
 		from .controllers.upload import upload_bp  # type: ignore
 		from .controllers.clean import clean_bp  # type: ignore
@@ -27,6 +26,7 @@ def create_app():
 	app.register_blueprint (clean_bp, url_prefix="/api")	
 	app.register_blueprint (training_bp, url_prefix="/api")	
 	app.register_blueprint (hyper_bp, url_prefix="/api")
+	app.register_blueprint (predict_bp, url_prefix="/api")
 
 	return app
 

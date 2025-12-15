@@ -53,9 +53,6 @@ export const train = async () => {
     }
 };
 
-// Aquí se pueden agregar más funciones de comunicación con el backend
-// export const otraFuncion = async (data) => { ... }
-
 // Reentrenamiento con hiperparámetros
 // RandomizedSearchCV (POST con parámetros ajustables)
 export const randomSearch = async (params) => {
@@ -65,4 +62,14 @@ export const randomSearch = async (params) => {
     } catch (error) {
         throw error.response?.data || error.message;
     }
+};
+
+// Predicción con nuevos datos
+export const predict = async (inputData) => {
+    try {
+        const response = await instance.post('/predict', inputData);
+        return response.data; // { predictions: [...] }
+    } catch (error) {
+        throw error.response?.data || error.message;
+    }   
 };
