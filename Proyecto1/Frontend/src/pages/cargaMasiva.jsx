@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Service from "../../service/Service.js";
 
 export default function CargaMasiva() {
@@ -6,6 +7,8 @@ export default function CargaMasiva() {
 	const [isUploading, setIsUploading] = useState(false);
 	const [alert, setAlert] = useState(null); // { type: 'success' | 'error', message: string }
     const [serviceStatus, setServiceStatus] = useState(null); // { ok: boolean, detail?: string }
+	const [isTraining, setIsTraining] = useState(false);
+	const navigate = useNavigate();
 
 	const onFileChange = (e) => {
 		const f = e.target.files?.[0] || null;
@@ -146,10 +149,30 @@ export default function CargaMasiva() {
 
 						<button
 							type="button"
-							className="inline-flex items-center rounded-md bg-emerald-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-700"
-							onClick={() => { /* pendiente: entrenamiento */ }}
+							disabled={isTraining}
+							className="inline-flex items-center rounded-md bg-emerald-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-700 disabled:opacity-60"
+							onClick={async () => {
+								try {
+									setIsTraining(true);
+									const res = await Service.train();
+									// Guardar resultados en localStorage para la página Evaluación
+									try {
+										localStorage.setItem("trainingResults", JSON.stringify(res));
+									} catch {}
+									setAlert({ type: "success", message: res?.message || "Entrenamiento completado." });
+									// Dar tiempo a que el usuario vea el mensaje antes de navegar
+									setTimeout(() => {
+										navigate("/evaluacion");
+									}, 1200);
+								} catch (err) {
+									const msg = typeof err === "string" ? err : (err?.error || err?.message || "Error durante el entrenamiento.");
+									setAlert({ type: "error", message: msg });
+								} finally {
+									setIsTraining(false);
+								}
+							}}
 						>
-							Entrenar modelo
+							{isTraining ? "Entrenando..." : "Entrenar modelo"}
 						</button>
 					</div>
 				</div>
