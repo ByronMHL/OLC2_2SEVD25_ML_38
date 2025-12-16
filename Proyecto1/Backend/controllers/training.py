@@ -88,12 +88,19 @@ def preprocess_and_split():
     pipeline_completo = Pipeline(steps=[
     ('preprocessor', preproc),
     ('classifier', RandomForestClassifier(
-       n_estimators=1000,
+       n_estimators=700,
        random_state=42,
+        max_depth=15,
+        min_samples_split=7,
+        class_weight='balanced'
     )
      )
     ])
+    modelo_rf = pipeline_completo.named_steps['classifier']
     
+    
+    
+
     #MODELO 2 
     # pipeline_completo = Pipeline(steps=[
     # ('preprocessor', preproc),
@@ -112,7 +119,13 @@ def preprocess_and_split():
     # entrenar
     pipeline_completo.fit(X_train, y_train)
 
+
+
+
     # Persistir modelo entrenado para reutilizar en predicción
+    
+    
+    
     models_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'models')
     os.makedirs(models_dir, exist_ok=True)
     model_path = os.path.join(models_dir, 'pipeline_training.pkl')
@@ -127,7 +140,11 @@ def preprocess_and_split():
     y_proba = pipeline_completo.predict_proba(X_test)[:, 1] #Prob
 
     #Print for testing
+    modelo_rf = pipeline_completo.named_steps['classifier']
+    importancias = modelo_rf.feature_importances_
     
+    
+    print(importancias)
     resultados = X_test.copy()
     resultados["riesgo_real"] = y_test.values
     resultados["prob_riesgo"] = y_proba
