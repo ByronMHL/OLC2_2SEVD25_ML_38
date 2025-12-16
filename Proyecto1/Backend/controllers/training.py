@@ -16,6 +16,8 @@ from sklearn.pipeline import Pipeline
 
 
 from sklearn.metrics import accuracy_score, classification_report, precision_score, recall_score, f1_score
+import os
+import joblib
 
 
 training_bp = Blueprint("training", __name__)
@@ -108,8 +110,16 @@ def preprocess_and_split():
 
 
     # entrenar
-
     pipeline_completo.fit(X_train, y_train)
+
+    # Persistir modelo entrenado para reutilizar en predicción
+    models_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'models')
+    os.makedirs(models_dir, exist_ok=True)
+    model_path = os.path.join(models_dir, 'pipeline_training.pkl')
+    try:
+        joblib.dump(pipeline_completo, model_path)
+    except Exception as e:
+        print(f"No se pudo guardar el modelo de training: {e}")
 
 
     #predict 
@@ -168,6 +178,7 @@ def preprocess_and_split():
         "metadata": metadata,
         "metrics": metrics,
         "results": results,
+        "model_path": model_path,
     }), 200
 
 

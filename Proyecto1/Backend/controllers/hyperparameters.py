@@ -8,6 +8,8 @@ from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV, RandomizedSearchCV
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report
+import os
+import joblib
 
 hyper_bp = Blueprint("hyperparams", __name__)
 
@@ -139,12 +141,22 @@ def rf_random_search():
 	best_pipeline = rand.best_estimator_
 	metrics, results = evaluate_pipeline(best_pipeline, X_test, y_test)
 
+	# Persistir el mejor pipeline para reutilizar en predicción
+	models_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'models')
+	os.makedirs(models_dir, exist_ok=True)
+	model_path = os.path.join(models_dir, 'pipeline_hyper.pkl')
+	try:
+		joblib.dump(best_pipeline, model_path)
+	except Exception as e:
+		print(f"No se pudo guardar el modelo de hyperparameters: {e}")
+
 	response = {
 		"message": "RandomizedSearchCV completado",
 		"best_params": rand.best_params_,
 		"best_score_cv": float(rand.best_score_),
 		"metrics": metrics,
 		"results": results,
-		"search_config": {"n_iter": n_iter, "cv": cv}
+		"search_config": {"n_iter": n_iter, "cv": cv},
+		"model_path": model_path,
 	}
 	return jsonify(response), 200
