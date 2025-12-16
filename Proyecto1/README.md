@@ -25,13 +25,13 @@ Se emplea **Random Forest Classifier** de scikit-learn para la predicción de de
 El proceso de limpieza prepara el dataset para modelado:
 
 - **Eliminación de columnas irrelevantes**: Se eliminó `carnet`, `first_name`, `last_name`, `gender` (no aportan al riesgo académico).
-- **Eliminación de duplicados**: Remueve filas idénticas para evitar sesgos.
-- **Conversión de tipos**: Convierte columnas numéricas a tipos apropiados (int32/float32), manejando errores.
-- **Procesamiento de `actividades_extracurriculares`**: Evalúa strings a listas, reemplaza vacías con `['n/a']` para codificación binaria posterior.
-- **Codificación de la columnba objetivo`riesgo`**: Mapea "no riesgo" a 0, "riesgo" a 1.
-- **Imputación de valores faltantes**: Para valores 0 en numéricas, usa mediana (para enteros) o media (para flotantes) para preservar distribuciones.
+- **Eliminación de duplicados**: Se removieron filas idénticas para evitar sesgos.
+- **Conversión de tipos**: columnas numéricas a tipos apropiados (int32/float32), manejando errores.
+- **Procesamiento de `actividades_extracurriculares`**: Conversion de strings a listas, asi como reemplazar listas vacías con el elemento `['n/a']` para codificación binaria posterior.
+- **Codificación de la columnba objetivo`riesgo`**: Se mapeó "no riesgo" a 0, "riesgo" a 1.
+- **Imputación de valores faltantes**: Para valores 0 en numéricas, se utilizó mediana (para enteros) y media (para flotantes) para preservar distribuciones.
 
-Esto asegura datos íntegros, sin nulos, y listos para preprocesamiento (escalado y binarización).
+Se busca asegurar datos, sin nulos, y listos para preprocesamiento (escalado y binarización).
 
 ## 3. Hiperparámetros (Entrenamiento)
 En el entrenamiento básico, se usan parámetros fijos para el Random Forest:
