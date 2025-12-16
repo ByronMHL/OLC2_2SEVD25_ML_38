@@ -12,59 +12,6 @@ import joblib
 
 predict_bp = Blueprint("predict", __name__)
 
-
-def _build_preprocessor_and_dataset():
-	numeric = [
-		"asistencia_clases",
-		"tareas_entregadas",
-		"participacion_clase",
-		"horas_estudio",
-		"promedio_evaluaciones",
-		"cursos_reprobados",
-		"reportes_disciplinarios",
-		"promedio_actual",
-	]
-
-	if getattr(DataStore, "df_cleaned", None) is None:
-		return None, None, None, None, {"error": "Primero ejecute la limpieza de datos (/clean)"}
-
-	mlb = MultiLabelBinarizer()
-	actividades_encoded = pd.DataFrame(
-		mlb.fit_transform(DataStore.df_cleaned["actividades_extracurriculares"]),
-		columns=mlb.classes_,
-		index=DataStore.df_cleaned.index,
-	)
-
-	df_model = pd.concat([DataStore.df_cleaned, actividades_encoded], axis=1)
-	df_model = df_model.drop(columns=["actividades_extracurriculares"])
-
-	if "riesgo" not in df_model.columns:
-		return None, None, None, None, {"error": "La columna 'riesgo' es obligatoria para el entrenamiento"}
-
-	X = df_model.drop(columns=["riesgo"])
-	y = df_model["riesgo"]
-
-	preproc = ColumnTransformer(
-		transformers=[
-			("num", StandardScaler(), numeric),
-			("bin", "passthrough", actividades_encoded.columns),
-		],
-		remainder="drop",
-	)
-
-	if X.isnull().any().any():
-		return None, None, None, None, {"error": "Existen valores nulos en X después del preprocesamiento"}
-	if y.isnull().any():
-		return None, None, None, None, {"error": "Existen valores nulos en y después del preprocesamiento"}
-
-	return X, y, preproc, mlb, None
-
-
-def _build_pipeline(preproc):
-	clf = RandomForestClassifier(n_estimators=1000, random_state=42)
-	return Pipeline(steps=[("preprocessor", preproc), ("classifier", clf)])
-
-
 @predict_bp.post("/predict")
 def predict_one():
 	payload = request.get_json(silent=True) or {}

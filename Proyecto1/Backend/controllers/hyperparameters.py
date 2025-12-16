@@ -96,8 +96,7 @@ def evaluate_pipeline(pipeline, X_test, y_test):
 	return metrics, results
 
 
-# Eliminado GridSearchCV: mantenemos sólo RandomizedSearchCV
-
+# RandomizedSearchCV
 
 @hyper_bp.post("/training/randomsearch")
 def rf_random_search():
