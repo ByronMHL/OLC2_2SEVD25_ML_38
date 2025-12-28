@@ -29,6 +29,3 @@ Thumbs.db
 
 # Build / dist
 Frontend/dist/
-
-# VSCode
-.vscode/
