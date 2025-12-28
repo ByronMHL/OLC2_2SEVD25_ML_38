@@ -1,0 +1,1001 @@
+cliente_id,frecuencia_compra,monto_total_gastado,monto_promedio_compra,dias_desde_ultima_compra,antiguedad_cliente_meses,canal_principal,numero_productos_distintos,fecha_reseña,producto_categoria,reseña_id,texto_reseña
+1,15.0,12853.97,1391.9,215.0,28.0,móvil,43.0,2025-03-24,ropa,1,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+2,4.0,10014.12,823.06,45.0,147.0,marketplace,30.0,2024-09-15,ropa,2,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+3,58.0,8709.53,584.38,32.0,141.0,call center,39.0,2024-09-13,alimentos,3,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+4,97.0,18510.31,237.2,130.0,,tienda física,8.0,2025-06-22,educacion,4,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+5,55.0,5265.05,34.47,52.0,86.0,tienda física,28.0,,servicios,5,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+6,57.0,7442.85,744.11,247.0,157.0,web,8.0,2025-04-29,salud,6,Las instalaciones están limpias yyy el personal explica los procedimientos de forma básica
+7,34.0,3100.55,1469.05,25.0,27.0,web,7.0,2023-05-24,hogar,7,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+8,77.0,6108.85,365.75,326.0,218.0,web,36.0,2025-12-07,electronica,8,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+9,9.0,6002.66,343.29,56.0,184.0,marketplace,10.0,2023-12-20,servicios,9,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+10,82.0,nanabc,1293.47,252.0,74.0,marketplace,14.0,2024-07-29,alimentos,10,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+11,94.0,12727.91,175.66,41.0,220.0,call center,46.0,2023-08-31,ropa,11,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+12,65.0,13344.02,837.52,74.0,95.0,móvil,19.0,2023-02-21,hogar,12,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+13,89.0,6599.75,1011.61,275.0,162.0,call center,17.0,2023-10-30,ropa,13,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+14,43.0,16989.73,1175.19,297.0,160.0,móvil,48.0,2023-03-22,educacion,14,La  metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+15,99.0,2003.61,279.59,327.0,164.0,call center,35.0,2025-08-28,hogar,15,El artículo para el hogar es funcional y fácil de usar aunq los materiales se sienten normales
+16,32.0,13779.76,255.88,109.0,192.0,web,49.0,2025-10-15,alimentos,16,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+17,46.0,11827.23,190.96,289.0,88.0,web,42.0,2025-10-25,hogar,17,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+18,87.0,12536.28,486.78,120.0,29.0,tienda física,48.0,2025-11-17,servicios,18,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso ..
+19,56.0,12140.46,766.29,3.0,105.0,móvil,50.0,2024-06-01,hogar,19,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+20,5.0,3688.31,421.09,314.0,200.0,móvil,8.0,2024-03-16,salud,20,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+21,45.0,15047.64,126.54,51.0,174.0,marketplace,10.0,2024-09-23,electronica,21,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas ..
+22,56.0,3951.53,9.73,148.0,79.0,marketplace,29.0,2023-03-03,alimentos,22,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+23,37.0,4488.91,164.55,90.0,35.0,móvil,41.0,2023-07-14,electronica,23,La interfaz es intuitiva yyy el dispositivo responde bien en tareas comunes yyy prolongadas
+24,13.0,4460.15,820.69,64.0,108.0,móvil,19.0,2024-12-03,servicios,24,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+25,42.0,2668.77,1355.77,37.0,111.0,marketplace,7.0,2024-01-13,servicios,25,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+26,71.0,19895.25,1050.5,116.0,,marketplace,11.0,2023-06-03,educacion,26,El contenido educativo es comprensible y bien estructurado aunq el ritmo es algo rápido
+27,43.0,8271.54,1004.76,324.0,105.0,móvil,9.0,2024-10-11,salud,27,Las instalaciones están limpias y el personal explica los procedimientos de forma básica ..
+28,97.0,19856.9,Error,17.0,155.0,marketplace,39.0,2024-01-12,electronica,28,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+29,28.0,1588.82,1097.23,134.0,189.0,móvil,42.0,2024-12-22,servicios,29,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+30,97.0,18985.79,1071.1,52.0,76.0,marketplace,9.0,2023-07-23,salud,30,La  atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+31,73.0,5250.44,800.5,65.0,118.0,marketplace,46.0,2025-12-07,salud,31,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+32,30.0,16704.74,486.95,49.0,188.0,tienda física,46.0,2025-02-09,salud,32,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+33,42.0,12801.28,535.85,283.0,116.0,marketplace,30.0,2024-01-24,hogar,33,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+34,,15675.88,1038.18,337.0,,móvil,31.0,2023-01-16,alimentos,34,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+35,77.0,9926.66,445.29,276.0,238.0,móvil,34.0,2024-09-26,electronica,35,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+36,93.0,16337.29,395.56,346.0,4.0,móvil,13.0,2025-12-05,electronica,36,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+37,58.0,2400.42,952.95,107.0,196.0,tienda física,47.0,2025-06-30,salud,37,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+38,48.0,12662.3,932.62,248.0,62.0,tienda física,1.0,2025-03-20,ropa,38,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+39,62.0,14160.19,886.19,345.0,29.0,call center,24.0,2025-04-25,hogar,39,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+40,91.0,16371.69,nanabc,294.0,52.0,marketplace,23.0,2024-01-14,salud,40,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo ..
+41,69.0,17659.86,179.39,44.0,87.0,web,13.0,2025-06-23,electronica,41,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+42,19.0,10682.67,64.42,166.0,218.0,call center,34.0,2023-04-29,salud,42,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+43,37.0,8887.29,470.77,320.0,126.0,marketplace,14.0,2023-11-26,electronica,43,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+44,67.0,13513.03,233.2,247.0,183.0,marketplace,29.0,2024-04-10,alimentos,44,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+45,98.0,9030.94,565.04,108.0,113.0,web,35.0,2023-04-18,alimentos,45,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+46,35.0,8526.91,73.17,358.0,115.0,web,23.0,2024-09-02,alimentos,46,El producto alimenticio viene muuy empacado y cumple con lo básico para el consumo diario
+47,57.0,7364.94,867.52,312.0,98.0,call center,32.0,2025-09-08,hogar,47,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+48,11.0,nanabc,1246.22,331.0,29.0,call center,7.0,2023-04-13,hogar,48,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+49,6.0,328.82,1382.29,33.0,106.0,web,35.0,2025-03-17,electronica,49,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+50,74.0,8335.03,762.26,133.0,100.0,call center,43.0,2024-02-06,electronica,50,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+51,31.0,16459.67,1271.78,159.0,240.0,marketplace,30.0,2025-03-27,alimentos,51,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+52,51.0,16933.2,403.96,35.0,192.0,call center,16.0,2023-06-27,hogar,52,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+53,76.0,18268.75,1031.22,19.0,70.0,web,32.0,2024-02-06,electronica,53,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+54,53.0,14435.89,2.97,239.0,218.0,móvil,40.0,2023-06-25,alimentos,54,El producto alimenticio viene muuy empacado y cumple con lo básico para el consumo diario
+55,51.0,11562.57,725.25,188.0,129.0,tienda física,33.0,2025-02-06,ropa,55,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+56,81.0,16423.92,866.24,344.0,97.0,móvil,46.0,2025-04-28,hogar,56,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+57,22.0,11204.4,236.47,296.0,228.0,marketplace,27.0,2024-01-13,alimentos,57,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+58,62.0,1399.66,758.55,89.0,22.0,web,37.0,2025-05-24,salud,58,Las instalaciones están limpias yyy el personal explica los procedimientos de forma básica
+59,33.0,5855.25,1308.49,75.0,208.0,call center,2.0,2025-09-18,educacion,59,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+60,44.0,8343.2,85.5,6.0,78.0,tienda física,39.0,2025-10-10,educacion,60,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+61,45.0,19363.92,1152.63,74.0,118.0,móvil,8.0,2023-03-27,alimentos,61,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+62,34.0,17993.29,1264.85,317.0,104.0,call center,30.0,2024-03-13,electronica,62,La interfaz es intuitiva yyy el dispositivo responde bien en tareas comunes yyy prolongadas
+63,36.0,1936.25,806.69,330.0,,marketplace,8.0,2024-04-13,electronica,63,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario ..
+64,81.0,18362.35,376.07,251.0,151.0,tienda física,31.0,2024-09-13,alimentos,64,El sabor es aceptable yyy la textura resulta agradable aunque esperaba mayor frescura
+65,9.0,18685.04,1233.41,38.0,41.0,call center,39.0,2024-03-25,educacion,65,El contenido educativo es comprensible y bien estructurado aunq el ritmo es algo rápido
+66,39.0,10388.75,1170.63,174.0,215.0,call center,49.0,2024-02-16,educacion,66,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+67,2.0,10056.76,240.16,240.0,136.0,móvil,26.0,2025-07-26,educacion,67,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+68,nanabc,10460.7,153.03,135.0,20.0,marketplace,22.0,2023-10-02,servicios,68,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+69,43.0,16987.49,1023.34,153.0,219.0,marketplace,24.0,2025-02-17,servicios,69,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+70,6.0,962.98,322.78,319.0,166.0,call center,26.0,2024-07-28,electronica,70,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+71,83.0,11243.79,1463.84,81.0,,móvil,10.0,2024-01-30,educacion,71,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+72,0.0,7460.86,899.71,197.0,150.0,call center,31.0,2023-10-12,educacion,72,El contenido educativo es comprensible y muuy estructurado aunque el ritmo es algo rápido
+73,91.0,12273.95,792.27,153.0,176.0,web,26.0,2024-11-06,educacion,73,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+74,59.0,1076.76,555.26,86.0,100.0,tienda física,26.0,2025-01-11,alimentos,74,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura ..
+75,8.0,15705.05,43.32,229.0,208.0,call center,11.0,2025-02-22,electronica,75,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+76,49.0,15772.54,16.62,124.0,8.0,tienda física,8.0,2023-11-16,ropa,76,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+77,56.0,18672.36,Error,80.0,238.0,web,32.0,2025-08-12,electronica,77,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+78,62.0,4122.58,143.76,20.0,190.0,móvil,48.0,2023-06-19,alimentos,78,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+79,46.0,,1466.69,109.0,189.0,web,43.0,2025-02-18,servicios,79,El servicio fue adecuado con tiempos razonables aunq la atención podría ser más clara
+80,43.0,12127.98,1307.95,299.0,215.0,móvil,9.0,2023-11-06,salud,80,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+81,21.0,5638.87,412.8,146.0,184.0,web,25.0,2024-12-03,electronica,81,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas ..
+82,91.0,7141.4,817.64,44.0,76.0,call center,25.0,2024-09-27,educacion,82,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+83,95.0,19019.2,750.75,27.0,105.0,tienda física,30.0,2023-03-13,ropa,83,La prenda es cómoda y la tela se siente agradable aunq la talla puede variar un poco
+84,25.0,864.07,665.53,19.0,8.0,web,4.0,2024-11-24,hogar,84,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+85,18.0,3.54,1353.24,351.0,204.0,tienda física,49.0,2024-10-14,educacion,85,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido ..
+86,4.0,16493.49,959.6,99.0,38.0,call center,50.0,2023-07-12,salud,86,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+87,87.0,17351.64,1067.68,168.0,187.0,móvil,2.0,2024-04-29,hogar,87,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+88,39.0,10861.28,1363.26,9.0,5.0,web,38.0,2023-10-28,electronica,88,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+89,28.0,8543.8,1169.19,261.0,84.0,móvil,43.0,2025-01-02,servicios,89,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+90,65.0,,1461.84,100.0,21.0,call center,35.0,2025-05-31,ropa,90,El  diseño es atractivo y el color coincide con lo esperado después de varios usos
+91,36.0,2579.1,1152.9,197.0,124.0,call center,46.0,2023-11-28,alimentos,91,El  sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+92,54.0,2368.61,718.98,183.0,16.0,tienda física,47.0,2025-09-15,electronica,92,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+93,9.0,19733.23,987.2,287.0,236.0,móvil,24.0,2024-11-02,alimentos,93,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+94,65.0,3948.61,327.23,142.0,125.0,móvil,12.0,2024-03-02,servicios,94,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+95,21.0,15062.96,981.88,270.0,213.0,marketplace,17.0,2025-08-05,educacion,95,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+96,54.0,17467.27,1075.38,68.0,172.0,call center,38.0,2024-05-11,ropa,96,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+97,2.0,10921.29,359.35,230.0,24.0,web,20.0,2024-09-14,ropa,97,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+98,97.0,3849.26,1297.75,263.0,110.0,móvil,44.0,2025-07-12,alimentos,98,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+99,16.0,18606.88,278.87,8.0,131.0,marketplace,12.0,2025-02-11,ropa,99,La prenda es cómoda yyy la tela se siente agradable aunque la talla puede variar un poco
+100,23.0,6069.65,347.64,337.0,84.0,call center,14.0,2024-09-05,educacion,100,El contenido educativo es comprensible y bien estructurado aunq el ritmo es algo rápido
+101,24.0,15728.23,892.24,333.0,128.0,marketplace,30.0,2023-08-11,alimentos,101,El sabor es aceptable yyy la textura resulta agradable aunque esperaba mayor frescura
+102,90.0,9834.06,1486.94,148.0,141.0,tienda física,2.0,2023-04-06,ropa,102,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+103,77.0,966.09,223.87,117.0,230.0,tienda física,46.0,2023-10-07,servicios,103,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+104,6.0,5012.34,898.76,357.0,140.0,web,30.0,2025-03-01,servicios,104,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+105,54.0,14960.29,102.25,323.0,232.0,marketplace,31.0,2024-10-25,alimentos,105,El  sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+106,88.0,15536.78,343.14,219.0,39.0,marketplace,10.0,,servicios,106,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+107,1.0,16214.67,Error,260.0,56.0,móvil,43.0,2025-07-29,servicios,107,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+108,64.0,7336.5,224.6,27.0,149.0,tienda física,45.0,2024-07-21,salud,108,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+109,84.0,10307.8,1149.07,1.0,153.0,tienda física,15.0,2025-11-29,ropa,109,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+110,43.0,8108.29,1228.54,197.0,209.0,tienda física,17.0,2025-01-05,hogar,110,Cumple su función en casa yyy ayuda a mantener el espacio organizado sin complicaciones
+111,39.0,15454.49,111.56,48.0,157.0,móvil,31.0,2023-01-08,ropa,111,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+112,7.0,8344.91,813.17,358.0,59.0,call center,34.0,2025-06-28,salud,112,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+113,69.0,nanabc,1358.11,249.0,178.0,web,32.0,2024-01-01,hogar,113,El  artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+114,7.0,14336.49,557.72,115.0,64.0,móvil,9.0,2024-07-02,servicios,114,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+115,6.0,9741.4,666.94,97.0,180.0,web,46.0,2025-10-23,servicios,115,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+116,94.0,8138.8,861.74,,171.0,call center,37.0,2025-07-04,alimentos,116,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+117,10.0,9285.85,821.94,231.0,137.0,tienda física,49.0,2025-02-11,electronica,117,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+118,72.0,1981.71,,256.0,36.0,tienda física,27.0,2025-05-31,servicios,118,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+119,6.0,8774.28,69.96,133.0,134.0,marketplace,21.0,2023-01-26,salud,119,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+120,63.0,5805.01,1003.81,151.0,118.0,móvil,1.0,2023-01-01,servicios,120,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+121,69.0,11452.94,298.37,71.0,122.0,marketplace,9.0,2024-06-21,hogar,121,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+122,89.0,2520.22,477.0,79.0,84.0,marketplace,39.0,2023-11-14,educacion,122,El contenido educativo es comprensible yyy bien estructurado aunque el ritmo es algo rápido
+123,98.0,13409.12,642.66,27.0,227.0,web,3.0,2024-06-07,servicios,123,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+124,65.0,677.33,61.62,304.0,176.0,marketplace,,2023-10-25,alimentos,124,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+125,8.0,18093.79,444.72,289.0,29.0,móvil,2.0,2024-03-22,ropa,125,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+126,82.0,15066.26,1086.56,232.0,116.0,marketplace,27.0,2025-10-10,ropa,126,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+127,80.0,17989.66,838.83,199.0,200.0,tienda física,16.0,2024-01-02,hogar,127,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+128,10.0,7037.45,965.86,322.0,0.0,móvil,33.0,2023-10-24,alimentos,128,El  producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+129,67.0,11509.6,470.11,40.0,153.0,web,29.0,2024-12-26,educacion,129,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+130,45.0,782.51,338.98,54.0,220.0,call center,43.0,2024-05-04,hogar,130,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones ..
+131,79.0,12584.62,10.0,355.0,216.0,call center,15.0,2023-11-14,salud,131,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+132,77.0,96.5,1249.05,354.0,181.0,call center,2.0,2023-10-09,hogar,132,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+133,88.0,4171.88,449.01,206.0,240.0,call center,47.0,2023-07-05,hogar,133,El artículo para el hogar es funcional y fácil de usar aunq los materiales se sienten normales
+134,14.0,2323.8,493.08,126.0,57.0,call center,42.0,2025-09-02,alimentos,134,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+135,51.0,7747.29,437.94,208.0,89.0,call center,30.0,2024-11-25,salud,135,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+136,75.0,11167.87,1398.14,89.0,173.0,móvil,42.0,2024-06-18,ropa,136,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+137,71.0,587.42,1437.77,24.0,161.0,tienda física,34.0,2025-10-29,salud,137,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+138,92.0,18529.42,998.56,75.0,47.0,web,3.0,2023-05-29,ropa,138,El diseño es atractivo y el color coincide con lo esperado después de varios usos ..
+139,63.0,,1446.08,93.0,45.0,call center,28.0,2024-02-12,servicios,139,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+140,50.0,17927.72,1109.02,74.0,170.0,móvil,22.0,2023-09-17,salud,140,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+141,54.0,4225.23,1022.01,357.0,111.0,call center,44.0,2024-05-09,servicios,141,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+142,20.0,19637.25,365.04,139.0,32.0,call center,17.0,2023-12-14,electronica,142,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+143,87.0,18697.7,293.06,256.0,130.0,marketplace,41.0,2023-03-31,electronica,143,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+144,69.0,18015.5,200.9,352.0,208.0,tienda física,3.0,2025-02-10,servicios,144,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+145,37.0,1707.2,1124.95,77.0,65.0,marketplace,13.0,2025-08-31,servicios,145,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+146,2.0,9221.96,780.58,272.0,169.0,marketplace,22.0,2024-01-20,salud,146,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+147,33.0,9199.07,804.34,194.0,119.0,móvil,28.0,2023-07-27,ropa,147,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+148,86.0,1010.04,483.54,271.0,212.0,tienda física,46.0,2024-03-02,alimentos,148,El  producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+149,96.0,7944.88,1072.86,102.0,117.0,call center,13.0,2024-04-11,salud,149,La atención en salud fue profesional aunq el tiempo de espera resultó un poco largo
+150,12.0,13820.28,712.8,251.0,201.0,tienda física,32.0,2023-12-04,servicios,150,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+151,54.0,813.18,10.51,77.0,131.0,tienda física,24.0,2024-05-27,servicios,151,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+152,72.0,4151.79,587.78,217.0,206.0,call center,46.0,2025-04-06,hogar,152,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+153,21.0,6056.12,597.65,307.0,137.0,tienda física,13.0,2023-10-08,alimentos,153,El producto alimenticio viene muuy empacado y cumple con lo básico para el consumo diario
+154,2.0,8601.37,258.56,17.0,110.0,tienda física,47.0,2024-09-30,servicios,154,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso ..
+155,57.0,11235.13,1449.88,254.0,178.0,móvil,4.0,2024-09-13,electronica,155,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+156,21.0,17876.75,1083.82,149.0,239.0,móvil,25.0,2025-06-11,alimentos,156,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+157,89.0,10131.3,10.21,78.0,64.0,marketplace,8.0,2025-09-14,hogar,157,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+158,38.0,3441.53,822.53,205.0,8.0,marketplace,14.0,2023-04-03,hogar,158,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+159,80.0,11392.32,129.36,327.0,117.0,call center,47.0,2024-07-11,ropa,159,La prenda es cómoda y la tela se siente agradable aunq la talla puede variar un poco
+160,47.0,17761.4,215.75,99.0,218.0,marketplace,26.0,2024-02-14,salud,160,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+161,1.0,19250.27,559.48,302.0,102.0,móvil,28.0,2024-06-22,servicios,161,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+162,86.0,18975.23,1331.39,27.0,76.0,call center,17.0,2024-10-06,hogar,162,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+163,69.0,5939.44,1164.01,242.0,165.0,call center,49.0,2024-09-13,electronica,163,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+164,70.0,10576.75,829.72,53.0,83.0,marketplace,3.0,2024-05-12,salud,164,Las instalaciones están limpias yyy el personal explica los procedimientos de forma básica
+165,93.0,9052.12,409.37,75.0,136.0,tienda física,5.0,2025-01-24,educacion,165,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+166,58.0,7344.41,565.73,303.0,55.0,móvil,18.0,2025-08-16,servicios,166,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso ..
+167,16.0,8272.37,777.2,216.0,238.0,móvil,2.0,2024-06-26,servicios,167,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+168,99.0,13075.71,,313.0,208.0,web,34.0,2024-03-13,ropa,168,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+169,86.0,2143.8,254.2,237.0,12.0,marketplace,44.0,2024-07-29,electronica,169,La interfaz es intuitiva yyy el dispositivo responde bien en tareas comunes yyy prolongadas
+170,40.0,2787.45,816.38,331.0,13.0,tienda física,24.0,2023-04-18,educacion,170,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+171,19.0,8114.81,808.61,149.0,188.0,tienda física,9.0,2024-12-15,ropa,171,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+172,73.0,12806.17,1245.9,315.0,,tienda física,48.0,2023-09-07,ropa,172,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+173,36.0,15566.85,412.44,308.0,69.0,tienda física,50.0,,ropa,173,El  diseño es atractivo y el color coincide con lo esperado después de varios usos
+174,54.0,17783.45,191.75,96.0,202.0,tienda física,11.0,2023-12-04,ropa,174,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+175,39.0,11278.61,849.2,12.0,42.0,tienda física,21.0,2025-12-09,electronica,175,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas ..
+176,63.0,7860.85,236.23,264.0,62.0,tienda física,34.0,2025-04-27,alimentos,176,El  producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+177,18.0,19478.38,779.58,274.0,34.0,marketplace,37.0,2023-07-30,electronica,177,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+178,nanabc,664.67,1050.18,306.0,127.0,call center,29.0,2024-03-14,ropa,178,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+179,97.0,7897.28,692.87,291.0,27.0,web,,2023-07-08,ropa,179,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+180,34.0,684.17,429.48,,220.0,tienda física,34.0,2024-02-23,hogar,180,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+181,86.0,5466.46,1095.51,242.0,202.0,tienda física,42.0,2025-07-31,salud,181,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+182,45.0,8880.76,1496.41,65.0,,tienda física,47.0,2025-02-11,ropa,182,El diseño es atractivo yyy el color coincide con lo esperado después de varios usos
+183,36.0,4346.97,497.02,17.0,25.0,móvil,50.0,2023-10-27,servicios,183,El  servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+184,52.0,17171.05,811.82,202.0,35.0,call center,1.0,2025-12-04,salud,184,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+185,90.0,19468.57,354.42,121.0,72.0,call center,36.0,2025-10-30,hogar,185,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+186,63.0,4423.61,1193.65,112.0,118.0,marketplace,2.0,2025-09-20,servicios,186,La  experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+187,75.0,15646.61,580.57,21.0,238.0,marketplace,46.0,2025-06-19,educacion,187,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+188,26.0,17218.3,602.0,294.0,157.0,móvil,5.0,2023-06-16,ropa,188,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+189,91.0,1728.14,401.54,261.0,182.0,web,35.0,2024-10-06,electronica,189,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+190,28.0,13389.24,1266.22,72.0,206.0,call center,10.0,2024-05-15,electronica,190,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+191,68.0,19079.54,1460.32,117.0,89.0,tienda física,33.0,2025-09-24,hogar,191,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones ..
+192,19.0,6177.13,1490.12,215.0,215.0,call center,21.0,2025-10-29,hogar,192,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+193,79.0,2638.57,717.91,297.0,,móvil,44.0,2025-02-19,salud,193,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+194,13.0,2375.05,1332.12,,13.0,marketplace,7.0,2023-08-28,ropa,194,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+195,47.0,14136.22,979.6,172.0,6.0,web,29.0,2025-11-22,hogar,195,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales ..
+196,15.0,15749.1,360.44,193.0,177.0,móvil,35.0,2024-07-19,salud,196,Las  instalaciones están limpias y el personal explica los procedimientos de forma básica
+197,82.0,17723.93,436.7,298.0,180.0,móvil,27.0,2023-02-28,ropa,197,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+198,55.0,4510.9,594.87,127.0,95.0,call center,12.0,2025-01-01,salud,198,Las instalaciones están limpias yyy el personal explica los procedimientos de forma básica
+199,61.0,16670.1,175.76,191.0,41.0,marketplace,37.0,2023-01-09,electronica,199,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+200,31.0,3151.74,930.24,309.0,137.0,móvil,46.0,2025-10-12,servicios,200,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+201,49.0,18038.63,395.65,,208.0,marketplace,41.0,,alimentos,201,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+202,30.0,9877.7,329.04,,,web,50.0,2025-03-11,hogar,202,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+203,85.0,9235.97,901.37,269.0,,tienda física,44.0,2023-02-28,servicios,203,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+204,96.0,14335.57,843.79,,87.0,tienda física,41.0,2025-06-19,servicios,204,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+205,99.0,13551.9,383.67,,25.0,tienda física,11.0,2025-05-28,alimentos,205,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+206,57.0,1542.7,957.09,326.0,,móvil,3.0,2024-05-18,salud,206,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+207,86.0,14638.19,1073.47,74.0,72.0,web,27.0,2024-07-05,educacion,207,El contenido educativo es comprensible y bien estructurado aunq el ritmo es algo rápido
+208,34.0,346.42,1132.29,298.0,,web,12.0,,hogar,208,El  artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+209,100.0,17665.11,980.58,197.0,228.0,web,35.0,2024-07-28,salud,209,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+210,82.0,9446.19,677.42,265.0,154.0,call center,46.0,2023-11-07,salud,210,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+211,2.0,13601.24,631.17,149.0,65.0,web,29.0,2023-03-07,electronica,211,Este producto electrónico ofrece un rendimiento estable aunq la batería podría mejorar con el uso diario
+212,30.0,2735.97,1486.0,237.0,43.0,call center,31.0,2025-07-13,ropa,212,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+213,72.0,3742.97,1308.07,91.0,112.0,tienda física,26.0,2023-01-16,educacion,213,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+214,62.0,2239.82,120.93,143.0,37.0,call center,49.0,2023-03-22,educacion,214,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido ..
+215,88.0,15086.46,702.0,320.0,80.0,tienda física,7.0,2024-12-16,salud,215,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+216,46.0,19245.01,1000.82,159.0,215.0,tienda física,26.0,2025-06-03,ropa,216,El  diseño es atractivo y el color coincide con lo esperado después de varios usos
+217,83.0,19495.29,,339.0,,móvil,29.0,2024-05-26,salud,217,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+218,65.0,17561.01,4.98,309.0,178.0,tienda física,5.0,2024-04-14,alimentos,218,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+219,100.0,3434.33,1465.0,364.0,124.0,tienda física,34.0,2023-02-05,alimentos,219,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+220,8.0,17867.22,,288.0,24.0,web,33.0,2025-10-06,salud,220,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+221,97.0,12032.13,682.81,322.0,188.0,web,15.0,2024-10-19,educacion,221,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+222,75.0,4179.89,1218.86,336.0,69.0,marketplace,49.0,2023-09-24,educacion,222,El  contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+223,,16612.6,206.2,96.0,75.0,call center,49.0,2023-03-17,salud,223,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+224,24.0,18815.43,1461.23,305.0,104.0,web,29.0,2024-04-21,electronica,224,La  interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+225,82.0,2269.33,1355.13,,24.0,tienda física,22.0,2024-10-04,ropa,225,El diseño es atractivo y el color coincide con lo esperado después de varios usos ..
+226,96.0,16913.14,475.99,50.0,235.0,call center,46.0,2023-04-13,electronica,226,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+227,74.0,19870.89,1236.57,138.0,136.0,web,1.0,2023-04-18,educacion,227,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+228,92.0,7041.89,923.74,10.0,42.0,marketplace,5.0,2023-10-09,electronica,228,Este  producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+229,44.0,5914.38,1319.86,239.0,156.0,call center,2.0,2023-07-11,educacion,229,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+230,80.0,17216.12,1340.9,7.0,129.0,call center,19.0,2023-11-14,ropa,230,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+231,25.0,9664.31,995.7,311.0,233.0,móvil,36.0,2025-11-20,ropa,231,La  prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+232,6.0,12253.87,383.32,66.0,,web,14.0,2023-08-29,ropa,232,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+233,85.0,4869.98,1459.22,54.0,139.0,call center,30.0,2025-11-22,electronica,233,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+234,1.0,12279.49,1016.86,175.0,125.0,marketplace,36.0,2023-12-07,educacion,234,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+235,57.0,16761.15,434.69,152.0,,call center,20.0,2024-12-16,electronica,235,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+236,1.0,16213.96,132.73,26.0,223.0,tienda física,20.0,2025-04-13,servicios,236,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+237,72.0,8140.29,63.0,63.0,150.0,marketplace,38.0,2024-05-04,educacion,237,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+238,20.0,19365.15,1241.55,19.0,55.0,tienda física,26.0,2023-03-27,servicios,238,El servicio fue adecuado con tiempos razonables aunq la atención podría ser más clara
+239,10.0,16550.26,630.62,213.0,215.0,call center,5.0,2024-05-09,hogar,239,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+240,39.0,669.81,813.8,197.0,231.0,call center,43.0,2025-10-16,educacion,240,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+241,Error,19325.31,37.37,280.0,69.0,móvil,29.0,2023-10-31,servicios,241,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+242,25.0,nanabc,849.14,86.0,26.0,móvil,4.0,2025-08-07,hogar,242,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+243,65.0,596.44,805.08,72.0,240.0,marketplace,24.0,2024-07-19,salud,243,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+244,11.0,7824.59,1306.97,276.0,110.0,call center,23.0,2025-04-30,hogar,244,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+245,45.0,2213.42,510.14,49.0,105.0,marketplace,18.0,2024-02-17,educacion,245,El contenido educativo es comprensible y bien estructurado aunq el ritmo es algo rápido
+246,8.0,4380.92,1136.64,185.0,226.0,call center,38.0,2024-12-08,servicios,246,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+247,43.0,793.72,111.04,48.0,211.0,tienda física,2.0,2023-06-05,alimentos,247,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura ..
+248,67.0,3926.97,1214.62,241.0,184.0,tienda física,19.0,2023-01-15,salud,248,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+249,99.0,5164.11,605.09,218.0,70.0,tienda física,13.0,2024-06-02,alimentos,249,El producto alimenticio viene bien empacado yyy cumple con lo básico para el consumo diario
+250,85.0,3257.82,1336.69,358.0,215.0,call center,13.0,2024-10-28,ropa,250,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+251,43.0,10918.53,1276.99,280.0,126.0,marketplace,9.0,2023-02-16,alimentos,251,El producto alimenticio viene bien empacado yyy cumple con lo básico para el consumo diario
+252,48.0,2326.07,1418.63,271.0,217.0,call center,40.0,2025-07-04,educacion,252,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+253,75.0,1384.68,542.35,57.0,41.0,tienda física,38.0,2023-01-18,alimentos,253,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+254,96.0,2511.61,1404.45,105.0,56.0,tienda física,37.0,2025-06-18,alimentos,254,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+255,55.0,18930.45,1092.02,45.0,87.0,tienda física,3.0,2025-06-06,ropa,255,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+256,99.0,16270.15,1253.84,360.0,124.0,call center,22.0,2025-06-08,alimentos,256,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+257,19.0,19038.62,761.21,57.0,0.0,móvil,32.0,2025-04-21,educacion,257,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+258,39.0,14373.02,1056.06,231.0,,tienda física,30.0,2023-03-07,electronica,258,Este producto electrónico ofrece un rendimiento estable aunq la batería podría mejorar con el uso diario
+259,70.0,4627.44,6.34,93.0,30.0,web,7.0,2025-07-08,ropa,259,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+260,37.0,4634.8,1035.74,80.0,210.0,web,28.0,2025-08-04,salud,260,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+261,86.0,8818.45,,168.0,82.0,móvil,27.0,2023-05-26,servicios,261,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+262,66.0,11152.39,1418.24,203.0,203.0,tienda física,22.0,2025-01-27,educacion,262,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+263,58.0,10250.34,241.11,320.0,111.0,móvil,21.0,2023-07-15,servicios,263,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+264,35.0,18940.77,287.25,306.0,193.0,móvil,24.0,2024-06-19,hogar,264,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales ..
+265,76.0,12683.3,33.87,257.0,218.0,tienda física,1.0,2024-07-26,educacion,265,El contenido educativo es comprensible y bien estructurado aunq el ritmo es algo rápido
+266,82.0,9833.74,19.61,294.0,84.0,móvil,50.0,2023-10-13,educacion,266,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+267,11.0,19099.77,70.85,29.0,152.0,tienda física,35.0,2023-01-26,hogar,267,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+268,77.0,6338.48,1431.24,261.0,5.0,marketplace,25.0,,salud,268,Las instalaciones están limpias y el personal explica los procedimientos de forma básica ..
+269,22.0,3681.77,1121.7,,110.0,call center,49.0,2024-08-05,servicios,269,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+270,7.0,9594.74,1288.78,271.0,230.0,tienda física,9.0,2024-02-22,educacion,270,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+271,53.0,18794.24,122.22,352.0,15.0,web,21.0,2025-04-07,electronica,271,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+272,34.0,4475.23,836.39,13.0,103.0,call center,24.0,2023-03-18,salud,272,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo ..
+273,84.0,14292.99,434.12,198.0,79.0,web,13.0,,salud,273,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+274,71.0,13306.85,389.14,114.0,136.0,tienda física,5.0,2025-10-02,ropa,274,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+275,17.0,13401.42,215.04,146.0,138.0,tienda física,23.0,2025-02-28,educacion,275,El  contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+276,54.0,13721.8,461.79,258.0,137.0,móvil,24.0,2025-11-22,hogar,276,Cumple  su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+277,54.0,6921.6,854.28,20.0,210.0,tienda física,23.0,2023-11-17,educacion,277,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+278,26.0,18564.4,407.92,292.0,28.0,marketplace,13.0,2023-10-28,salud,278,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+279,37.0,13743.16,1095.16,79.0,76.0,call center,37.0,2025-09-30,educacion,279,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+280,11.0,974.11,1452.28,207.0,198.0,tienda física,2.0,,servicios,280,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+281,97.0,11629.41,1054.67,190.0,132.0,web,45.0,2024-09-04,educacion,281,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+282,6.0,11380.43,753.39,320.0,133.0,móvil,46.0,2023-06-05,servicios,282,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+283,3.0,1670.58,821.61,337.0,14.0,tienda física,2.0,2024-12-09,hogar,283,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+284,62.0,18449.36,1080.66,337.0,35.0,tienda física,7.0,2024-08-14,ropa,284,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+285,16.0,4189.54,770.49,99.0,,móvil,19.0,2023-11-27,hogar,285,Cumple  su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+286,38.0,14037.3,623.5,240.0,90.0,marketplace,43.0,2024-06-23,educacion,286,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+287,14.0,10376.97,142.63,84.0,17.0,tienda física,29.0,2024-07-27,alimentos,287,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+288,89.0,3369.4,1401.38,279.0,39.0,marketplace,29.0,2024-04-19,electronica,288,Este producto electrónico ofrece un rendimiento estable aunq la batería podría mejorar con el uso diario
+289,75.0,13048.13,1106.21,93.0,82.0,tienda física,32.0,2024-08-11,educacion,289,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+290,4.0,4688.0,556.32,172.0,19.0,call center,32.0,2025-03-25,ropa,290,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+291,38.0,15162.21,1127.81,,55.0,móvil,34.0,2025-12-04,hogar,291,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+292,nanabc,1275.92,1235.8,334.0,161.0,móvil,39.0,2025-03-16,educacion,292,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+293,13.0,10606.5,34.49,36.0,15.0,web,11.0,2024-12-21,educacion,293,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+294,70.0,792.8,458.76,114.0,,web,43.0,2023-08-19,ropa,294,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+295,0.0,,390.47,4.0,171.0,marketplace,26.0,2023-10-17,salud,295,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+296,14.0,2075.28,169.42,360.0,30.0,tienda física,43.0,2023-02-02,salud,296,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+297,67.0,1216.91,978.67,116.0,127.0,móvil,47.0,2024-06-26,servicios,297,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+298,31.0,19627.22,1343.41,207.0,210.0,tienda física,44.0,2025-05-24,salud,298,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+299,75.0,18293.53,1467.14,239.0,26.0,web,20.0,2025-11-29,alimentos,299,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+300,31.0,1433.76,1037.08,284.0,39.0,tienda física,22.0,2025-08-22,educacion,300,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+301,83.0,7178.48,403.49,213.0,121.0,web,49.0,2025-01-21,electronica,301,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+302,11.0,1002.68,233.23,165.0,162.0,tienda física,36.0,2024-05-15,servicios,302,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+303,89.0,19183.64,1047.23,44.0,91.0,tienda física,16.0,2024-01-27,electronica,303,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+304,8.0,5917.15,920.68,61.0,59.0,móvil,,2024-02-07,hogar,304,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+305,45.0,,,96.0,87.0,marketplace,47.0,2023-01-11,salud,305,Las instalaciones están limpias y el personal explica los procedimientos de forma básica ..
+306,8.0,8538.15,690.54,146.0,150.0,marketplace,11.0,2024-12-18,electronica,306,La  interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+307,33.0,3810.43,9.32,129.0,119.0,call center,,2025-03-26,ropa,307,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+308,1.0,13057.78,640.56,142.0,,tienda física,19.0,2025-11-16,servicios,308,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+309,72.0,10523.44,1349.82,45.0,,tienda física,8.0,2024-10-30,educacion,309,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido ..
+310,86.0,16733.15,1365.54,174.0,173.0,web,45.0,2024-11-16,educacion,310,El contenido educativo es comprensible y bien estructurado aunq el ritmo es algo rápido
+311,55.0,5652.02,54.25,182.0,87.0,móvil,33.0,2025-11-11,electronica,311,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+312,94.0,4068.26,129.05,64.0,233.0,tienda física,26.0,2024-10-10,electronica,312,Este  producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+313,45.0,4875.51,225.34,7.0,,marketplace,45.0,,salud,313,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+314,97.0,6450.95,734.6,1.0,89.0,móvil,32.0,2024-08-29,ropa,314,El  diseño es atractivo y el color coincide con lo esperado después de varios usos
+315,97.0,11806.42,1196.9,179.0,48.0,tienda física,11.0,2025-05-24,ropa,315,La  prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+316,95.0,1214.06,662.87,134.0,105.0,web,28.0,2025-06-08,alimentos,316,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+317,47.0,16468.96,1128.12,69.0,205.0,marketplace,3.0,2023-02-09,alimentos,317,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura ..
+318,49.0,12562.5,149.46,158.0,88.0,tienda física,19.0,2024-09-15,salud,318,Las instalaciones están limpias yyy el personal explica los procedimientos de forma básica
+319,67.0,18074.7,,135.0,108.0,call center,42.0,2024-03-14,servicios,319,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+320,nanabc,7405.37,1377.55,89.0,128.0,call center,49.0,2024-05-29,alimentos,320,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+321,75.0,16755.88,501.59,135.0,178.0,web,46.0,2023-05-24,salud,321,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+322,75.0,5718.6,995.37,336.0,111.0,tienda física,45.0,,ropa,322,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+323,30.0,15097.72,1055.18,147.0,191.0,web,1.0,2023-10-25,electronica,323,La interfaz es intuitiva y el dispositivo responde muuy en tareas comunes y prolongadas
+324,19.0,12562.56,790.94,76.0,143.0,marketplace,35.0,2023-12-05,educacion,324,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+325,93.0,15327.45,890.18,343.0,202.0,marketplace,10.0,,salud,325,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+326,24.0,6933.19,679.77,,109.0,tienda física,33.0,2023-04-18,servicios,326,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+327,18.0,2093.29,367.89,140.0,25.0,móvil,23.0,2025-09-29,hogar,327,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+328,72.0,14149.96,894.22,129.0,61.0,call center,1.0,,ropa,328,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+329,44.0,2653.25,287.09,118.0,50.0,call center,32.0,2024-03-16,electronica,329,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+330,60.0,16516.35,1152.3,,22.0,tienda física,32.0,2024-12-21,servicios,330,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+331,62.0,827.29,897.19,1.0,93.0,call center,40.0,2024-11-28,ropa,331,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+332,19.0,12126.53,792.25,225.0,113.0,call center,48.0,2024-08-29,alimentos,332,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+333,67.0,11959.67,304.28,284.0,80.0,web,12.0,,salud,333,La  atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+334,64.0,8147.07,481.47,360.0,35.0,call center,43.0,,salud,334,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+335,32.0,14651.86,991.46,0.0,77.0,call center,32.0,2023-04-28,hogar,335,Cumple  su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+336,67.0,18033.53,879.41,324.0,64.0,tienda física,34.0,2024-05-25,alimentos,336,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+337,35.0,3687.57,526.67,100.0,150.0,web,26.0,2024-03-15,servicios,337,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+338,52.0,5748.33,621.26,,185.0,call center,22.0,,servicios,338,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+339,5.0,17975.98,1152.87,111.0,76.0,call center,22.0,2024-02-25,educacion,339,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+340,58.0,18083.68,1252.84,149.0,96.0,marketplace,17.0,2023-09-19,ropa,340,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+341,51.0,2111.27,707.17,316.0,,tienda física,45.0,2024-09-09,educacion,341,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+342,81.0,1577.6,902.74,202.0,38.0,call center,1.0,2024-01-14,alimentos,342,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+343,6.0,19465.17,727.84,97.0,120.0,móvil,26.0,2023-04-07,electronica,343,Este producto electrónico ofrece un rendimiento estable aunq la batería podría mejorar con el uso diario
+344,52.0,13906.27,661.99,338.0,171.0,tienda física,46.0,2025-08-31,ropa,344,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+345,82.0,15163.62,332.26,187.0,210.0,tienda física,20.0,2024-02-11,salud,345,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+346,36.0,4512.09,1329.57,112.0,,tienda física,23.0,2023-11-01,ropa,346,La prenda es cómoda yyy la tela se siente agradable aunque la talla puede variar un poco
+347,80.0,14665.45,795.46,224.0,74.0,call center,10.0,2024-04-23,ropa,347,El diseño es atractivo yyy el color coincide con lo esperado después de varios usos
+348,41.0,5182.93,1251.97,223.0,73.0,móvil,5.0,2023-11-09,electronica,348,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+349,78.0,2607.34,533.0,33.0,91.0,móvil,17.0,2025-04-29,electronica,349,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+350,nanabc,13296.82,702.79,342.0,234.0,móvil,24.0,2023-11-06,alimentos,350,El  producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+351,4.0,16598.29,,222.0,115.0,tienda física,19.0,2024-12-06,alimentos,351,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura ..
+352,5.0,1876.8,87.24,218.0,138.0,móvil,16.0,2025-01-26,hogar,352,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+353,92.0,14179.11,348.3,61.0,66.0,web,16.0,2023-09-29,alimentos,353,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+354,7.0,9460.11,822.9,271.0,45.0,call center,37.0,2025-09-10,salud,354,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+355,88.0,8655.5,544.2,103.0,49.0,call center,39.0,2023-09-13,alimentos,355,El producto alimenticio viene bien empacado yyy cumple con lo básico para el consumo diario
+356,44.0,8159.91,233.79,119.0,177.0,web,6.0,2023-05-01,servicios,356,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+357,15.0,16812.85,699.42,222.0,187.0,móvil,41.0,2023-05-01,salud,357,Las  instalaciones están limpias y el personal explica los procedimientos de forma básica
+358,84.0,18628.08,1497.91,7.0,39.0,móvil,17.0,2023-02-11,hogar,358,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+359,86.0,10237.41,466.33,361.0,41.0,marketplace,24.0,2023-12-07,alimentos,359,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+360,55.0,10328.16,475.97,146.0,213.0,tienda física,10.0,2024-09-15,alimentos,360,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+361,24.0,12640.51,145.52,290.0,139.0,call center,50.0,2024-03-30,ropa,361,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+362,83.0,14460.47,926.08,188.0,76.0,móvil,40.0,2024-07-14,salud,362,Las  instalaciones están limpias y el personal explica los procedimientos de forma básica
+363,3.0,15352.01,,151.0,185.0,tienda física,26.0,2025-07-06,servicios,363,El  servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+364,76.0,13128.47,881.63,120.0,149.0,web,45.0,2025-09-14,hogar,364,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+365,19.0,16257.72,489.64,93.0,15.0,web,,2023-06-17,ropa,365,La  prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+366,18.0,14206.2,688.4,109.0,33.0,web,40.0,2025-09-09,alimentos,366,El producto alimenticio viene bien empacado yyy cumple con lo básico para el consumo diario
+367,66.0,951.16,184.26,274.0,224.0,web,14.0,2025-03-13,servicios,367,La  experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+368,41.0,7312.58,535.01,225.0,14.0,tienda física,4.0,2023-05-16,educacion,368,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+369,93.0,1905.59,265.5,291.0,48.0,web,22.0,2024-11-23,hogar,369,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+370,85.0,4194.35,1168.56,254.0,149.0,tienda física,3.0,2023-12-15,educacion,370,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+371,94.0,18836.68,380.83,286.0,59.0,web,41.0,2024-02-16,servicios,371,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+372,50.0,7603.36,1227.25,235.0,,web,22.0,2024-11-03,electronica,372,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+373,95.0,13958.29,805.11,152.0,51.0,call center,35.0,2023-07-19,ropa,373,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+374,92.0,17126.48,404.23,118.0,201.0,call center,26.0,2024-07-27,alimentos,374,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+375,1.0,10603.09,603.08,96.0,22.0,tienda física,5.0,2024-04-05,alimentos,375,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+376,92.0,7264.55,29.15,72.0,142.0,móvil,47.0,2025-04-18,alimentos,376,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+377,47.0,18024.55,1078.67,250.0,75.0,call center,43.0,2024-08-28,educacion,377,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+378,87.0,5896.37,1496.4,141.0,95.0,móvil,10.0,2023-11-19,alimentos,378,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+379,67.0,15343.2,,209.0,72.0,call center,12.0,2023-05-22,educacion,379,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+380,91.0,6931.85,1395.13,246.0,127.0,tienda física,35.0,2023-01-15,alimentos,380,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+381,70.0,6057.82,779.21,311.0,143.0,tienda física,29.0,2023-02-09,electronica,381,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+382,,7520.36,1045.69,144.0,17.0,call center,14.0,2023-12-01,ropa,382,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+383,28.0,2125.57,1115.31,363.0,49.0,tienda física,3.0,2024-05-16,alimentos,383,El  producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+384,13.0,11511.51,393.15,244.0,211.0,móvil,3.0,,educacion,384,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+385,89.0,5320.31,1190.56,77.0,223.0,call center,8.0,2024-03-25,educacion,385,La  metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+386,41.0,4416.08,994.93,152.0,68.0,tienda física,49.0,2023-11-21,hogar,386,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+387,32.0,2980.72,740.66,294.0,222.0,web,48.0,2023-06-13,alimentos,387,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+388,53.0,18275.91,309.7,50.0,178.0,tienda física,44.0,2024-03-30,electronica,388,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+389,14.0,12048.18,1320.13,132.0,15.0,web,32.0,2024-06-25,alimentos,389,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+390,29.0,13185.07,1245.94,220.0,194.0,móvil,14.0,2025-11-20,hogar,390,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+391,34.0,7102.91,911.43,331.0,44.0,móvil,18.0,2023-02-12,hogar,391,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales ..
+392,20.0,2027.13,508.78,155.0,218.0,marketplace,33.0,2025-08-07,ropa,392,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+393,59.0,15550.45,1492.74,117.0,83.0,marketplace,7.0,,electronica,393,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+394,40.0,5045.45,628.07,208.0,194.0,call center,20.0,2025-06-23,alimentos,394,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+395,64.0,10360.56,779.01,273.0,196.0,web,26.0,2025-04-25,alimentos,395,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+396,11.0,8280.51,1091.58,336.0,20.0,marketplace,13.0,,hogar,396,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+397,42.0,19014.79,177.19,346.0,138.0,marketplace,11.0,2024-03-25,servicios,397,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+398,5.0,13389.4,1214.55,237.0,80.0,web,25.0,2024-02-12,hogar,398,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+399,100.0,16879.56,1439.18,183.0,60.0,marketplace,26.0,2024-09-30,educacion,399,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+400,59.0,11934.72,79.66,342.0,218.0,call center,30.0,2024-07-02,educacion,400,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+401,89.0,,480.24,23.0,60.0,marketplace,40.0,2023-12-29,ropa,401,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco ..
+402,54.0,18531.47,1009.68,83.0,49.0,web,37.0,2024-08-12,educacion,402,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+403,48.0,11376.44,862.5,249.0,200.0,tienda física,29.0,2025-08-11,electronica,403,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+404,47.0,3797.23,897.97,52.0,199.0,tienda física,31.0,2025-10-09,ropa,404,El diseño es atractivo yyy el color coincide con lo esperado después de varios usos
+405,79.0,16740.68,822.83,301.0,,call center,27.0,2025-05-14,salud,405,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+406,84.0,17768.19,1026.79,268.0,88.0,móvil,32.0,,alimentos,406,El  producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+407,31.0,5598.96,826.15,305.0,124.0,call center,36.0,2024-01-15,servicios,407,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+408,79.0,3952.35,1045.06,319.0,,marketplace,19.0,2025-03-19,hogar,408,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+409,4.0,4544.46,,214.0,10.0,móvil,18.0,2024-04-07,educacion,409,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+410,69.0,3819.62,1347.0,203.0,1.0,web,26.0,2024-09-30,electronica,410,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+411,5.0,15777.33,517.78,238.0,182.0,web,17.0,2023-02-17,educacion,411,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+412,55.0,14208.81,1256.89,260.0,22.0,web,23.0,2024-08-29,alimentos,412,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+413,nanabc,7729.67,961.28,140.0,92.0,tienda física,38.0,2025-02-02,electronica,413,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+414,96.0,5090.18,669.84,234.0,,tienda física,44.0,2023-09-05,alimentos,414,El producto alimenticio viene bien empacado yyy cumple con lo básico para el consumo diario
+415,82.0,19322.64,615.88,281.0,103.0,marketplace,31.0,2023-05-21,educacion,415,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+416,75.0,1828.19,516.29,0.0,168.0,call center,35.0,2023-12-25,alimentos,416,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+417,99.0,3837.78,323.44,323.0,170.0,web,23.0,2025-06-26,alimentos,417,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+418,84.0,12022.59,284.93,94.0,117.0,call center,33.0,2025-05-08,alimentos,418,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+419,91.0,19691.2,926.07,74.0,6.0,call center,48.0,2025-04-25,educacion,419,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido ..
+420,89.0,7219.05,1102.95,330.0,178.0,call center,34.0,2023-03-03,servicios,420,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+421,41.0,18294.53,606.34,59.0,199.0,tienda física,13.0,2025-07-15,educacion,421,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+422,4.0,3900.8,1205.32,22.0,2.0,call center,5.0,2023-06-10,hogar,422,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+423,97.0,727.61,289.76,338.0,128.0,tienda física,49.0,2023-02-05,hogar,423,El artículo para el hogar es funcional y fácil de usar aunq los materiales se sienten normales
+424,17.0,7019.66,1128.62,200.0,134.0,call center,49.0,2024-08-04,alimentos,424,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+425,61.0,5513.28,512.22,249.0,195.0,call center,33.0,2025-09-27,alimentos,425,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+426,30.0,17342.78,313.03,258.0,30.0,móvil,26.0,2025-03-23,salud,426,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+427,94.0,5052.12,914.89,327.0,36.0,móvil,12.0,2024-11-18,servicios,427,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+428,12.0,15030.93,1447.45,221.0,184.0,marketplace,45.0,2025-06-22,educacion,428,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+429,10.0,15593.04,189.5,253.0,237.0,tienda física,46.0,2024-11-17,ropa,429,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+430,78.0,489.74,605.19,44.0,239.0,web,19.0,2024-03-30,alimentos,430,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+431,2.0,3313.49,933.97,82.0,198.0,web,8.0,2023-11-19,salud,431,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+432,42.0,9818.18,1343.62,93.0,,marketplace,42.0,2025-07-20,ropa,432,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+433,74.0,,1232.64,232.0,175.0,tienda física,42.0,2023-07-17,servicios,433,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+434,37.0,7317.89,277.48,348.0,,marketplace,17.0,,electronica,434,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas ..
+435,45.0,4781.13,1224.1,143.0,152.0,marketplace,40.0,2024-09-04,electronica,435,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+436,34.0,12043.62,15.79,230.0,13.0,móvil,22.0,2023-03-23,servicios,436,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+437,88.0,17136.83,483.89,120.0,135.0,marketplace,18.0,2023-01-30,hogar,437,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+438,68.0,1358.65,1092.96,353.0,86.0,web,40.0,2023-06-18,alimentos,438,El producto alimenticio viene muuy empacado y cumple con lo básico para el consumo diario
+439,45.0,8383.49,675.5,261.0,191.0,marketplace,49.0,2023-06-21,alimentos,439,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+440,99.0,4525.95,489.2,165.0,185.0,web,27.0,2025-11-22,hogar,440,El  artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+441,33.0,13433.86,235.47,103.0,58.0,web,48.0,2025-07-25,ropa,441,El diseño es atractivo yyy el color coincide con lo esperado después de varios usos
+442,54.0,17438.8,895.18,246.0,138.0,web,17.0,2024-10-31,educacion,442,La  metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+443,89.0,3132.45,,103.0,30.0,móvil,45.0,2023-11-13,alimentos,443,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+444,54.0,10748.76,904.8,32.0,50.0,call center,24.0,2024-04-02,servicios,444,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+445,40.0,11356.4,296.47,142.0,228.0,call center,29.0,2023-08-29,servicios,445,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+446,11.0,1354.64,35.99,21.0,2.0,web,40.0,2024-07-15,hogar,446,Cumple  su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+447,38.0,16934.31,1182.11,42.0,57.0,tienda física,28.0,2023-01-25,hogar,447,Cumple  su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+448,89.0,6711.21,243.59,47.0,73.0,marketplace,,2025-01-18,hogar,448,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+449,21.0,7905.91,1280.72,260.0,60.0,web,28.0,2024-03-10,servicios,449,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+450,23.0,18108.19,654.14,159.0,51.0,tienda física,21.0,2025-09-15,electronica,450,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+451,43.0,2578.26,1031.68,315.0,206.0,móvil,22.0,2024-01-18,servicios,451,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+452,26.0,13462.71,183.89,147.0,99.0,call center,1.0,2024-02-13,alimentos,452,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+453,7.0,15325.18,1123.62,74.0,160.0,web,28.0,2025-01-12,electronica,453,Este producto electrónico ofrece un rendimiento estable aunq la batería podría mejorar con el uso diario
+454,87.0,15652.35,1485.26,316.0,4.0,marketplace,17.0,2023-10-19,electronica,454,La  interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+455,82.0,12293.94,557.18,31.0,161.0,marketplace,17.0,2023-05-22,alimentos,455,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+456,33.0,18474.16,454.21,100.0,84.0,web,22.0,2024-09-25,hogar,456,El  artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+457,34.0,11239.41,494.16,247.0,129.0,web,38.0,2023-05-14,ropa,457,El  diseño es atractivo y el color coincide con lo esperado después de varios usos
+458,71.0,3097.34,283.47,299.0,61.0,tienda física,30.0,2024-02-02,hogar,458,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+459,41.0,4650.13,489.42,147.0,63.0,marketplace,33.0,2025-09-27,salud,459,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+460,24.0,9227.49,1230.74,290.0,234.0,call center,28.0,2025-06-28,servicios,460,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+461,30.0,17827.29,834.51,255.0,138.0,web,1.0,2023-11-10,salud,461,La  atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+462,65.0,1618.75,254.37,320.0,195.0,web,26.0,2023-12-14,electronica,462,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+463,41.0,8480.18,,352.0,172.0,marketplace,15.0,,servicios,463,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+464,6.0,9433.11,580.15,15.0,184.0,marketplace,37.0,2025-08-11,ropa,464,La prenda es cómoda y la tela se siente agradable aunq la talla puede variar un poco
+465,24.0,7134.97,1178.76,124.0,124.0,call center,2.0,2024-06-12,electronica,465,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+466,81.0,19066.66,588.9,90.0,91.0,tienda física,35.0,2024-02-02,alimentos,466,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+467,71.0,12239.43,,20.0,215.0,call center,36.0,,ropa,467,La prenda es cómoda y la tela se siente agradable aunq la talla puede variar un poco
+468,66.0,7132.08,919.62,198.0,60.0,móvil,43.0,2025-01-23,salud,468,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+469,3.0,12856.97,1377.06,336.0,64.0,tienda física,29.0,2023-01-15,educacion,469,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+470,47.0,110.54,993.4,246.0,227.0,marketplace,42.0,2024-07-30,educacion,470,El contenido educativo es comprensible y bien estructurado aunq el ritmo es algo rápido
+471,14.0,17915.84,932.91,197.0,10.0,móvil,25.0,2025-08-22,electronica,471,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+472,79.0,5220.11,81.02,9.0,55.0,móvil,6.0,2024-08-11,educacion,472,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+473,87.0,15195.5,1268.68,285.0,69.0,tienda física,9.0,2025-09-20,ropa,473,La  prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+474,64.0,4271.18,418.33,341.0,238.0,tienda física,41.0,2025-04-03,ropa,474,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+475,23.0,12868.35,1016.89,83.0,73.0,tienda física,32.0,2025-09-27,ropa,475,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+476,29.0,1974.31,1314.72,49.0,138.0,web,8.0,2023-11-07,hogar,476,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales ..
+477,62.0,8251.26,1398.19,168.0,,tienda física,27.0,2025-11-17,salud,477,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+478,60.0,15618.53,758.51,,44.0,marketplace,27.0,2024-07-23,alimentos,478,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+479,70.0,5508.75,945.81,276.0,111.0,call center,33.0,2023-06-12,ropa,479,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+480,14.0,3669.21,46.52,302.0,201.0,call center,35.0,2024-02-21,ropa,480,El diseño es atractivo yyy el color coincide con lo esperado después de varios usos
+481,91.0,3336.19,424.47,270.0,64.0,tienda física,6.0,2023-05-23,servicios,481,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+482,13.0,18717.3,357.35,102.0,232.0,marketplace,27.0,2024-05-15,salud,482,Las instalaciones están limpias yyy el personal explica los procedimientos de forma básica
+483,85.0,4661.44,175.11,322.0,156.0,móvil,37.0,2025-08-14,alimentos,483,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+484,80.0,11289.67,542.05,52.0,59.0,call center,18.0,2023-08-24,educacion,484,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+485,73.0,5876.74,1303.51,129.0,58.0,tienda física,,2024-02-12,educacion,485,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+486,99.0,10692.01,924.01,293.0,9.0,móvil,30.0,2023-10-24,educacion,486,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+487,35.0,2279.68,134.48,176.0,,tienda física,15.0,2023-07-02,electronica,487,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+488,54.0,13858.32,740.52,106.0,92.0,web,28.0,2024-12-29,alimentos,488,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario ..
+489,65.0,17431.93,344.7,298.0,84.0,call center,28.0,2025-04-23,salud,489,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+490,74.0,10392.81,1187.78,181.0,172.0,web,17.0,2024-08-01,salud,490,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+491,12.0,7685.84,466.88,170.0,104.0,marketplace,41.0,2023-04-22,electronica,491,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+492,14.0,13095.46,419.4,259.0,88.0,web,47.0,2023-03-07,servicios,492,La  experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+493,0.0,18257.44,577.11,174.0,195.0,call center,18.0,2023-04-02,servicios,493,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+494,72.0,8844.89,190.6,177.0,74.0,web,48.0,2023-07-09,educacion,494,El contenido educativo es comprensible yyy bien estructurado aunque el ritmo es algo rápido
+495,47.0,9910.88,446.38,365.0,102.0,tienda física,38.0,2023-05-16,hogar,495,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+496,81.0,11801.3,1304.24,2.0,30.0,call center,38.0,2023-09-14,servicios,496,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+497,60.0,15885.75,1008.64,202.0,,marketplace,30.0,2025-06-17,alimentos,497,El producto alimenticio viene muuy empacado y cumple con lo básico para el consumo diario
+498,9.0,18916.5,751.49,14.0,238.0,tienda física,3.0,,educacion,498,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+499,81.0,19516.14,161.48,145.0,109.0,call center,23.0,2024-10-14,alimentos,499,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario ..
+500,86.0,14412.38,953.82,24.0,203.0,web,14.0,2025-08-02,educacion,500,El contenido educativo es comprensible yyy bien estructurado aunque el ritmo es algo rápido
+501,30.0,12045.16,766.76,47.0,59.0,marketplace,13.0,2024-03-30,electronica,501,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+502,5.0,19458.99,,75.0,179.0,web,30.0,2025-12-06,salud,502,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+503,35.0,591.13,1216.23,19.0,66.0,marketplace,20.0,2025-08-21,educacion,503,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+504,58.0,14876.17,139.83,100.0,4.0,tienda física,31.0,2024-09-24,electronica,504,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+505,95.0,15956.15,416.09,121.0,32.0,marketplace,19.0,2024-05-04,electronica,505,Este producto electrónico ofrece un rendimiento estable aunq la batería podría mejorar con el uso diario
+506,13.0,5471.86,1051.89,341.0,179.0,tienda física,19.0,2025-08-08,servicios,506,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+507,64.0,17840.47,413.43,307.0,201.0,marketplace,46.0,2024-12-13,educacion,507,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+508,99.0,8926.67,1018.1,243.0,84.0,móvil,1.0,2025-09-07,electronica,508,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+509,42.0,9155.77,656.96,309.0,193.0,call center,27.0,2024-04-02,alimentos,509,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura ..
+510,72.0,14625.57,463.82,42.0,233.0,móvil,24.0,2025-09-30,servicios,510,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+511,35.0,16408.71,163.12,337.0,183.0,web,36.0,2024-06-19,electronica,511,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario ..
+512,85.0,19486.7,81.49,,103.0,tienda física,37.0,2023-03-08,salud,512,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+513,39.0,Error,1151.46,253.0,41.0,call center,17.0,2023-09-14,alimentos,513,El producto alimenticio viene bien empacado yyy cumple con lo básico para el consumo diario
+514,79.0,2133.67,415.8,322.0,180.0,móvil,35.0,2025-07-28,ropa,514,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+515,76.0,5603.54,665.08,130.0,4.0,marketplace,36.0,2024-09-18,electronica,515,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+516,58.0,3908.17,1293.32,291.0,199.0,call center,32.0,2025-05-10,electronica,516,Este producto electrónico ofrece un rendimiento estable aunq la batería podría mejorar con el uso diario
+517,55.0,19713.17,421.91,8.0,103.0,web,44.0,2024-09-16,hogar,517,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+518,46.0,3372.81,468.38,171.0,216.0,marketplace,42.0,2024-09-29,electronica,518,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+519,42.0,nanabc,1291.3,200.0,27.0,marketplace,48.0,2024-01-15,alimentos,519,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+520,28.0,1521.87,1077.08,223.0,61.0,call center,42.0,2024-07-10,alimentos,520,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+521,44.0,8436.83,1466.36,48.0,146.0,marketplace,2.0,2024-03-10,electronica,521,Este  producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+522,70.0,15407.83,476.74,237.0,143.0,móvil,20.0,2025-10-05,ropa,522,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+523,69.0,13726.95,883.05,38.0,57.0,tienda física,4.0,2025-07-16,educacion,523,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+524,70.0,10402.58,1124.69,183.0,212.0,marketplace,22.0,2024-03-29,servicios,524,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+525,20.0,Error,,331.0,41.0,web,22.0,2024-10-28,salud,525,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo ..
+526,36.0,16775.35,981.17,304.0,3.0,tienda física,37.0,2025-01-06,electronica,526,La  interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+527,14.0,9990.24,1445.12,208.0,135.0,web,26.0,2024-03-29,servicios,527,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+528,14.0,19292.6,332.46,272.0,148.0,tienda física,11.0,2023-06-28,educacion,528,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+529,6.0,3126.11,1314.62,174.0,42.0,call center,48.0,2025-12-03,electronica,529,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+530,17.0,15324.23,552.91,195.0,6.0,tienda física,39.0,2024-11-25,salud,530,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+531,70.0,16948.92,277.83,5.0,3.0,móvil,28.0,2024-01-23,salud,531,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+532,63.0,,967.71,,97.0,tienda física,50.0,2025-04-09,salud,532,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+533,10.0,Error,962.7,261.0,109.0,web,10.0,2025-10-26,electronica,533,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+534,45.0,15957.86,1403.76,248.0,132.0,móvil,28.0,2023-09-09,electronica,534,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+535,77.0,11730.27,1224.91,246.0,60.0,call center,,2025-08-01,educacion,535,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+536,8.0,19606.33,357.5,71.0,57.0,tienda física,46.0,2023-10-08,salud,536,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+537,9.0,5158.58,153.19,147.0,192.0,web,19.0,2025-05-08,salud,537,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+538,91.0,3481.06,1030.75,116.0,16.0,web,39.0,2023-06-02,alimentos,538,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+539,79.0,10024.76,925.41,272.0,,web,33.0,2024-09-02,servicios,539,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+540,28.0,14101.44,286.91,298.0,110.0,marketplace,25.0,2023-02-01,electronica,540,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+541,57.0,8635.62,1329.53,167.0,134.0,call center,45.0,2024-03-20,educacion,541,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+542,100.0,12099.27,618.76,120.0,95.0,tienda física,45.0,2024-04-08,electronica,542,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+543,93.0,16028.96,727.04,228.0,75.0,web,22.0,2025-04-25,ropa,543,El  diseño es atractivo y el color coincide con lo esperado después de varios usos
+544,69.0,3209.45,1020.71,331.0,70.0,tienda física,9.0,2023-10-30,electronica,544,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+545,82.0,17862.12,418.75,280.0,232.0,web,30.0,2025-08-02,servicios,545,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+546,56.0,16008.34,625.98,133.0,201.0,marketplace,2.0,2024-10-17,alimentos,546,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+547,73.0,nanabc,933.43,179.0,138.0,móvil,39.0,2023-01-03,alimentos,547,El producto alimenticio viene muuy empacado y cumple con lo básico para el consumo diario
+548,65.0,4475.21,,15.0,125.0,móvil,26.0,2024-01-15,alimentos,548,El  producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+549,4.0,1468.89,142.51,26.0,46.0,web,36.0,2024-03-12,ropa,549,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+550,55.0,6599.52,173.78,358.0,146.0,marketplace,45.0,2024-04-06,servicios,550,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+551,34.0,14036.18,941.49,360.0,164.0,web,5.0,2024-03-10,salud,551,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+552,42.0,1979.85,1124.52,306.0,169.0,tienda física,49.0,2024-04-14,alimentos,552,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+553,40.0,14574.57,63.83,210.0,75.0,marketplace,27.0,,salud,553,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+554,66.0,17077.06,973.77,226.0,19.0,web,8.0,2025-11-05,alimentos,554,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+555,91.0,5329.07,1251.89,150.0,91.0,call center,28.0,2025-10-10,educacion,555,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+556,98.0,14041.02,919.54,255.0,135.0,móvil,4.0,2023-05-25,ropa,556,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+557,76.0,2416.81,1115.68,209.0,180.0,móvil,5.0,2023-06-08,servicios,557,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+558,61.0,19915.63,46.79,123.0,89.0,call center,10.0,2024-08-21,alimentos,558,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario ..
+559,28.0,1445.13,925.18,217.0,191.0,marketplace,25.0,2025-05-10,hogar,559,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+560,20.0,19634.81,319.98,191.0,28.0,tienda física,17.0,2023-01-13,ropa,560,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco ..
+561,8.0,8294.52,1367.66,155.0,42.0,marketplace,18.0,2024-10-27,educacion,561,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+562,,1378.36,1331.23,3.0,132.0,marketplace,,2023-02-14,electronica,562,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+563,100.0,18587.22,1085.33,200.0,25.0,tienda física,31.0,2025-09-09,salud,563,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+564,19.0,574.4,1059.94,209.0,157.0,marketplace,6.0,2025-02-15,educacion,564,El contenido educativo es comprensible y bien estructurado aunq el ritmo es algo rápido
+565,89.0,nanabc,1228.2,278.0,104.0,marketplace,34.0,2025-08-05,salud,565,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+566,82.0,890.01,959.81,354.0,7.0,móvil,32.0,2023-03-06,electronica,566,Este producto electrónico ofrece un rendimiento estable aunq la batería podría mejorar con el uso diario
+567,34.0,1823.12,1167.05,309.0,53.0,marketplace,21.0,2025-06-05,electronica,567,La  interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+568,12.0,5568.13,795.68,220.0,91.0,web,50.0,,educacion,568,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+569,54.0,428.43,63.12,134.0,193.0,marketplace,36.0,2024-03-28,hogar,569,Cumple su función en casa yyy ayuda a mantener el espacio organizado sin complicaciones
+570,31.0,14225.64,90.33,26.0,116.0,web,35.0,2023-08-10,salud,570,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+571,90.0,4860.51,808.84,330.0,138.0,móvil,35.0,2023-10-27,educacion,571,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+572,89.0,4744.07,1404.83,355.0,24.0,web,21.0,,servicios,572,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+573,16.0,8676.95,265.13,132.0,195.0,tienda física,34.0,2023-02-27,salud,573,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+574,66.0,12497.66,809.76,36.0,98.0,web,20.0,2025-08-04,alimentos,574,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+575,65.0,32.4,1151.92,216.0,90.0,móvil,21.0,2025-02-09,salud,575,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+576,92.0,7920.28,1399.63,271.0,116.0,web,16.0,2024-01-12,hogar,576,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+577,53.0,4557.76,856.08,131.0,45.0,call center,13.0,2025-09-25,alimentos,577,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+578,39.0,12909.15,901.71,285.0,36.0,móvil,32.0,2023-01-26,electronica,578,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+579,21.0,10262.46,,58.0,29.0,web,30.0,,hogar,579,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+580,24.0,16141.11,78.48,131.0,29.0,web,19.0,2025-08-01,salud,580,Las instalaciones están limpias y el personal explica los procedimientos de forma básica ..
+581,58.0,2511.54,502.97,53.0,118.0,tienda física,46.0,2023-12-05,educacion,581,El contenido educativo es comprensible yyy bien estructurado aunque el ritmo es algo rápido
+582,0.0,8076.3,575.15,345.0,11.0,call center,46.0,2024-05-13,servicios,582,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+583,72.0,10010.57,1007.78,241.0,49.0,marketplace,38.0,2024-06-29,educacion,583,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+584,32.0,15508.84,709.2,8.0,157.0,web,35.0,2025-11-07,alimentos,584,El  producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+585,26.0,17289.4,1365.17,262.0,199.0,marketplace,39.0,2024-05-09,servicios,585,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+586,71.0,9998.0,1461.22,49.0,208.0,tienda física,15.0,2024-07-04,hogar,586,Cumple su función en casa yyy ayuda a mantener el espacio organizado sin complicaciones
+587,80.0,7579.69,1251.29,68.0,121.0,call center,24.0,2025-11-28,electronica,587,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+588,94.0,13760.79,232.76,52.0,219.0,web,7.0,2023-03-08,electronica,588,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+589,77.0,4565.57,280.28,278.0,49.0,móvil,16.0,2024-10-08,electronica,589,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+590,5.0,3401.59,1465.5,271.0,205.0,web,38.0,2023-07-06,electronica,590,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+591,95.0,19493.2,889.5,70.0,205.0,call center,30.0,2025-10-22,ropa,591,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+592,2.0,6588.2,1278.83,321.0,229.0,web,27.0,,salud,592,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+593,55.0,17207.86,98.64,322.0,53.0,call center,3.0,2023-11-16,ropa,593,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+594,75.0,7876.02,1356.86,29.0,58.0,móvil,21.0,2023-07-01,servicios,594,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+595,50.0,5070.87,458.67,358.0,14.0,tienda física,9.0,2025-03-03,educacion,595,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido ..
+596,9.0,14045.68,638.12,150.0,97.0,tienda física,17.0,2023-02-14,ropa,596,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+597,42.0,17221.59,610.71,187.0,105.0,móvil,3.0,2025-05-08,educacion,597,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+598,75.0,2191.3,272.68,62.0,141.0,web,23.0,2024-08-14,ropa,598,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+599,96.0,787.18,1372.41,120.0,58.0,tienda física,29.0,2025-01-25,ropa,599,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+600,40.0,19019.14,143.14,215.0,217.0,tienda física,8.0,2024-04-12,salud,600,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+601,80.0,16879.6,664.19,207.0,156.0,tienda física,19.0,2023-08-20,ropa,601,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+602,19.0,16565.24,199.31,3.0,80.0,call center,19.0,2025-01-12,electronica,602,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+603,20.0,5395.04,213.97,125.0,223.0,móvil,24.0,2025-02-02,servicios,603,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+604,40.0,1049.98,12.69,4.0,169.0,marketplace,6.0,,servicios,604,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+605,16.0,8005.74,1335.49,161.0,108.0,móvil,2.0,2024-06-03,educacion,605,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+606,86.0,6210.73,612.04,273.0,58.0,marketplace,47.0,2023-09-12,alimentos,606,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+607,63.0,13768.19,875.05,80.0,51.0,marketplace,,2025-03-16,educacion,607,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+608,29.0,4173.23,1378.67,213.0,201.0,móvil,34.0,2023-03-10,salud,608,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+609,15.0,3606.88,1091.07,114.0,63.0,marketplace,15.0,2024-09-22,educacion,609,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+610,10.0,14213.47,1349.78,286.0,148.0,tienda física,39.0,,educacion,610,El  contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+611,12.0,16757.48,850.14,241.0,57.0,web,12.0,2024-05-09,hogar,611,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+612,22.0,9398.73,751.95,3.0,27.0,móvil,47.0,2024-04-24,hogar,612,Cumple su función en casa yyy ayuda a mantener el espacio organizado sin complicaciones
+613,50.0,9162.99,1330.5,158.0,192.0,móvil,24.0,2024-04-20,electronica,613,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+614,37.0,2991.96,1409.68,267.0,5.0,móvil,32.0,2023-11-08,alimentos,614,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+615,93.0,1716.84,107.11,109.0,187.0,web,11.0,2023-06-11,salud,615,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+616,,10535.57,22.06,38.0,147.0,call center,26.0,,educacion,616,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido ..
+617,5.0,15113.69,1271.1,140.0,225.0,marketplace,15.0,2025-02-07,salud,617,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+618,98.0,548.81,1170.85,346.0,15.0,call center,6.0,2023-06-12,electronica,618,Este producto electrónico ofrece un rendimiento estable aunq la batería podría mejorar con el uso diario
+619,5.0,9328.62,414.53,342.0,,call center,18.0,2025-07-20,hogar,619,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+620,53.0,15003.4,555.23,101.0,124.0,web,45.0,2023-02-28,educacion,620,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+621,46.0,10292.65,239.68,119.0,117.0,web,46.0,2025-05-22,educacion,621,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido ..
+622,82.0,1942.95,1061.92,163.0,145.0,call center,7.0,2023-11-25,salud,622,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+623,97.0,10967.8,1400.9,115.0,134.0,web,41.0,2025-09-15,educacion,623,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+624,11.0,6513.44,788.65,200.0,104.0,tienda física,40.0,2023-05-27,electronica,624,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+625,77.0,6814.48,637.42,177.0,207.0,marketplace,11.0,2023-03-22,educacion,625,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+626,44.0,19972.48,1060.69,100.0,177.0,call center,25.0,2023-01-29,ropa,626,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+627,92.0,6102.55,1426.67,110.0,203.0,marketplace,40.0,2024-04-29,educacion,627,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+628,39.0,11489.82,630.4,139.0,118.0,call center,21.0,2024-03-07,educacion,628,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+629,32.0,11366.88,721.9,282.0,123.0,web,50.0,2025-11-27,servicios,629,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+630,1.0,4586.22,101.33,184.0,128.0,web,10.0,2025-12-01,salud,630,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+631,78.0,,1104.93,241.0,114.0,móvil,34.0,2023-08-22,electronica,631,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+632,12.0,14084.3,898.41,198.0,122.0,móvil,44.0,2023-09-22,servicios,632,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+633,96.0,19494.13,1301.24,112.0,60.0,call center,19.0,2023-04-16,electronica,633,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+634,74.0,15540.39,779.06,118.0,186.0,web,6.0,2023-09-20,hogar,634,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+635,58.0,12301.73,1054.77,303.0,61.0,marketplace,18.0,2025-03-21,hogar,635,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+636,76.0,14960.34,103.65,69.0,19.0,web,20.0,2024-06-27,ropa,636,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+637,65.0,7098.07,446.14,299.0,47.0,marketplace,32.0,2025-05-16,hogar,637,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+638,,16998.01,731.02,244.0,97.0,call center,28.0,2023-10-29,alimentos,638,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+639,nanabc,15895.58,1340.51,157.0,175.0,móvil,8.0,2025-04-07,electronica,639,Este producto electrónico ofrece un rendimiento estable aunq la batería podría mejorar con el uso diario
+640,41.0,17912.9,1051.26,50.0,9.0,móvil,17.0,2024-04-11,servicios,640,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+641,7.0,17995.66,553.2,285.0,83.0,call center,42.0,2025-06-02,servicios,641,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+642,68.0,9147.99,382.43,230.0,79.0,web,32.0,2025-11-26,educacion,642,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+643,50.0,13559.11,778.76,,43.0,marketplace,2.0,2024-02-12,alimentos,643,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario ..
+644,38.0,11620.33,1468.17,348.0,76.0,web,44.0,2023-09-22,alimentos,644,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+645,11.0,19463.77,1256.83,125.0,145.0,marketplace,44.0,2025-11-20,electronica,645,La interfaz es intuitiva yyy el dispositivo responde bien en tareas comunes yyy prolongadas
+646,68.0,6985.49,958.11,266.0,107.0,tienda física,47.0,2024-11-28,alimentos,646,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura ..
+647,70.0,Error,548.47,144.0,97.0,web,19.0,2024-06-30,salud,647,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+648,42.0,Error,865.6,91.0,10.0,call center,10.0,2023-05-18,ropa,648,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+649,89.0,19050.86,,43.0,28.0,móvil,2.0,2024-02-26,ropa,649,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+650,88.0,16938.74,1000.39,152.0,230.0,web,12.0,2023-04-02,ropa,650,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+651,62.0,13890.11,,46.0,29.0,web,18.0,2024-04-23,alimentos,651,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario ..
+652,18.0,5189.61,312.3,190.0,182.0,web,37.0,2024-12-08,electronica,652,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+653,99.0,3694.16,60.97,305.0,18.0,tienda física,24.0,2023-03-13,alimentos,653,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+654,80.0,12291.87,963.31,314.0,126.0,call center,36.0,2023-08-07,ropa,654,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+655,3.0,14949.0,1263.66,154.0,168.0,móvil,7.0,2024-09-24,educacion,655,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+656,67.0,Error,1154.89,307.0,107.0,call center,11.0,2025-02-01,salud,656,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo ..
+657,75.0,16996.4,504.55,138.0,99.0,call center,29.0,2025-10-16,educacion,657,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+658,78.0,13902.18,1417.25,235.0,83.0,móvil,47.0,2025-09-08,salud,658,La  atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+659,12.0,5231.76,526.87,265.0,139.0,web,29.0,2025-09-02,ropa,659,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+660,77.0,9684.82,1124.97,28.0,37.0,call center,42.0,2023-10-21,hogar,660,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+661,90.0,8975.28,1454.87,312.0,118.0,móvil,15.0,2025-03-03,ropa,661,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+662,34.0,14890.74,1495.31,358.0,,marketplace,22.0,2024-04-18,educacion,662,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+663,32.0,14096.98,1405.88,325.0,171.0,tienda física,28.0,2025-04-27,electronica,663,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+664,49.0,8924.11,1226.9,195.0,,marketplace,43.0,,salud,664,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+665,58.0,10810.54,123.27,201.0,13.0,call center,26.0,2025-05-17,alimentos,665,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+666,26.0,2178.64,454.07,221.0,36.0,tienda física,6.0,2024-10-07,educacion,666,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+667,71.0,19974.92,1038.1,172.0,146.0,marketplace,3.0,2023-05-03,educacion,667,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+668,11.0,3820.67,1140.94,163.0,124.0,móvil,50.0,2024-08-05,electronica,668,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+669,45.0,11869.72,909.4,110.0,76.0,call center,25.0,2024-11-01,electronica,669,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+670,14.0,18575.56,1012.37,154.0,99.0,marketplace,1.0,2023-09-30,ropa,670,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+671,0.0,11928.32,610.66,207.0,122.0,móvil,29.0,2023-09-28,hogar,671,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+672,94.0,8562.91,1332.96,139.0,172.0,móvil,21.0,2024-03-08,ropa,672,El  diseño es atractivo y el color coincide con lo esperado después de varios usos
+673,79.0,9008.7,,249.0,80.0,tienda física,43.0,2024-11-10,ropa,673,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+674,96.0,13988.04,364.55,350.0,112.0,web,31.0,2023-07-03,ropa,674,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+675,90.0,2936.98,507.85,109.0,176.0,tienda física,31.0,2025-07-07,salud,675,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+676,86.0,13293.41,547.84,77.0,,marketplace,20.0,2025-01-26,salud,676,La  atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+677,38.0,5161.03,403.95,225.0,51.0,móvil,32.0,2024-05-08,ropa,677,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+678,21.0,9926.54,745.3,53.0,214.0,marketplace,36.0,2023-05-19,electronica,678,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+679,60.0,8164.07,447.81,121.0,84.0,marketplace,37.0,2024-09-11,servicios,679,La  experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+680,34.0,17307.19,801.03,333.0,61.0,tienda física,17.0,,alimentos,680,El producto alimenticio viene bien empacado yyy cumple con lo básico para el consumo diario
+681,8.0,15656.32,601.88,213.0,36.0,marketplace,23.0,2024-06-07,educacion,681,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+682,40.0,10416.72,398.69,54.0,168.0,móvil,22.0,2023-10-22,alimentos,682,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+683,26.0,3146.15,1333.16,295.0,80.0,call center,38.0,2024-08-15,hogar,683,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+684,57.0,1127.05,716.42,344.0,,marketplace,37.0,2024-08-14,alimentos,684,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+685,46.0,18554.2,848.23,153.0,78.0,web,21.0,2023-08-02,salud,685,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+686,2.0,16473.63,292.33,150.0,81.0,tienda física,18.0,2023-09-04,ropa,686,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+687,64.0,19623.16,,77.0,149.0,web,48.0,2025-08-25,alimentos,687,El  producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+688,67.0,6206.84,1126.32,248.0,11.0,móvil,,2025-01-13,ropa,688,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco ..
+689,68.0,11905.27,705.73,144.0,140.0,móvil,33.0,2024-10-23,salud,689,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+690,81.0,14738.69,797.23,125.0,227.0,tienda física,39.0,2025-08-25,servicios,690,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+691,94.0,3041.6,965.31,132.0,227.0,tienda física,44.0,2023-02-15,hogar,691,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+692,21.0,4315.13,34.81,13.0,86.0,marketplace,19.0,2025-04-24,electronica,692,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+693,5.0,14793.4,1438.98,354.0,23.0,call center,48.0,2025-07-07,alimentos,693,El sabor es aceptable y la textura resulta agradable aunq esperaba mayor frescura
+694,47.0,84.64,1118.55,,153.0,call center,12.0,2025-03-18,servicios,694,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+695,95.0,8037.07,1082.85,204.0,,web,49.0,2024-03-20,ropa,695,El  diseño es atractivo y el color coincide con lo esperado después de varios usos
+696,44.0,18090.94,795.14,11.0,37.0,tienda física,32.0,2023-09-09,electronica,696,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+697,67.0,10522.23,,201.0,146.0,marketplace,3.0,2024-04-17,servicios,697,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+698,2.0,9091.49,1214.91,116.0,105.0,web,12.0,2023-02-24,ropa,698,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco ..
+699,18.0,810.89,697.93,235.0,214.0,móvil,33.0,2025-04-17,servicios,699,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+700,95.0,13686.38,1438.51,37.0,210.0,web,21.0,2023-08-12,educacion,700,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+701,18.0,10740.83,1237.17,132.0,198.0,móvil,42.0,2025-04-11,electronica,701,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+702,,19357.96,1445.41,64.0,229.0,call center,15.0,2024-05-15,educacion,702,El contenido educativo es comprensible y bien estructurado aunq el ritmo es algo rápido
+703,24.0,42.61,1457.67,202.0,187.0,web,36.0,2024-05-27,alimentos,703,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+704,38.0,9668.78,1361.6,86.0,130.0,call center,11.0,2024-12-03,servicios,704,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+705,9.0,10970.19,,267.0,105.0,marketplace,49.0,2024-11-03,hogar,705,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+706,70.0,879.43,62.41,192.0,238.0,tienda física,17.0,2024-12-31,alimentos,706,El  producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+707,43.0,12533.08,195.6,30.0,82.0,call center,,2024-05-03,servicios,707,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara ..
+708,22.0,7279.52,1457.74,68.0,80.0,web,21.0,2025-03-14,electronica,708,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+709,88.0,10941.39,659.43,42.0,33.0,tienda física,38.0,,alimentos,709,El  sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+710,28.0,15130.24,562.82,53.0,79.0,web,7.0,2024-06-12,ropa,710,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+711,87.0,12088.12,1381.75,130.0,197.0,marketplace,10.0,2025-08-25,electronica,711,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario ..
+712,36.0,18328.13,1329.4,54.0,42.0,móvil,43.0,2024-11-29,alimentos,712,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+713,32.0,14379.51,723.09,199.0,17.0,tienda física,38.0,2023-12-01,electronica,713,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+714,86.0,17354.18,981.25,214.0,204.0,tienda física,6.0,2023-10-31,hogar,714,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+715,40.0,9341.41,216.45,,106.0,marketplace,20.0,2025-02-08,hogar,715,Cumple su función en casa yyy ayuda a mantener el espacio organizado sin complicaciones
+716,15.0,2679.38,1069.8,20.0,215.0,marketplace,12.0,2024-08-08,salud,716,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+717,1.0,14798.02,778.86,,200.0,web,4.0,2025-08-08,alimentos,717,El producto alimenticio viene muuy empacado y cumple con lo básico para el consumo diario
+718,70.0,15443.33,746.53,31.0,162.0,web,47.0,2024-03-05,hogar,718,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+719,73.0,17872.51,817.99,127.0,172.0,tienda física,29.0,2024-11-05,hogar,719,El  artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+720,17.0,19987.11,,347.0,190.0,call center,10.0,2023-05-14,alimentos,720,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+721,71.0,3595.89,106.52,290.0,3.0,call center,26.0,2024-10-22,servicios,721,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+722,77.0,9611.94,830.99,281.0,126.0,móvil,42.0,2023-11-06,alimentos,722,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+723,24.0,10365.25,6.14,285.0,88.0,móvil,29.0,2025-05-25,salud,723,Las  instalaciones están limpias y el personal explica los procedimientos de forma básica
+724,85.0,14726.45,247.44,155.0,96.0,marketplace,36.0,2025-03-11,ropa,724,El diseño es atractivo yyy el color coincide con lo esperado después de varios usos
+725,54.0,10847.46,1237.67,78.0,54.0,tienda física,9.0,2024-12-23,electronica,725,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+726,80.0,14126.18,1433.92,349.0,153.0,web,20.0,2023-04-18,electronica,726,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+727,40.0,1527.0,289.18,,211.0,web,50.0,2025-05-22,ropa,727,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+728,57.0,nanabc,446.14,112.0,190.0,web,13.0,2024-01-16,salud,728,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+729,22.0,15222.09,1349.47,316.0,113.0,marketplace,6.0,2024-04-06,salud,729,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+730,99.0,12941.75,,206.0,89.0,web,41.0,2023-05-03,alimentos,730,El sabor es aceptable y la textura resulta agradable aunq esperaba mayor frescura
+731,28.0,13707.43,621.07,346.0,171.0,tienda física,27.0,2025-01-08,salud,731,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo ..
+732,32.0,18506.26,857.81,135.0,152.0,marketplace,14.0,2023-06-20,electronica,732,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+733,7.0,8569.33,713.09,363.0,177.0,call center,13.0,2025-01-23,electronica,733,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+734,92.0,19848.92,270.04,363.0,160.0,call center,27.0,2023-01-04,alimentos,734,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+735,44.0,9016.53,468.87,59.0,20.0,web,9.0,2024-11-06,electronica,735,La  interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+736,21.0,4445.63,756.57,208.0,207.0,call center,47.0,2025-08-25,salud,736,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+737,39.0,2057.06,189.83,66.0,222.0,marketplace,33.0,2025-10-14,ropa,737,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+738,83.0,5668.67,728.19,271.0,,call center,50.0,2024-04-27,alimentos,738,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+739,22.0,18419.38,1332.24,235.0,240.0,call center,32.0,2023-09-23,ropa,739,La prenda es cómoda yyy la tela se siente agradable aunque la talla puede variar un poco
+740,21.0,10822.85,909.66,11.0,73.0,tienda física,45.0,2025-11-05,salud,740,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+741,33.0,17742.46,1404.08,185.0,83.0,tienda física,34.0,2025-04-07,educacion,741,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+742,16.0,14162.93,914.5,170.0,72.0,web,40.0,2024-09-10,alimentos,742,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+743,70.0,3811.12,,40.0,226.0,tienda física,13.0,2025-05-25,alimentos,743,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+744,55.0,13070.78,211.5,67.0,85.0,call center,6.0,2023-10-08,salud,744,Las  instalaciones están limpias y el personal explica los procedimientos de forma básica
+745,46.0,11225.08,1454.06,186.0,,tienda física,43.0,2023-09-08,servicios,745,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+746,56.0,7477.48,,246.0,179.0,móvil,27.0,2024-02-13,ropa,746,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco ..
+747,5.0,8276.04,828.64,24.0,119.0,móvil,17.0,2023-04-24,ropa,747,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+748,31.0,1330.72,570.13,58.0,31.0,web,36.0,2023-04-25,hogar,748,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+749,88.0,4867.96,1308.06,294.0,83.0,marketplace,26.0,2023-08-24,educacion,749,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento ..
+750,97.0,12843.12,420.84,238.0,126.0,móvil,21.0,2025-01-23,educacion,750,El contenido educativo es comprensible yyy bien estructurado aunque el ritmo es algo rápido
+751,89.0,14452.14,292.67,293.0,201.0,web,3.0,2025-08-10,ropa,751,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+752,72.0,10005.6,899.97,251.0,209.0,móvil,7.0,2024-04-10,servicios,752,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+753,80.0,12073.29,9.41,209.0,190.0,web,19.0,2024-03-24,electronica,753,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+754,8.0,11752.99,574.84,353.0,110.0,call center,39.0,2023-04-09,ropa,754,El diseño es atractivo y el color coincide con lo esperado después de varios usos ..
+755,71.0,10740.96,459.05,282.0,116.0,tienda física,35.0,2025-02-22,servicios,755,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+756,Error,10607.5,1433.24,113.0,174.0,call center,32.0,2023-03-23,educacion,756,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+757,91.0,1453.99,886.05,350.0,111.0,marketplace,13.0,2025-01-17,salud,757,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo ..
+758,30.0,10610.94,1245.17,220.0,90.0,móvil,11.0,2023-04-01,alimentos,758,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura ..
+759,46.0,3631.91,61.98,24.0,24.0,móvil,1.0,2023-05-13,salud,759,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+760,98.0,10854.78,1295.28,232.0,240.0,web,3.0,2024-06-28,salud,760,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+761,55.0,17855.18,564.09,204.0,,móvil,9.0,2023-09-05,salud,761,Las instalaciones están limpias yyy el personal explica los procedimientos de forma básica
+762,28.0,654.58,619.04,306.0,62.0,marketplace,17.0,2024-12-29,electronica,762,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+763,66.0,6794.29,1012.86,295.0,114.0,tienda física,31.0,2023-11-14,educacion,763,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+764,12.0,12265.9,469.17,250.0,84.0,call center,16.0,2024-05-23,alimentos,764,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+765,70.0,12833.05,,19.0,223.0,móvil,12.0,2023-06-18,hogar,765,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+766,10.0,5141.07,1394.35,170.0,61.0,call center,31.0,2025-04-11,alimentos,766,El sabor es aceptable y la textura resulta agradable aunq esperaba mayor frescura
+767,59.0,8637.51,28.43,234.0,174.0,móvil,29.0,2023-11-05,educacion,767,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+768,6.0,3705.28,711.16,10.0,158.0,tienda física,22.0,2023-04-19,electronica,768,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+769,78.0,19024.2,962.51,278.0,172.0,web,9.0,2024-03-21,salud,769,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+770,69.0,16123.93,190.33,359.0,,call center,36.0,2025-03-27,electronica,770,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+771,40.0,19492.22,,73.0,7.0,call center,27.0,2024-06-26,ropa,771,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+772,83.0,9240.42,692.59,334.0,199.0,web,11.0,2024-07-22,alimentos,772,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+773,4.0,13863.55,1124.15,72.0,,marketplace,50.0,2023-10-24,ropa,773,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+774,6.0,11975.26,309.48,123.0,178.0,call center,14.0,2024-11-23,salud,774,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+775,9.0,5593.54,1052.8,168.0,179.0,tienda física,12.0,2023-09-16,electronica,775,Este  producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+776,45.0,11395.48,247.41,5.0,138.0,tienda física,29.0,2024-12-16,educacion,776,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+777,54.0,7135.78,9.65,28.0,94.0,marketplace,38.0,2025-02-19,electronica,777,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+778,52.0,8480.79,976.48,263.0,197.0,call center,42.0,2023-01-23,educacion,778,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+779,81.0,12080.82,821.57,347.0,21.0,call center,38.0,2023-03-07,hogar,779,El artículo para el hogar es funcional yyy fácil de usar aunque los materiales se sienten normales
+780,58.0,984.86,1222.1,,113.0,móvil,9.0,,educacion,780,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+781,48.0,4632.6,674.6,305.0,115.0,call center,49.0,2024-03-03,educacion,781,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+782,97.0,2652.64,125.96,200.0,187.0,móvil,46.0,2025-05-06,salud,782,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+783,57.0,13841.87,3.75,88.0,2.0,call center,15.0,2025-10-24,salud,783,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+784,72.0,9070.02,608.83,196.0,146.0,móvil,5.0,2025-07-12,electronica,784,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas ..
+785,57.0,1280.48,298.53,39.0,47.0,web,38.0,2025-06-11,hogar,785,Cumple su función en casa yyy ayuda a mantener el espacio organizado sin complicaciones
+786,94.0,18586.8,28.6,317.0,184.0,móvil,7.0,2025-07-07,electronica,786,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+787,20.0,3718.0,362.38,269.0,201.0,tienda física,28.0,2023-01-02,alimentos,787,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+788,31.0,18744.75,386.27,45.0,61.0,call center,42.0,2025-05-09,hogar,788,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+789,61.0,17779.42,,263.0,19.0,call center,43.0,2024-01-12,salud,789,Las  instalaciones están limpias y el personal explica los procedimientos de forma básica
+790,37.0,13751.86,1127.96,242.0,103.0,call center,23.0,2024-01-08,educacion,790,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+791,18.0,10879.6,890.73,43.0,92.0,marketplace,33.0,2023-01-03,salud,791,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+792,53.0,3494.34,344.27,311.0,153.0,call center,39.0,2025-01-25,alimentos,792,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+793,28.0,2583.04,341.5,231.0,,call center,20.0,2024-12-28,alimentos,793,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+794,17.0,18574.24,700.38,80.0,136.0,marketplace,25.0,2025-06-11,educacion,794,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+795,7.0,5312.42,136.83,8.0,202.0,web,5.0,2023-07-02,educacion,795,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+796,54.0,2151.68,67.1,279.0,,marketplace,41.0,2025-09-10,alimentos,796,El sabor es aceptable yyy la textura resulta agradable aunque esperaba mayor frescura
+797,52.0,1967.23,756.74,321.0,230.0,tienda física,49.0,2023-03-31,alimentos,797,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+798,95.0,16150.32,,240.0,34.0,móvil,2.0,2023-10-28,salud,798,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+799,41.0,4354.76,256.33,101.0,42.0,móvil,18.0,,servicios,799,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+800,99.0,2849.06,79.71,309.0,126.0,tienda física,34.0,2025-04-06,salud,800,Las instalaciones están limpias yyy el personal explica los procedimientos de forma básica
+801,36.0,5596.5,624.33,160.0,228.0,web,21.0,2024-01-03,hogar,801,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales ..
+802,66.0,13187.96,575.46,111.0,96.0,tienda física,46.0,2025-06-18,salud,802,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+803,24.0,11721.33,1011.55,93.0,112.0,call center,35.0,2023-10-08,hogar,803,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+804,60.0,4255.8,347.92,308.0,91.0,tienda física,38.0,2023-02-10,ropa,804,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+805,52.0,9824.62,1060.18,,92.0,marketplace,19.0,2023-09-24,hogar,805,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+806,22.0,13670.48,,196.0,115.0,call center,6.0,2025-06-08,salud,806,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+807,14.0,2842.71,353.58,20.0,49.0,call center,25.0,2025-01-08,educacion,807,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+808,43.0,3631.68,1228.41,322.0,142.0,móvil,28.0,2025-06-27,servicios,808,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+809,8.0,2483.26,859.57,182.0,180.0,web,7.0,2023-09-25,hogar,809,El  artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+810,73.0,17893.05,851.95,330.0,33.0,móvil,45.0,2023-05-25,ropa,810,La prenda es cómoda y la tela se siente agradable aunq la talla puede variar un poco
+811,0.0,5989.01,1211.57,1.0,57.0,tienda física,37.0,2023-11-04,ropa,811,La  prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+812,37.0,17250.79,661.97,73.0,103.0,call center,46.0,2024-12-23,servicios,812,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+813,33.0,15828.52,513.84,2.0,,web,8.0,2023-10-02,educacion,813,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+814,6.0,4587.31,294.73,112.0,3.0,marketplace,1.0,2023-08-14,salud,814,Las instalaciones están limpias yyy el personal explica los procedimientos de forma básica
+815,64.0,14289.37,799.58,127.0,188.0,móvil,41.0,2025-06-18,electronica,815,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+816,57.0,13384.53,698.95,324.0,123.0,marketplace,26.0,2024-12-15,alimentos,816,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+817,44.0,2704.05,1486.06,276.0,98.0,tienda física,4.0,2025-06-17,servicios,817,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+818,48.0,14626.49,1413.69,,195.0,call center,39.0,2024-09-10,educacion,818,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+819,40.0,2106.94,946.7,350.0,39.0,móvil,47.0,2024-06-11,servicios,819,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+820,94.0,12219.98,1066.47,39.0,202.0,web,26.0,2024-11-05,salud,820,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+821,99.0,11015.69,640.54,141.0,162.0,call center,30.0,2025-06-05,servicios,821,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+822,56.0,8078.68,269.83,234.0,54.0,móvil,40.0,2025-04-25,alimentos,822,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+823,19.0,16989.06,1286.09,63.0,148.0,web,34.0,2025-08-15,servicios,823,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+824,46.0,16779.19,1275.28,68.0,141.0,marketplace,35.0,2023-05-31,ropa,824,El  diseño es atractivo y el color coincide con lo esperado después de varios usos
+825,95.0,682.75,512.04,203.0,222.0,marketplace,11.0,2023-07-31,ropa,825,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco ..
+826,82.0,19505.73,1495.01,249.0,89.0,call center,30.0,2023-07-08,electronica,826,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+827,70.0,5104.31,62.73,165.0,15.0,web,31.0,2023-05-16,alimentos,827,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+828,96.0,17510.46,1325.76,358.0,71.0,tienda física,17.0,2023-12-05,educacion,828,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido ..
+829,34.0,16510.34,26.11,40.0,228.0,call center,4.0,2024-11-15,salud,829,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+830,59.0,15136.36,1133.92,258.0,140.0,call center,49.0,2024-11-10,servicios,830,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+831,65.0,10869.42,,281.0,139.0,call center,15.0,2025-11-11,electronica,831,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+832,93.0,16411.82,100.05,154.0,48.0,call center,4.0,2023-08-29,salud,832,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo ..
+833,96.0,12617.05,795.31,178.0,176.0,marketplace,30.0,2025-11-20,servicios,833,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+834,94.0,307.99,476.38,292.0,166.0,tienda física,32.0,2025-05-30,servicios,834,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+835,31.0,17098.02,556.28,160.0,210.0,call center,14.0,2023-12-28,educacion,835,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+836,4.0,17484.87,498.33,242.0,141.0,tienda física,30.0,2025-10-22,servicios,836,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+837,44.0,5098.53,1213.18,101.0,140.0,call center,50.0,2025-09-13,educacion,837,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+838,nanabc,3527.31,393.67,309.0,240.0,tienda física,26.0,2023-12-14,alimentos,838,El sabor es aceptable y la textura resulta agradable aunq esperaba mayor frescura
+839,63.0,6974.49,1262.6,265.0,68.0,tienda física,26.0,2023-09-08,ropa,839,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+840,95.0,13932.77,1347.5,347.0,83.0,móvil,1.0,2025-08-20,educacion,840,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+841,11.0,nanabc,,127.0,160.0,call center,33.0,2023-01-29,electronica,841,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+842,94.0,3155.83,1354.09,345.0,118.0,web,28.0,2025-07-06,salud,842,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+843,67.0,14623.18,155.63,326.0,175.0,marketplace,2.0,2024-01-20,electronica,843,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+844,90.0,9843.41,606.45,121.0,228.0,tienda física,41.0,2023-04-30,electronica,844,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario ..
+845,44.0,4442.2,101.38,289.0,104.0,call center,10.0,2024-06-11,alimentos,845,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+846,84.0,8731.99,872.81,275.0,150.0,móvil,15.0,2023-09-02,ropa,846,La prenda es cómoda y la tela se siente agradable aunq la talla puede variar un poco
+847,50.0,2235.62,699.48,278.0,6.0,móvil,31.0,2023-11-24,alimentos,847,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+848,98.0,9665.94,1103.73,106.0,28.0,web,38.0,2023-01-26,salud,848,La  atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+849,50.0,3051.34,143.89,305.0,73.0,web,43.0,2024-06-27,educacion,849,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+850,13.0,11958.21,1189.5,228.0,,tienda física,45.0,2025-03-22,ropa,850,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+851,25.0,6534.81,783.92,303.0,153.0,call center,8.0,2025-09-18,servicios,851,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+852,64.0,10736.0,1135.02,267.0,48.0,móvil,8.0,2023-04-08,educacion,852,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+853,59.0,12387.25,604.65,16.0,,web,35.0,2025-03-22,electronica,853,La interfaz es intuitiva yyy el dispositivo responde bien en tareas comunes yyy prolongadas
+854,66.0,1623.23,1247.89,355.0,126.0,call center,28.0,2024-02-04,servicios,854,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+855,45.0,317.98,1147.3,,68.0,tienda física,15.0,2025-06-10,salud,855,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+856,42.0,18458.96,,77.0,207.0,web,39.0,2025-11-11,salud,856,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+857,67.0,3334.44,578.8,123.0,35.0,móvil,7.0,2023-07-15,hogar,857,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+858,2.0,6424.83,555.87,227.0,190.0,web,5.0,2024-06-14,alimentos,858,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario ..
+859,41.0,5985.13,1342.61,208.0,74.0,marketplace,38.0,2023-01-05,servicios,859,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+860,84.0,516.4,1064.7,292.0,37.0,web,44.0,2023-02-07,hogar,860,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+861,51.0,12789.23,857.75,162.0,233.0,call center,38.0,2023-07-23,educacion,861,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+862,5.0,11551.95,705.8,209.0,45.0,tienda física,45.0,2023-07-08,servicios,862,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara ..
+863,12.0,15989.43,1295.71,347.0,147.0,móvil,34.0,2023-12-31,servicios,863,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+864,85.0,5291.0,1471.99,280.0,18.0,marketplace,29.0,2025-06-09,electronica,864,Este producto electrónico ofrece un rendimiento estable aunq la batería podría mejorar con el uso diario
+865,56.0,11717.59,531.46,,,web,9.0,2025-06-29,electronica,865,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+866,64.0,2021.25,1279.28,129.0,149.0,marketplace,30.0,,hogar,866,Cumple  su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+867,18.0,15712.17,1377.4,147.0,237.0,web,1.0,2024-09-11,hogar,867,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+868,14.0,6866.0,1492.83,308.0,137.0,tienda física,1.0,2023-06-04,hogar,868,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+869,89.0,18674.92,15.97,163.0,139.0,call center,20.0,2024-05-02,servicios,869,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+870,95.0,18484.59,242.28,100.0,91.0,tienda física,23.0,2025-01-12,salud,870,Las instalaciones están limpias y el personal explica los procedimientos de forma básica ..
+871,25.0,11379.33,,68.0,193.0,marketplace,8.0,2025-09-07,electronica,871,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+872,75.0,17351.17,1329.46,101.0,166.0,móvil,48.0,2024-04-20,electronica,872,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+873,91.0,13985.18,1042.16,331.0,129.0,call center,7.0,,hogar,873,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+874,12.0,11996.64,300.48,4.0,66.0,marketplace,8.0,2023-11-24,hogar,874,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+875,94.0,7698.78,1132.54,103.0,64.0,móvil,26.0,2023-12-22,servicios,875,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+876,59.0,1732.0,740.22,101.0,163.0,marketplace,47.0,2023-09-11,alimentos,876,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+877,79.0,2236.65,320.28,,86.0,móvil,15.0,2024-01-10,salud,877,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+878,77.0,2545.65,1266.31,92.0,123.0,marketplace,37.0,,hogar,878,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+879,70.0,11597.42,787.96,286.0,65.0,web,6.0,2024-09-29,ropa,879,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+880,3.0,3613.71,347.05,125.0,150.0,móvil,22.0,2023-12-15,electronica,880,Este producto electrónico ofrece un rendimiento estable aunq la batería podría mejorar con el uso diario
+881,55.0,18547.71,1090.91,341.0,194.0,web,49.0,2023-03-03,hogar,881,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+882,16.0,19694.35,541.93,136.0,233.0,call center,14.0,2024-03-22,electronica,882,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+883,87.0,19099.21,737.86,339.0,17.0,tienda física,30.0,2023-02-06,electronica,883,Este producto electrónico ofrece un rendimiento estable aunq la batería podría mejorar con el uso diario
+884,83.0,14330.73,1470.66,231.0,185.0,móvil,33.0,2024-02-11,salud,884,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+885,92.0,18696.54,319.44,63.0,240.0,móvil,14.0,2025-05-21,alimentos,885,El producto alimenticio viene bien empacado yyy cumple con lo básico para el consumo diario
+886,31.0,15539.88,1027.32,271.0,116.0,tienda física,6.0,2023-05-17,electronica,886,La interfaz es intuitiva y el dispositivo responde muuy en tareas comunes y prolongadas
+887,7.0,328.59,,140.0,53.0,tienda física,41.0,2023-12-07,salud,887,La atención en salud fue profesional aunq el tiempo de espera resultó un poco largo
+888,11.0,13858.37,1214.02,337.0,57.0,tienda física,22.0,2024-10-08,alimentos,888,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+889,53.0,4946.19,328.23,160.0,28.0,tienda física,36.0,2024-12-18,salud,889,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+890,26.0,9963.58,843.82,155.0,,tienda física,31.0,2024-09-29,alimentos,890,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+891,71.0,14927.41,458.2,44.0,184.0,call center,16.0,2025-09-02,educacion,891,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+892,93.0,16668.18,1071.32,187.0,20.0,marketplace,41.0,2025-03-22,hogar,892,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+893,24.0,9157.55,638.17,356.0,47.0,web,25.0,2023-01-22,hogar,893,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+894,44.0,843.87,243.8,5.0,61.0,tienda física,30.0,2025-08-03,salud,894,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+895,52.0,2791.44,646.39,56.0,184.0,call center,40.0,2025-03-19,alimentos,895,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+896,89.0,14122.01,151.35,278.0,165.0,web,13.0,2025-10-15,salud,896,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+897,41.0,12062.52,8.82,347.0,108.0,marketplace,2.0,2025-08-30,electronica,897,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas ..
+898,94.0,17885.53,686.3,214.0,125.0,web,37.0,2024-09-04,ropa,898,El  diseño es atractivo y el color coincide con lo esperado después de varios usos
+899,33.0,8452.5,1415.14,348.0,,call center,7.0,2024-11-27,educacion,899,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento ..
+900,23.0,11912.02,1049.68,148.0,,marketplace,4.0,2025-06-14,electronica,900,Este producto electrónico ofrece un rendimiento estable aunq la batería podría mejorar con el uso diario
+901,48.0,12690.27,740.89,109.0,238.0,web,32.0,2025-01-22,alimentos,901,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+902,6.0,4601.81,1075.55,242.0,183.0,tienda física,48.0,2025-05-28,ropa,902,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco ..
+903,80.0,7286.27,187.04,294.0,228.0,marketplace,16.0,2024-03-31,educacion,903,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+904,63.0,1.25,1491.03,265.0,,tienda física,2.0,2025-05-18,electronica,904,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+905,49.0,8803.75,814.43,63.0,12.0,call center,31.0,2024-03-28,salud,905,La atención en salud fue profesional aunq el tiempo de espera resultó un poco largo
+906,25.0,10520.49,1443.75,254.0,97.0,móvil,,2025-05-30,electronica,906,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+907,25.0,3706.68,291.73,66.0,10.0,tienda física,31.0,,hogar,907,El artículo para el hogar es funcional yyy fácil de usar aunque los materiales se sienten normales
+908,100.0,19849.15,941.25,278.0,41.0,tienda física,36.0,2023-04-26,alimentos,908,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+909,2.0,454.47,864.15,142.0,48.0,call center,46.0,2025-03-07,servicios,909,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+910,72.0,9919.77,113.84,100.0,174.0,tienda física,24.0,2024-08-29,hogar,910,El  artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+911,31.0,2592.21,1385.8,116.0,201.0,web,41.0,2024-10-08,ropa,911,El  diseño es atractivo y el color coincide con lo esperado después de varios usos
+912,96.0,5983.33,1405.73,206.0,192.0,móvil,16.0,2024-04-17,alimentos,912,El sabor es aceptable yyy la textura resulta agradable aunque esperaba mayor frescura
+913,62.0,14995.17,357.71,272.0,110.0,call center,35.0,2024-03-31,ropa,913,La prenda es cómoda y la tela se siente agradable aunq la talla puede variar un poco
+914,55.0,7991.94,,5.0,98.0,marketplace,36.0,2025-10-27,servicios,914,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+915,5.0,7225.55,977.14,139.0,220.0,tienda física,22.0,2023-10-11,educacion,915,El contenido educativo es comprensible y bien estructurado aunq el ritmo es algo rápido
+916,35.0,6161.47,1154.34,291.0,83.0,móvil,33.0,2024-01-23,servicios,916,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+917,41.0,10868.17,352.3,236.0,119.0,tienda física,13.0,2025-04-20,alimentos,917,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+918,65.0,8170.06,1427.8,197.0,12.0,call center,10.0,2025-12-07,ropa,918,La  prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+919,65.0,19361.26,57.51,364.0,159.0,tienda física,49.0,2025-07-07,alimentos,919,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+920,24.0,Error,799.04,13.0,69.0,web,8.0,2024-04-05,electronica,920,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas ..
+921,96.0,5833.2,114.02,151.0,25.0,tienda física,44.0,2023-09-27,alimentos,921,El sabor es aceptable y la textura resulta agradable aunq esperaba mayor frescura
+922,58.0,12333.6,1482.78,192.0,117.0,móvil,25.0,2024-06-29,electronica,922,Este  producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+923,54.0,9123.42,1373.23,21.0,221.0,call center,47.0,,alimentos,923,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+924,92.0,1380.49,11.33,82.0,129.0,marketplace,39.0,2024-03-30,ropa,924,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+925,1.0,19966.32,1163.63,93.0,64.0,web,28.0,,salud,925,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+926,58.0,1766.4,1014.92,145.0,35.0,móvil,44.0,2023-06-30,ropa,926,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+927,87.0,3790.11,431.67,40.0,123.0,call center,5.0,2023-12-05,electronica,927,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+928,38.0,11498.58,1347.47,210.0,219.0,móvil,33.0,2023-09-11,alimentos,928,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+929,94.0,8003.67,605.66,358.0,12.0,call center,12.0,2023-11-07,hogar,929,El  artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+930,4.0,14416.4,396.5,75.0,215.0,móvil,44.0,2025-10-08,servicios,930,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+931,79.0,nanabc,550.08,340.0,190.0,call center,17.0,2024-10-01,servicios,931,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+932,90.0,16689.29,521.54,17.0,225.0,call center,7.0,2024-07-07,hogar,932,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+933,84.0,8100.17,1463.66,166.0,116.0,móvil,35.0,2025-03-17,alimentos,933,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+934,100.0,13507.79,615.37,164.0,107.0,tienda física,20.0,2025-02-10,servicios,934,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+935,48.0,15078.3,172.01,329.0,1.0,marketplace,38.0,2024-02-27,ropa,935,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+936,10.0,14965.2,14.99,61.0,190.0,tienda física,38.0,2025-03-30,educacion,936,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+937,30.0,17728.73,781.88,277.0,,call center,13.0,2023-11-08,alimentos,937,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+938,41.0,16907.21,785.08,156.0,7.0,móvil,49.0,2025-02-20,alimentos,938,El producto alimenticio viene muuy empacado y cumple con lo básico para el consumo diario
+939,22.0,5785.0,1024.26,345.0,40.0,móvil,16.0,2025-10-03,salud,939,Las instalaciones están limpias y el personal explica los procedimientos de forma básica ..
+940,26.0,959.02,18.06,200.0,49.0,marketplace,8.0,2025-11-03,alimentos,940,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+941,41.0,10306.85,434.44,239.0,201.0,call center,19.0,2023-02-15,educacion,941,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+942,42.0,16193.92,1311.91,320.0,145.0,call center,37.0,2023-03-30,hogar,942,Cumple  su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+943,29.0,17424.1,418.32,182.0,149.0,tienda física,20.0,2023-08-09,electronica,943,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+944,63.0,2044.45,1211.63,286.0,108.0,call center,13.0,2025-10-15,electronica,944,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+945,80.0,3479.39,194.32,99.0,120.0,tienda física,41.0,2023-10-06,hogar,945,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+946,67.0,3120.93,1230.09,158.0,79.0,web,1.0,2025-03-08,educacion,946,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+947,42.0,10915.63,1150.8,246.0,210.0,tienda física,49.0,2025-01-15,alimentos,947,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+948,54.0,7499.87,412.54,219.0,144.0,tienda física,41.0,2023-09-23,salud,948,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+949,86.0,11033.46,756.15,358.0,142.0,marketplace,49.0,2024-06-24,hogar,949,El artículo para el hogar es funcional yyy fácil de usar aunque los materiales se sienten normales
+950,73.0,4381.42,1283.08,201.0,,marketplace,17.0,2025-06-10,hogar,950,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+951,20.0,12288.6,804.83,128.0,43.0,móvil,13.0,2024-01-23,servicios,951,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+952,53.0,16214.68,448.07,197.0,219.0,tienda física,48.0,2024-02-28,ropa,952,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+953,57.0,18816.14,582.56,138.0,215.0,tienda física,44.0,2025-01-19,alimentos,953,El sabor es aceptable y la textura resulta agradable aunq esperaba mayor frescura
+954,24.0,12406.21,287.55,0.0,205.0,móvil,4.0,2023-06-13,hogar,954,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+955,12.0,9576.51,980.78,158.0,47.0,marketplace,42.0,2025-01-07,alimentos,955,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+956,1.0,15495.77,703.23,244.0,184.0,web,13.0,2024-01-14,hogar,956,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+957,92.0,7602.29,246.47,298.0,179.0,móvil,40.0,2023-12-26,educacion,957,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido ..
+958,41.0,14082.84,1468.54,303.0,58.0,call center,28.0,2023-03-28,educacion,958,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+959,38.0,7166.92,270.94,331.0,177.0,web,18.0,2025-06-29,hogar,959,Cumple  su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+960,29.0,3537.8,764.34,130.0,168.0,móvil,9.0,2025-01-25,hogar,960,Cumple su función en casa y ayuda a mantener el espacio organizado sin complicaciones
+961,46.0,18080.84,93.61,45.0,,call center,,2023-07-03,ropa,961,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+962,3.0,2444.92,907.17,267.0,194.0,marketplace,31.0,2023-01-27,educacion,962,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+963,50.0,8512.98,247.38,258.0,162.0,móvil,3.0,2024-05-22,salud,963,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+964,0.0,14259.55,1427.0,199.0,16.0,web,26.0,2024-06-11,ropa,964,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+965,96.0,7660.85,1170.3,225.0,120.0,tienda física,32.0,,alimentos,965,El producto alimenticio viene bien empacado yyy cumple con lo básico para el consumo diario
+966,37.0,7781.12,870.8,190.0,73.0,tienda física,47.0,2023-02-03,servicios,966,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+967,51.0,8179.58,174.91,332.0,169.0,marketplace,30.0,2023-06-15,electronica,967,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+968,7.0,6189.56,503.91,25.0,207.0,marketplace,9.0,2025-01-29,servicios,968,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+969,56.0,14807.94,882.67,105.0,142.0,web,44.0,2023-11-18,electronica,969,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+970,71.0,2345.43,1136.24,52.0,105.0,móvil,48.0,2024-05-28,hogar,970,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+971,62.0,3070.1,1193.48,212.0,170.0,call center,2.0,2025-07-12,salud,971,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+972,21.0,18530.83,13.96,301.0,132.0,móvil,38.0,2023-09-14,alimentos,972,El sabor es aceptable y la textura resulta agradable aunque esperaba mayor frescura
+973,76.0,10044.01,1064.62,16.0,201.0,tienda física,24.0,2023-07-06,hogar,973,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+974,87.0,19120.39,590.32,315.0,150.0,marketplace,40.0,2025-07-23,hogar,974,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+975,54.0,11350.46,133.35,244.0,167.0,marketplace,12.0,2025-07-01,electronica,975,Este producto electrónico ofrece un rendimiento estable aunq la batería podría mejorar con el uso diario
+976,16.0,5937.02,459.89,174.0,122.0,call center,30.0,,alimentos,976,El producto alimenticio viene bien empacado y cumple con lo básico para el consumo diario
+977,6.0,19719.45,,257.0,37.0,call center,19.0,2024-03-03,alimentos,977,El producto alimenticio viene muuy empacado y cumple con lo básico para el consumo diario
+978,54.0,16363.02,183.88,187.0,134.0,móvil,22.0,2023-03-18,servicios,978,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+979,36.0,7894.58,795.01,134.0,99.0,móvil,1.0,2023-11-08,electronica,979,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+980,88.0,17144.1,1128.75,253.0,46.0,tienda física,10.0,2024-02-28,ropa,980,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+981,25.0,5048.26,18.13,85.0,220.0,web,37.0,2023-08-20,electronica,981,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario ..
+982,13.0,12573.05,146.55,238.0,234.0,tienda física,22.0,2025-01-28,salud,982,Las instalaciones están limpias y el personal explica los procedimientos de forma básica
+983,76.0,nanabc,734.01,3.0,,call center,31.0,2024-09-23,servicios,983,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+984,5.0,19338.98,812.69,62.0,,tienda física,43.0,2023-06-14,electronica,984,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+985,92.0,2126.09,951.22,330.0,49.0,móvil,34.0,2023-10-01,ropa,985,El diseño es atractivo y el color coincide con lo esperado después de varios usos
+986,90.0,10089.79,1378.55,229.0,24.0,móvil,49.0,2025-08-02,electronica,986,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+987,6.0,15134.44,1062.94,,240.0,marketplace,48.0,2025-09-24,ropa,987,La prenda es cómoda y la tela se siente agradable aunq la talla puede variar un poco
+988,60.0,13731.25,999.49,153.0,89.0,móvil,50.0,2025-01-19,educacion,988,La metodología utilizada facilita el aprendizaje pero requiere mayor acompañamiento con una experiencia de uso razonablemente consistente
+989,42.0,1931.28,,,22.0,móvil,47.0,2025-06-23,educacion,989,El contenido educativo es comprensible y bien estructurado aunque el ritmo es algo rápido
+990,nanabc,17604.11,,8.0,197.0,móvil,49.0,,electronica,990,La interfaz es intuitiva yyy el dispositivo responde bien en tareas comunes yyy prolongadas
+991,80.0,14477.36,752.3,302.0,180.0,tienda física,32.0,2023-03-20,salud,991,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+992,36.0,5775.56,,186.0,211.0,call center,15.0,2024-06-24,electronica,992,Este producto electrónico ofrece un rendimiento estable aunque la batería podría mejorar con el uso diario
+993,66.0,15924.78,1298.33,149.0,5.0,marketplace,38.0,2024-04-20,electronica,993,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+994,61.0,1007.66,1169.21,133.0,87.0,marketplace,7.0,2023-11-15,electronica,994,La interfaz es intuitiva y el dispositivo responde bien en tareas comunes y prolongadas
+995,68.0,7896.88,1109.05,145.0,122.0,marketplace,40.0,2024-08-25,ropa,995,La prenda es cómoda y la tela se siente agradable aunque la talla puede variar un poco
+996,87.0,8468.71,281.47,81.0,95.0,call center,11.0,2023-07-03,salud,996,La atención en salud fue profesional aunque el tiempo de espera resultó un poco largo
+997,nanabc,563.46,,362.0,143.0,marketplace,40.0,2024-05-12,hogar,997,El artículo para el hogar es funcional y fácil de usar aunque los materiales se sienten normales
+998,96.0,7271.85,836.53,165.0,87.0,móvil,48.0,2023-09-26,servicios,998,La experiencia general fue correcta pero hubo pequeños retrasos durante el proceso
+999,91.0,8693.04,1193.08,242.0,214.0,marketplace,32.0,2025-05-11,servicios,999,El servicio fue adecuado con tiempos razonables aunque la atención podría ser más clara
+1000,46.0,19882.53,368.45,232.0,128.0,web,38.0,2025-08-13,ropa,1000,El diseño es atractivo y el color coincide con lo esperado después de varios usos

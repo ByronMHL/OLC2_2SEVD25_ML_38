@@ -1,0 +1,38 @@
+from flask import Flask
+from flask_cors import CORS
+
+
+def create_app():
+	app = Flask(__name__)
+
+
+	app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024  # 50MB
+
+	CORS(app, resources={r"/api/*": {"origins": "*"}})
+
+	# Blueprints de controllers
+	try:
+		from controllers.upload import upload_bp
+		from controllers.clean import clean_bp
+		from controllers.training import training_bp
+		from controllers.hyperparameters import hyper_bp
+		from controllers.predict import predict_bp
+	except ModuleNotFoundError:
+		from .controllers.upload import upload_bp  # type: ignore
+		from .controllers.clean import clean_bp  # type: ignore
+		from .controllers.training import training_bp  # type: ignore
+		from .controllers.hyperparameters import hyper_bp  # type: ignore
+		from .controllers.predict import predict_bp  # type: ignore
+
+	app.register_blueprint(upload_bp, url_prefix="/api")
+	app.register_blueprint(clean_bp, url_prefix="/api")
+	app.register_blueprint(training_bp, url_prefix="/api")
+	app.register_blueprint(hyper_bp, url_prefix="/api")
+	app.register_blueprint(predict_bp, url_prefix="/api")
+
+	return app
+
+
+if __name__ == "__main__":
+	app = create_app()
+	app.run(host="0.0.0.0", port=5000, debug=True)
