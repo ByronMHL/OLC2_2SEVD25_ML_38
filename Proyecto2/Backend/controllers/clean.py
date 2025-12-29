@@ -15,23 +15,10 @@ def clean_data():
     try:
 
         # ===== LIMPIEZA DE DATOS =====
-        DataStore.df_cleaned = DataStore.df_raw.drop(columns=["cliente_id", "reseña_id", "fecha_reseña"])
+        DataStore.df_cleaned = DataStore.df_raw.drop(columns=["cliente_id", "reseña_id", "fecha_reseña","texto_reseña"])
         DataStore.df_cleaned = DataStore.df_cleaned.drop_duplicates()
 
-        # 2. Convertir tipos de datos
-        
-        # Columnas numéricas para segmentación de clientes
-        numeric_cols = [
-            "frecuencia_compra",
-            "monto_total_gastado",
-            "monto_promedio_compra",
-            "dias_desde_ultima_compra",
-            "antiguedad_cliente_meses",
-            "numero_productos_distintos",
-        ]
-        
-        # Para canal_principal y producto_categoria: llenar con moda
-        categorical_cols = ["canal_principal", "producto_categoria"]
+
         
         DataStore.df_cleaned["frecuencia_compra"] = pd.to_numeric(DataStore.df_cleaned["frecuencia_compra"], errors='coerce').fillna(0).astype('int32') 
         DataStore.df_cleaned["monto_total_gastado"] = pd.to_numeric(DataStore.df_cleaned["monto_total_gastado"], errors='coerce').fillna(0).astype('float64') 
@@ -49,15 +36,12 @@ def clean_data():
         DataStore.df_cleaned.loc[DataStore.df_cleaned['monto_promedio_compra'] == 0, 'monto_promedio_compra'] = DataStore.df_cleaned["monto_promedio_compra"].mean()
 
 
-        print(DataStore.df_cleaned.describe())
-        # # 6. Codificar variables categóricas para clustering
-        # if "canal_principal" in df.columns:
-        #     df["canal_encoded"] = pd.Categorical(df["canal_principal"]).codes
+        DataStore.df_cleaned["canal_principal"] = (DataStore.df_cleaned["canal_principal"].astype("string").fillna("Desconocido"))
+        DataStore.df_cleaned["producto_categoria"] = (DataStore.df_cleaned["producto_categoria"].astype("string").fillna("Desconocido"))
 
-        # if "producto_categoria" in df.columns:
-        #     df["categoria_encoded"] = pd.Categorical(df["producto_categoria"]).codes
 
-    
+
+ 
         return jsonify({
             "success": True,
             "message": "Limpieza completada exitosamente",

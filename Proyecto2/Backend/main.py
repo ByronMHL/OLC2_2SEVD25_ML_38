@@ -15,7 +15,7 @@ def create_app():
 		from controllers.upload import upload_bp
 		from controllers.clean import clean_bp
 		from controllers.training import training_bp
-		from controllers.hyperparameters import hyper_bp
+		from controllers.hyperparameters import hyper_bp	
 		from controllers.predict import predict_bp
 	except ModuleNotFoundError:
 		from .controllers.upload import upload_bp  # type: ignore
