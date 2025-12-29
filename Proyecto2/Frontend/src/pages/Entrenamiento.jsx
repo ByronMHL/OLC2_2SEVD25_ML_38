@@ -23,6 +23,16 @@ export default function Entrenamiento() {
   const [result, setResult] = useState(null);
   const [modelsStatus, setModelsStatus] = useState(null);
 
+  // Parámetros Text KMeans + TF-IDF
+  const [tkNClusters, setTkNClusters] = useState(6);
+  const [tkInit, setTkInit] = useState("k-means++");
+  const [tkNInit, setTkNInit] = useState(10);
+  const [tkMaxIter, setTkMaxIter] = useState(500);
+  const [tkRandomState, setTkRandomState] = useState(42);
+  const [tfidfMaxFeatures, setTfidfMaxFeatures] = useState(5000);
+  const [tfidfMinDf, setTfidfMinDf] = useState(1);
+  const [tfidfMaxDf, setTfidfMaxDf] = useState(1.0);
+
   // Cargar parámetros actuales del backend al montar
   useEffect(() => {
     const fetchParams = async () => {
@@ -40,6 +50,17 @@ export default function Entrenamiento() {
           const p = all.hierarchical;
           if (p.n_clusters != null) setHiNClusters(Number(p.n_clusters));
           if (p.linkage) setHiLinkage(p.linkage);
+        }
+        if (all?.text_kmeans) {
+          const p = all.text_kmeans;
+          if (p.n_clusters != null) setTkNClusters(Number(p.n_clusters));
+          if (p.init) setTkInit(p.init);
+          if (p.n_init != null) setTkNInit(Number(p.n_init));
+          if (p.max_iter != null) setTkMaxIter(Number(p.max_iter));
+          if (p.random_state != null) setTkRandomState(Number(p.random_state));
+          if (p.tfidf_max_features != null) setTfidfMaxFeatures(Number(p.tfidf_max_features));
+          if (p.tfidf_min_df != null) setTfidfMinDf(p.tfidf_min_df);
+          if (p.tfidf_max_df != null) setTfidfMaxDf(Number(p.tfidf_max_df));
         }
       } catch (e) {
         // Silencioso; se puede mostrar en UI si se desea
@@ -65,6 +86,17 @@ export default function Entrenamiento() {
           n_clusters: hiNClusters,
           linkage: hiLinkage,
         });
+      } else if (algorithm === "text_kmeans") {
+        await Service.setTextKMeansParams({
+          n_clusters: tkNClusters,
+          init: tkInit,
+          n_init: tkNInit,
+          max_iter: tkMaxIter,
+          random_state: tkRandomState,
+          tfidf_max_features: tfidfMaxFeatures,
+          tfidf_min_df: tfidfMinDf,
+          tfidf_max_df: tfidfMaxDf,
+        });
       }
       setAlert({ type: "success", message: "Configuración guardada correctamente" });
     } catch (err) {
@@ -87,6 +119,8 @@ export default function Entrenamiento() {
         res = await Service.trainHierarchical();
       } else if (algorithm === "auto_k") {
         res = await Service.trainAutoK();
+      } else if (algorithm === "text_kmeans") {
+        res = await Service.trainTextKMeans();
       }
       setResult(res || null);
       setAlert({ type: "success", message: res?.message || "Entrenamiento completado" });
@@ -131,6 +165,10 @@ export default function Entrenamiento() {
                 className={`px-4 py-2 rounded-md border ${algorithm === 'auto_k' ? 'bg-amber-600 border-amber-600 text-white' : 'bg-slate-800 border-slate-700 text-slate-200'}`}
                 onClick={() => setAlgorithm('auto_k')}
               >Auto-K (K-Means)</button>
+              <button
+                className={`px-4 py-2 rounded-md border ${algorithm === 'text_kmeans' ? 'bg-amber-600 border-amber-600 text-white' : 'bg-slate-800 border-slate-700 text-slate-200'}`}
+                onClick={() => setAlgorithm('text_kmeans')}
+              >Texto (TF-IDF + KMeans)</button>
             </div>
           </div>
 
@@ -201,6 +239,60 @@ export default function Entrenamiento() {
               <p className="text-slate-300 text-sm">Determina automáticamente el número de clusters usando la métrica de silhouette y entrena K-Means con ese valor. No requiere configuración adicional.</p>
             </div>
           )}
+
+          {algorithm === 'text_kmeans' && (
+            <div className="rounded-xl border border-slate-700 bg-slate-900/50 shadow-md p-5">
+              <div className="text-slate-100 font-semibold mb-2">Parámetros Texto (TF-IDF + KMeans)</div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label className="text-slate-300 text-sm">tfidf_max_features</label>
+                  <input type="number" min={100} value={tfidfMaxFeatures} onChange={(e) => setTfidfMaxFeatures(Math.max(100, parseInt(e.target.value) || 100))} className="mt-1 w-full rounded-md bg-slate-800 border border-slate-700 px-3 py-2 text-slate-100" />
+                </div>
+                <div>
+                  <label className="text-slate-300 text-sm">tfidf_min_df</label>
+                  <input type="text" value={tfidfMinDf} onChange={(e) => {
+                    const v = e.target.value;
+                    // Permitir números enteros >=1 o decimales 0..1
+                    if (v === "") { setTfidfMinDf(1); return; }
+                    const asNum = Number(v);
+                    if (!isNaN(asNum)) setTfidfMinDf(asNum);
+                  }} className="mt-1 w-full rounded-md bg-slate-800 border border-slate-700 px-3 py-2 text-slate-100" />
+                  <p className="mt-1 text-xs text-slate-500">Entero (≥1) o proporción [0,1].</p>
+                </div>
+                <div>
+                  <label className="text-slate-300 text-sm">tfidf_max_df</label>
+                  <input type="number" step="0.01" min={0.01} max={1} value={tfidfMaxDf} onChange={(e) => setTfidfMaxDf(Math.min(1, Math.max(0.01, parseFloat(e.target.value) || 1)))} className="mt-1 w-full rounded-md bg-slate-800 border border-slate-700 px-3 py-2 text-slate-100" />
+                </div>
+                <div>
+                  <label className="text-slate-300 text-sm">n_clusters</label>
+                  <input type="number" min={2} value={tkNClusters} onChange={(e) => setTkNClusters(Math.max(2, parseInt(e.target.value) || 2))} className="mt-1 w-full rounded-md bg-slate-800 border border-slate-700 px-3 py-2 text-slate-100" />
+                </div>
+                <div>
+                  <label className="text-slate-300 text-sm">init</label>
+                  <select value={tkInit} onChange={(e) => setTkInit(e.target.value)} className="mt-1 w-full rounded-md bg-slate-800 border border-slate-700 px-3 py-2 text-slate-100">
+                    <option value="k-means++">k-means++ (recomendado)</option>
+                    <option value="random">random</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="text-slate-300 text-sm">n_init</label>
+                  <input type="number" min={1} value={tkNInit} onChange={(e) => setTkNInit(Math.max(1, parseInt(e.target.value) || 1))} className="mt-1 w-full rounded-md bg-slate-800 border border-slate-700 px-3 py-2 text-slate-100" />
+                </div>
+                <div>
+                  <label className="text-slate-300 text-sm">max_iter</label>
+                  <input type="number" min={1} value={tkMaxIter} onChange={(e) => setTkMaxIter(Math.max(1, parseInt(e.target.value) || 1))} className="mt-1 w-full rounded-md bg-slate-800 border border-slate-700 px-3 py-2 text-slate-100" />
+                </div>
+                <div>
+                  <label className="text-slate-300 text-sm">random_state</label>
+                  <input type="number" min={0} value={tkRandomState} onChange={(e) => setTkRandomState(Math.max(0, parseInt(e.target.value) || 0))} className="mt-1 w-full rounded-md bg-slate-800 border border-slate-700 px-3 py-2 text-slate-100" />
+                </div>
+              </div>
+              <p className="mt-2 text-xs text-slate-400">Parámetros para TF-IDF y KMeans textual. Coinciden con /hyperparameters/text_kmeans.</p>
+              <div className="mt-3">
+                <button onClick={saveConfig} disabled={isSaving} className="inline-flex items-center rounded-md bg-amber-600 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-700 disabled:opacity-60">{isSaving ? 'Guardando...' : 'Guardar configuración'}</button>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Ejecución y resultados */}
@@ -265,6 +357,12 @@ export default function Entrenamiento() {
                   <div>Entrenado: {modelsStatus.hierarchical?.trained ? 'Sí' : 'No'}</div>
                   <div>Clusters: {modelsStatus.hierarchical?.n_clusters ?? '-'}</div>
                   <div>Etiquetas: {modelsStatus.hierarchical?.labels_count ?? 0}</div>
+                </div>
+                <div className="rounded-md bg-slate-800 border border-slate-700 px-3 py-2">
+                  <div className="text-slate-100 font-semibold">Texto (TF-IDF + KMeans)</div>
+                  <div>Entrenado: {modelsStatus.text_kmeans?.trained ? 'Sí' : 'No'}</div>
+                  <div>Clusters: {modelsStatus.text_kmeans?.n_clusters ?? '-'}</div>
+                  <div>Etiquetas: {modelsStatus.text_kmeans?.labels_count ?? 0}</div>
                 </div>
                 <div className="rounded-md bg-slate-800 border border-slate-700 px-3 py-2">
                   <div className="text-slate-100 font-semibold">K Óptimo</div>

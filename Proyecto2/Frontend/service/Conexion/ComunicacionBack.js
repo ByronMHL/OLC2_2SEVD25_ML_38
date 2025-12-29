@@ -35,7 +35,8 @@ export const cargaMasiva = async (file) => {
 // Limpieza de datos
 export const clean = async () => {
     try {
-        const response = await instance.get('/clean');
+        // Ejecuta limpieza numérica y textual en una sola llamada
+        const response = await instance.get('/clean-all');
         return response.data; // { message: "Se han limpiado los datos correctamente" }
     } catch (error) {
         throw error.response?.data || error.message;
@@ -82,7 +83,25 @@ export const setHierarchicalParams = async (params) => {
 export const getAllHyperparams = async () => {
     try {
         const response = await instance.get('/hyperparameters/all');
-        return response.data; // { kmeans, hierarchical, notes }
+        return response.data; // { kmeans, hierarchical, text_kmeans, notes }
+    } catch (error) {
+        throw error.response?.data || error.message;
+    }
+};
+
+export const getTextKMeansParams = async () => {
+    try {
+        const response = await instance.get('/hyperparameters/text_kmeans');
+        return response.data; // { algorithm, parameters }
+    } catch (error) {
+        throw error.response?.data || error.message;
+    }
+};
+
+export const setTextKMeansParams = async (params) => {
+    try {
+        const response = await instance.post('/hyperparameters/text_kmeans', params);
+        return response.data; // { success, parameters }
     } catch (error) {
         throw error.response?.data || error.message;
     }
@@ -91,7 +110,7 @@ export const getAllHyperparams = async () => {
 // ------------------ Entrenamiento (training) ------------------
 export const trainKMeans = async () => {
     try {
-        const response = await instance.post('/train/kmeans');
+        const response = await instance.get('/training/kmeans');
         return response.data; // { success, metrics, ... }
     } catch (error) {
         throw error.response?.data || error.message;
@@ -100,7 +119,7 @@ export const trainKMeans = async () => {
 
 export const trainHierarchical = async () => {
     try {
-        const response = await instance.post('/train/hierarchical');
+        const response = await instance.get('/training/hierarchical');
         return response.data; // { success, metrics, ... }
     } catch (error) {
         throw error.response?.data || error.message;
@@ -109,7 +128,16 @@ export const trainHierarchical = async () => {
 
 export const trainAutoK = async () => {
     try {
-        const response = await instance.post('/train/auto-k');
+        const response = await instance.get('/training/auto-k');
+        return response.data; // { success, metrics, ... }
+    } catch (error) {
+        throw error.response?.data || error.message;
+    }
+};
+
+export const trainTextKMeans = async () => {
+    try {
+        const response = await instance.get('/training/text/kmeans');
         return response.data; // { success, metrics, ... }
     } catch (error) {
         throw error.response?.data || error.message;
