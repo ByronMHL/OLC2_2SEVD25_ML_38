@@ -1,0 +1,34 @@
+# Entornos virtuales de Python
+Backend/.venv/
+Backend/venv/
+Backend/env/
+Backend/.env
+
+# Archivos de datos generados
+data/raw/*.csv
+data/cleaned/*
+
+# Cache y artefactos Python
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Node.js
+Frontend/node_modules/
+Frontend/.env
+Frontend/.vite/
+
+# Logs y temporales
+*.log
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Build / dist
+Frontend/dist/
+
+# VSCode
+.vscode/
