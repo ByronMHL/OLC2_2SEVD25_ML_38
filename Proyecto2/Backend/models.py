@@ -2,6 +2,10 @@ from typing import Optional, Any, Dict, List
 import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
+try:
+    from sklearn.feature_extraction.text import TfidfVectorizer
+except Exception:
+    TfidfVectorizer = Any  # fallback typing
 
 
 class DataStore:
@@ -39,6 +43,7 @@ class ModelStore:
     # Modelos para clustering textual
     text_kmeans_model: Optional[KMeans] = None
     text_kmeans_labels: Optional[List[int]] = None
+    text_vectorizer: Optional[Any] = None
     text_kmeans_params: Dict[str, Any] = {
         "n_clusters": 6,
         "init": "k-means++",

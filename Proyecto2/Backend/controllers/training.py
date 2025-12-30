@@ -135,6 +135,13 @@ def train_kmeans():
         labels = kmeans.fit_predict(X_processed)
         ModelStore.kmeans_model = kmeans
         ModelStore.kmeans_labels = labels.tolist()
+        # Añadir etiquetas al dataframe numérico
+        if getattr(DataStore, 'df_numeric_cleaned', None) is not None:
+            try:
+                DataStore.df_numeric_cleaned["kmeans_cluster"] = labels
+            except Exception:
+                # Si hay desalineación, no romper
+                pass
 
         # Calcular métricas
         silhouette = silhouette_score(X_processed, labels)
@@ -259,6 +266,12 @@ def train_auto_k():
         ModelStore.kmeans_model = kmeans
         ModelStore.kmeans_labels = labels.tolist()
         ModelStore.optimal_k = int(optimal_k)
+        # Añadir etiquetas al dataframe numérico
+        if getattr(DataStore, 'df_numeric_cleaned', None) is not None:
+            try:
+                DataStore.df_numeric_cleaned["kmeans_cluster"] = labels
+            except Exception:
+                pass
 
         silhouette = silhouette_score(X_processed, labels)
         davies_bouldin = davies_bouldin_score(X_processed, labels)

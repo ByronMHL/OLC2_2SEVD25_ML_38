@@ -152,3 +152,53 @@ export const getModelsStatus = async () => {
         throw error.response?.data || error.message;
     }
 };
+
+// ------------------ Reportes ------------------
+export const getNumericProfile = async (clusterCol) => {
+    try {
+        const params = clusterCol ? { cluster_col: clusterCol } : {};
+        const response = await instance.get('/reports/numeric-profile', { params });
+        return response.data; // { success, data }
+    } catch (error) {
+        throw error.response?.data || error.message;
+    }
+};
+
+export const getTextPatterns = async (topN = 12) => {
+    try {
+        const response = await instance.get('/reports/text-patterns', { params: { top_n: topN } });
+        return response.data; // { success, data }
+    } catch (error) {
+        throw error.response?.data || error.message;
+    }
+};
+
+export const getDescriptions = async (clusterCol, topN = 12, zHigh = 0.7, zLow = -0.7) => {
+    try {
+        const response = await instance.get('/reports/descriptions', {
+            params: {
+                cluster_col: clusterCol,
+                top_n: topN,
+                z_high: zHigh,
+                z_low: zLow,
+            },
+        });
+        return response.data; // { success, data }
+    } catch (error) {
+        throw error.response?.data || error.message;
+    }
+};
+
+export const exportReports = async (clusterCol, topN = 12, zHigh = 0.7, zLow = -0.7) => {
+    try {
+        const response = await instance.post('/reports/export', {
+            cluster_col: clusterCol,
+            top_n: topN,
+            z_high: zHigh,
+            z_low: zLow,
+        });
+        return response.data; // { success, data }
+    } catch (error) {
+        throw error.response?.data || error.message;
+    }
+};

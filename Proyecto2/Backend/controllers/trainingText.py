@@ -47,6 +47,14 @@ def train_text_kmeans():
         labels = kmeans.fit_predict(X_dense)
         ModelStore.text_kmeans_model = kmeans
         ModelStore.text_kmeans_labels = labels.tolist()
+        # Guardar vectorizador para análisis de patrones
+        ModelStore.text_vectorizer = vectorizer
+        # Añadir etiquetas al dataframe textual
+        if getattr(DataStore, 'df_text_cleaned', None) is not None:
+            try:
+                DataStore.df_text_cleaned["text_cluster"] = labels
+            except Exception:
+                pass
 
         # Métricas (usar cosine para texto)
         silhouette = silhouette_score(X_dense, labels, metric='cosine')
