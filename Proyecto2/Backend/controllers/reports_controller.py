@@ -5,6 +5,7 @@ from reports.segment_profiles import compute_numeric_profiles
 from reports.segment_patterns import compute_text_patterns
 from reports.export_report import export_all_reports
 from reports.segment_descriptions import build_segment_descriptions
+from reports.sentiment_report import compute_sentiment_report
 
 reports_bp = Blueprint("reports", __name__)
 
@@ -26,6 +27,19 @@ def get_text_patterns():
     try:
         # No crear subcarpetas en llamadas del frontend
         result = compute_text_patterns(top_n=top_n, use_subdir=False)
+        return jsonify({"success": True, "data": result}), 200
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 400
+
+
+@reports_bp.get("/reports/sentiment")
+def get_sentiment_report():
+    """Obtiene reporte de sentimientos independiente del clustering.
+
+    No crea subcarpetas (pensado para llamadas del frontend).
+    """
+    try:
+        result = compute_sentiment_report(use_subdir=False)
         return jsonify({"success": True, "data": result}), 200
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 400

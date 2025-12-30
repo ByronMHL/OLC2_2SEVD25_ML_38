@@ -6,6 +6,7 @@ from typing import Dict, Any
 from .segment_profiles import compute_numeric_profiles
 from .segment_patterns import compute_text_patterns
 from .segment_descriptions import build_segment_descriptions
+from .sentiment_report import compute_sentiment_report
 
 
 def export_all_reports(cluster_col: str = None, top_n: int = 12, z_high: float = 0.7, z_low: float = -0.7) -> Dict[str, Any]:
@@ -20,6 +21,8 @@ def export_all_reports(cluster_col: str = None, top_n: int = 12, z_high: float =
     # Ejecutar cálculos
     numeric = compute_numeric_profiles(cluster_col=cluster_col, base_dir=base_root, use_subdir=False)
     text = compute_text_patterns(top_n=top_n, base_dir=base_root, use_subdir=False)
+    # Reporte de sentimiento independiente del clustering
+    sentiment = compute_sentiment_report(base_dir=base_root, use_subdir=False)
     descriptions = build_segment_descriptions(numeric, text, z_high=z_high, z_low=z_low)
 
     # Guardar resumen
@@ -27,6 +30,7 @@ def export_all_reports(cluster_col: str = None, top_n: int = 12, z_high: float =
         "timestamp": ts,
         "numeric_profiles": numeric,
         "text_patterns": text,
+        "sentiment": sentiment,
         "descriptions": descriptions,
     }
     summary_path = os.path.join(base_root, "report_summary.json")
@@ -39,6 +43,7 @@ def export_all_reports(cluster_col: str = None, top_n: int = 12, z_high: float =
         "sections": {
             "numeric_profiles": numeric,
             "text_patterns": text,
+            "sentiment": sentiment,
             "descriptions": descriptions,
         },
     }

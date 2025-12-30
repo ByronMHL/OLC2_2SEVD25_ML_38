@@ -3,8 +3,125 @@ import pandas as pd
 import numpy as np
 import re
 from models import DataStore
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+import logging
 
 clean_bp = Blueprint("clean", __name__)
+
+
+def _ensure_nltk_resources():
+    """Asegura recursos NLTK necesarios (stopwords, punkt, wordnet)."""
+    try:
+        nltk.data.find('corpora/stopwords')
+    except LookupError:
+        nltk.download('stopwords', quiet=True)
+    try:
+        nltk.data.find('tokenizers/punkt')
+    except LookupError:
+        nltk.download('punkt', quiet=True)
+    try:
+        nltk.data.find('corpora/wordnet')
+    except LookupError:
+        nltk.download('wordnet', quiet=True)
+
+
+# Cache del modelo spaCy en español (si está disponible)
+_SPACY_NLP_ES = None
+_NLTK_TOKENIZER_AVAILABLE = None
+
+
+def _ensure_spacy_model():
+    """Intenta cargar el modelo spaCy español; lo descarga si falta."""
+    global _SPACY_NLP_ES
+    if _SPACY_NLP_ES is not None:
+        return _SPACY_NLP_ES
+    try:
+        import spacy
+        from spacy.cli import download as spacy_download
+    except Exception:
+        return None
+    try:
+        _SPACY_NLP_ES = spacy.load("es_core_news_sm")
+        return _SPACY_NLP_ES
+    except Exception:
+        try:
+            spacy_download("es_core_news_sm")
+            _SPACY_NLP_ES = spacy.load("es_core_news_sm")
+            return _SPACY_NLP_ES
+        except Exception:
+            return None
+
+
+def _ensure_nltk_resources():
+    """Asegura recursos NLTK necesarios (stopwords, punkt/punkt_tab, wordnet)."""
+    global _NLTK_TOKENIZER_AVAILABLE
+    try:
+        nltk.data.find('corpora/stopwords')
+    except LookupError:
+        nltk.download('stopwords', quiet=True)
+
+    # Asegurar tokenizer: probar tanto 'punkt' como 'punkt_tab'
+    tokenizer_ok = False
+    try:
+        nltk.data.find('tokenizers/punkt')
+        tokenizer_ok = True
+    except LookupError:
+        try:
+            nltk.data.find('tokenizers/punkt_tab')
+            tokenizer_ok = True
+        except LookupError:
+            # Intentar descargar ambos recursos
+            try:
+                nltk.download('punkt_tab', quiet=True)
+            except Exception:
+                pass
+            try:
+                nltk.download('punkt', quiet=True)
+            except Exception:
+                pass
+            # Verificar nuevamente
+            try:
+                nltk.data.find('tokenizers/punkt_tab')
+                tokenizer_ok = True
+            except LookupError:
+                try:
+                    nltk.data.find('tokenizers/punkt')
+                    tokenizer_ok = True
+                except LookupError:
+                    tokenizer_ok = False
+
+    _NLTK_TOKENIZER_AVAILABLE = tokenizer_ok
+
+    try:
+        nltk.data.find('corpora/wordnet')
+    except LookupError:
+        nltk.download('wordnet', quiet=True)
+
+
+def _get_spanish_stopwords_safe() -> set:
+    """Obtiene stopwords de NLTK; si falla, usa un conjunto básico."""
+    try:
+        return set(stopwords.words('spanish'))
+    except Exception as e:
+        logging.warning(f"Stopwords NLTK no disponibles, usando fallback. Detalle: {e}")
+        return {
+            "el","la","los","las","de","del","y","en","es","un","una","unos","unas","al","a","con","por","para","como","se","su","sus","lo","le","les","o","u","que","qué","quien","quién","cual","cuál","donde","dónde","cuando","cuándo","mi","mis","tu","tus","nuestro","nuestra","nuestros","nuestras","pero","si","sí","no","ya","más","menos","muy","también","solo","sólo","porque","sobre","entre","hasta","desde","sin","todo","toda","todos","todas","cada","otro","otra","otros","otras"
+        }
+
+
+def _tokenize_spanish_safe(text: str) -> list:
+    """Tokeniza en español; si falla NLTK, usa separación por espacios."""
+    global _NLTK_TOKENIZER_AVAILABLE
+    if _NLTK_TOKENIZER_AVAILABLE:
+        try:
+            return word_tokenize(text, language='spanish')
+        except Exception as e:
+            logging.warning(f"Tokenización NLTK falló, usando regex. Detalle: {e}")
+            _NLTK_TOKENIZER_AVAILABLE = False
+    # Fallback regex (sin log repetitivo)
+    return [t for t in re.split(r"\s+", text.strip()) if t]
 
 
 def _perform_numeric_clean(df_raw: pd.DataFrame) -> dict:
@@ -67,8 +184,26 @@ def _perform_text_clean(df_raw: pd.DataFrame) -> dict:
     df_text["texto_reseña"] = df_text["texto_reseña"].astype("string").fillna("")
     df_text["texto_lower"] = df_text["texto_reseña"].str.lower()
     df_text["texto_sin_signos"] = df_text["texto_lower"].apply(lambda s: re.sub(r"[^\w\s]", " ", s))
-    df_text["tokens"] = df_text["texto_sin_signos"].apply(lambda s: [t for t in re.split(r"\s+", s.strip()) if t])
-    df_text["texto_limpio"] = df_text["tokens"].apply(lambda toks: " ".join(toks))
+    # Asegurar recursos y obtener stopwords de NLTK (español)
+    _ensure_nltk_resources()
+    STOPWORDS_ES = _get_spanish_stopwords_safe()
+    # Tokenización segura y eliminación de stopwords
+    df_text["tokens"] = df_text["texto_sin_signos"].apply(
+        lambda s: [t for t in _tokenize_spanish_safe(s) if t and t.isalpha() and t not in STOPWORDS_ES]
+    )
+    # Lematización con spaCy si está disponible; si no, usar tokens como fallback
+    nlp = _ensure_spacy_model()
+    if nlp is not None:
+        df_text["lemmas"] = df_text["texto_sin_signos"].apply(
+            lambda s: [
+                tok.lemma_.lower()
+                for tok in nlp(s)
+                if tok.is_alpha and tok.lemma_ and tok.lemma_.strip() and tok.lemma_.lower() not in STOPWORDS_ES
+            ]
+        )
+    else:
+        df_text["lemmas"] = df_text["tokens"]
+    df_text["texto_limpio"] = df_text["lemmas"].apply(lambda toks: " ".join(toks))
 
     return {
         "df": df_text,
@@ -162,7 +297,9 @@ def preview_text_tokens():
     try:
         top_n = int(request.args.get("top", 50))
         # Concatenar todas las listas de tokens
-        tokens_series = DataStore.df_text_cleaned["tokens"]
+        # Preferir lemas si existen, de lo contrario tokens
+        col = "lemmas" if "lemmas" in DataStore.df_text_cleaned.columns else "tokens"
+        tokens_series = DataStore.df_text_cleaned[col]
         all_tokens = []
         for toks in tokens_series:
             if isinstance(toks, list):

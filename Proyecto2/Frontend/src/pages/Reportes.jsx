@@ -28,6 +28,7 @@ export default function Reportes() {
   const [patterns, setPatterns] = useState(null);
   const [descriptions, setDescriptions] = useState(null);
   const [exportInfo, setExportInfo] = useState(null);
+  const [sentiment, setSentiment] = useState(null);
 
   const previewRef = useRef(null);
 
@@ -37,17 +38,20 @@ export default function Reportes() {
     setLoading(true);
     setError(null);
     try {
-      const [n, p, d] = await Promise.all([
+      const [n, p, d, s] = await Promise.all([
         getNumericProfile(clusterCol),
         getTextPatterns(topN),
         getDescriptions(clusterCol, topN, zHigh, zLow),
+        // Fetch directo del endpoint de sentimientos
+        fetch("http://localhost:5000/api/reports/sentiment").then(r => r.json()),
       ]);
-      if (!n.success || !p.success || !d.success) {
+      if (!n.success || !p.success || !d.success || !s.success) {
         throw new Error("Error en uno de los endpoints de reportes");
       }
       setNumeric(n.data);
       setPatterns(p.data);
       setDescriptions(d.data);
+      setSentiment(s.data);
     } catch (e) {
       setError(e?.error || e?.message || "Error al obtener reportes");
     } finally {
@@ -348,6 +352,65 @@ export default function Reportes() {
             </div>
           ) : (
             <p className="text-slate-400 text-sm">Sin patrones textuales.</p>
+          )}
+        </section>
+
+        {/* Sentimientos (independiente del clustering) */}
+        <section className="bg-slate-900 p-4 rounded border border-slate-800">
+          <h3 className="text-lg font-medium mb-2">Análisis de Sentimientos</h3>
+          {sentiment ? (
+            <div className="space-y-4">
+              {/* Resumen */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
+                <div className="bg-slate-800 rounded p-3">
+                  <div className="text-xs text-slate-400">Total reseñas</div>
+                  <div className="text-lg">{sentiment.summary?.total ?? 0}</div>
+                </div>
+                <div className="bg-slate-800 rounded p-3">
+                  <div className="text-xs text-slate-400">Promedio puntaje</div>
+                  <div className="text-lg">{Number(sentiment.summary?.avg_score ?? 0).toFixed(3)}</div>
+                </div>
+                <div className="bg-slate-800 rounded p-3">
+                  <div className="text-xs text-slate-400">Positivo</div>
+                  <div className="text-lg">{sentiment.summary?.counts?.positivo ?? 0}</div>
+                </div>
+                <div className="bg-slate-800 rounded p-3">
+                  <div className="text-xs text-slate-400">Negativo</div>
+                  <div className="text-lg">{sentiment.summary?.counts?.negativo ?? 0}</div>
+                </div>
+              </div>
+
+              {/* Figuras */}
+              {sentiment.figures?.length ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  {sentiment.figures.map((fig, idx) => (
+                    <div key={idx} className="bg-slate-800 rounded p-2">
+                      <img
+                        alt={`Sentimiento ${idx+1}`}
+                        className="rounded border border-slate-700"
+                        crossOrigin="anonymous"
+                        src={buildFileUrl(fig, `s-${idx}`)}
+                        onError={(e) => { e.currentTarget.src = buildFileUrl(fig, `s-${idx}-retry`); }}
+                      />
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-slate-400 text-sm">Sin figuras de sentimientos.</p>
+              )}
+
+              {/* Enlaces a tablas */}
+              <div className="text-sm space-x-2">
+                {sentiment.tables?.summary_json ? (
+                  <a className="text-indigo-400 hover:underline" href={`http://localhost:5000/api/reports/file?path=${encodeURIComponent(sentiment.tables.summary_json)}`} target="_blank" rel="noreferrer">Resumen (JSON)</a>
+                ) : null}
+                {sentiment.tables?.detailed_csv ? (
+                  <a className="text-indigo-400 hover:underline" href={`http://localhost:5000/api/reports/file?path=${encodeURIComponent(sentiment.tables.detailed_csv)}`} target="_blank" rel="noreferrer">Detalle (CSV)</a>
+                ) : null}
+              </div>
+            </div>
+          ) : (
+            <p className="text-slate-400 text-sm">Sin reporte de sentimientos.</p>
           )}
         </section>
 

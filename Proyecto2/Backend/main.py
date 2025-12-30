@@ -16,17 +16,22 @@ def create_app():
 		from controllers.clean import clean_bp
 		from controllers.training import training_bp
 		from controllers.trainingText import training_text_bp
-		from controllers.hyperparameters import hyper_bp	
+		from controllers.hyperparameters import hyper_bp 
 		from controllers.predict import predict_bp
 		from controllers.reports_controller import reports_bp
-	except ModuleNotFoundError:
-		from .controllers.upload import upload_bp  # type: ignore
-		from .controllers.clean import clean_bp  # type: ignore
-		from .controllers.training import training_bp  # type: ignore
-		from .controllers.trainingText import training_text_bp  # type: ignore
-		from .controllers.hyperparameters import hyper_bp  # type: ignore
-		from .controllers.predict import predict_bp  # type: ignore
-		from .controllers.reports_controller import reports_bp  # type: ignore
+	except ModuleNotFoundError as e:
+		# Solo usar imports relativos si el error es por no encontrar 'controllers'
+		if "No module named 'controllers'" in str(e) or "controllers" == getattr(e, "name", ""):
+			from .controllers.upload import upload_bp  # type: ignore
+			from .controllers.clean import clean_bp  # type: ignore
+			from .controllers.training import training_bp  # type: ignore
+			from .controllers.trainingText import training_text_bp  # type: ignore
+			from .controllers.hyperparameters import hyper_bp  # type: ignore
+			from .controllers.predict import predict_bp  # type: ignore
+			from .controllers.reports_controller import reports_bp  # type: ignore
+		else:
+			# Re-lanzar errores de dependencias internas (p.ej., 'nltk' ausente)
+			raise
 
 	app.register_blueprint(upload_bp, url_prefix="/api")
 	app.register_blueprint(clean_bp, url_prefix="/api")
