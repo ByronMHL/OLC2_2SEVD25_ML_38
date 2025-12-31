@@ -1,0 +1,3 @@
+## Pruebas en el clustering de texto
+
+En el conjunto de datos textual de 10 000 reseñas, las métricas internas evidencian una baja cohesión y separación entre clusters. Esto sugiere que los textos presentan un contenido semánticamente homogéneo, lo que dificulta la formación de grupos claramente diferenciables mediante K-means. La distribución desbalanceada de los clusters refuerza esta observación, indicando la ausencia de una estructura temática fuerte en los datos.

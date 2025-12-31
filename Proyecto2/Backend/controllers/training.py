@@ -263,13 +263,15 @@ def train_auto_k():
             random_state=ModelStore.kmeans_params.get("random_state", 42),
         )
         labels = kmeans.fit_predict(X_processed)
-        ModelStore.kmeans_model = kmeans
-        ModelStore.kmeans_labels = labels.tolist()
+        # Guardar en espacio Auto-K para no sobreescribir el K-Means manual
+        ModelStore.kmeans_auto_model = kmeans
+        ModelStore.kmeans_auto_labels = labels.tolist()
         ModelStore.optimal_k = int(optimal_k)
         # Añadir etiquetas al dataframe numérico
         if getattr(DataStore, 'df_numeric_cleaned', None) is not None:
             try:
-                DataStore.df_numeric_cleaned["kmeans_cluster"] = labels
+                # Etiquetas específicas de Auto-K
+                DataStore.df_numeric_cleaned["kmeans_auto_cluster"] = labels
             except Exception:
                 pass
 

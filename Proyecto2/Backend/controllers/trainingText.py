@@ -20,9 +20,12 @@ def _preprocess_text_to_tfidf():
 
     params = ModelStore.text_kmeans_params
     vectorizer = TfidfVectorizer(
-        max_features=params.get("tfidf_max_features", 5000),
-        min_df=params.get("tfidf_min_df", 1),
-        max_df=params.get("tfidf_max_df", 1.0),
+        max_features=params.get("tfidf_max_features", 2000),
+        min_df=params.get("tfidf_min_df", 3),
+        max_df=params.get("tfidf_max_df", 0.7),
+        ngram_range=tuple(params.get("ngram_range", (1, 2))),
+        sublinear_tf=bool(params.get("sublinear_tf", True)),
+        norm=(None if (str(params.get("norm", "l2")).lower() in ["none", "null", "none"] or params.get("norm") is None) else str(params.get("norm", "l2")))
     )
 
     X_tfidf = vectorizer.fit_transform(df["texto_limpio"].tolist())

@@ -202,3 +202,49 @@ export const exportReports = async (clusterCol, topN = 12, zHigh = 0.7, zLow = -
         throw error.response?.data || error.message;
     }
 };
+
+// ------------------ Evaluación de Clustering ------------------
+export const getClusteringEvaluation = async () => {
+    try {
+        const response = await instance.get('/evaluation/clustering');
+        return response.data; // { success, evaluations, errors }
+    } catch (error) {
+        throw error.response?.data || error.message;
+    }
+};
+
+export const evaluateKMeansModel = async () => {
+    try {
+        const response = await instance.get('/evaluation/clustering/kmeans');
+        return response.data; // { success, evaluation }
+    } catch (error) {
+        throw error.response?.data || error.message;
+    }
+};
+
+export const evaluateHierarchicalModel = async () => {
+    try {
+        const response = await instance.get('/evaluation/clustering/hierarchical');
+        return response.data; // { success, evaluation }
+    } catch (error) {
+        throw error.response?.data || error.message;
+    }
+};
+
+export const evaluateTextKMeansModel = async () => {
+    try {
+        const response = await instance.get('/evaluation/clustering/text');
+        return response.data; // { success, evaluation }
+    } catch (error) {
+        throw error.response?.data || error.message;
+    }
+};
+
+export const evaluateAutoKModel = async () => {
+    try {
+        const response = await instance.get('/evaluation/clustering/auto-k');
+        return response.data; // { success, evaluation }
+    } catch (error) {
+        throw error.response?.data || error.message;
+    }
+};

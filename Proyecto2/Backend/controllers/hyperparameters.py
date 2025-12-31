@@ -211,6 +211,49 @@ def set_text_kmeans_params():
                 return jsonify({"error": "tfidf_max_df debe estar en (0,1]"}), 400
             ModelStore.text_kmeans_params["tfidf_max_df"] = max_df
 
+        # Nuevos parámetros TF-IDF
+        if "ngram_range" in data:
+            ngr = data["ngram_range"]
+            # Espera lista/tupla de dos enteros [a,b] con 1<=a<=b
+            if not isinstance(ngr, (list, tuple)) or len(ngr) != 2:
+                return jsonify({"error": "ngram_range debe ser [min_n, max_n]"}), 400
+            try:
+                a = int(ngr[0]); b = int(ngr[1])
+            except Exception:
+                return jsonify({"error": "ngram_range debe contener enteros"}), 400
+            if a < 1 or b < a:
+                return jsonify({"error": "ngram_range inválido: se requiere 1 <= min_n <= max_n"}), 400
+            ModelStore.text_kmeans_params["ngram_range"] = (a, b)
+
+        if "sublinear_tf" in data:
+            # Acepta booleano literal; si viene string, interpretar 'true'/'false'
+            val = data["sublinear_tf"]
+            if isinstance(val, str):
+                val_l = val.strip().lower()
+                if val_l in ["true", "1", "yes", "y", "si", "sí"]:
+                    val = True
+                elif val_l in ["false", "0", "no", "n"]:
+                    val = False
+                else:
+                    return jsonify({"error": "sublinear_tf debe ser booleano"}), 400
+            elif not isinstance(val, bool):
+                return jsonify({"error": "sublinear_tf debe ser booleano"}), 400
+            ModelStore.text_kmeans_params["sublinear_tf"] = bool(val)
+
+        if "norm" in data:
+            norm = data["norm"]
+            # Permitir 'l2', 'l1' o None/'none'
+            if norm is None:
+                ModelStore.text_kmeans_params["norm"] = None
+            else:
+                norm_s = str(norm).lower()
+                if norm_s in ["none", "null"]:
+                    ModelStore.text_kmeans_params["norm"] = None
+                elif norm_s in ["l1", "l2"]:
+                    ModelStore.text_kmeans_params["norm"] = norm_s
+                else:
+                    return jsonify({"error": "norm debe ser 'l1', 'l2' o null"}), 400
+
         return jsonify({
             "success": True,
             "message": "Parámetros de clustering textual actualizados",

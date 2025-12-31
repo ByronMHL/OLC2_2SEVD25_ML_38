@@ -181,7 +181,10 @@ def _perform_text_clean(df_raw: pd.DataFrame) -> dict:
         raise ValueError("La columna 'texto_reseña' no existe en los datos")
 
     df_text = df_raw[["texto_reseña"]].copy()
-    df_text["texto_reseña"] = df_text["texto_reseña"].astype("string").fillna("")
+    # Normalizar nulos y espacios; registrar métricas iniciales de vacíos
+    df_text["texto_reseña"] = df_text["texto_reseña"].astype("string").fillna("").str.strip()
+    initial_rows = len(df_text)
+    empty_original_count = int((df_text["texto_reseña"] == "").sum())
     df_text["texto_lower"] = df_text["texto_reseña"].str.lower()
     df_text["texto_sin_signos"] = df_text["texto_lower"].apply(lambda s: re.sub(r"[^\w\s]", " ", s))
     # Asegurar recursos y obtener stopwords de NLTK (español)
@@ -205,11 +208,22 @@ def _perform_text_clean(df_raw: pd.DataFrame) -> dict:
         df_text["lemmas"] = df_text["tokens"]
     df_text["texto_limpio"] = df_text["lemmas"].apply(lambda toks: " ".join(toks))
 
+    # Filtrar filas sin texto válido: original vacío o sin tokens/lemmas
+    no_valid_tokens_count = int((df_text["lemmas"].apply(len) == 0).sum())
+    # Primero descartar originales vacíos
+    df_text = df_text[df_text["texto_reseña"] != ""]
+    # Luego descartar entradas sin tokens/lemmas
+    df_text = df_text[df_text["lemmas"].apply(lambda toks: len(toks) > 0)]
+    df_text = df_text.copy().reset_index(drop=True)
+
     return {
         "df": df_text,
         "stats": {
+            "initial_rows": initial_rows,
             "rows": len(df_text),
-            "empty_text_count": int((df_text["texto_reseña"] == "").sum()),
+            "empty_text_count": empty_original_count,
+            "no_valid_tokens_count": no_valid_tokens_count,
+            "dropped_total": int(initial_rows - len(df_text)),
         },
         "preview": df_text.head(10).to_dict(orient="records"),
     }
@@ -225,9 +239,6 @@ def clean_data():
         num_res = _perform_numeric_clean(DataStore.df_raw)
         DataStore.df_numeric_cleaned = num_res["df"].copy()
         DataStore.df_cleaned = DataStore.df_numeric_cleaned  # compatibilidad
-
-
-
  
         return jsonify({
             "success": True,

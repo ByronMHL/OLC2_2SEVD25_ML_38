@@ -19,6 +19,7 @@ def create_app():
 		from controllers.hyperparameters import hyper_bp 
 		from controllers.predict import predict_bp
 		from controllers.reports_controller import reports_bp
+		from controllers.rendimiento import rendimiento_bp
 	except ModuleNotFoundError as e:
 		# Solo usar imports relativos si el error es por no encontrar 'controllers'
 		if "No module named 'controllers'" in str(e) or "controllers" == getattr(e, "name", ""):
@@ -29,6 +30,7 @@ def create_app():
 			from .controllers.hyperparameters import hyper_bp  # type: ignore
 			from .controllers.predict import predict_bp  # type: ignore
 			from .controllers.reports_controller import reports_bp  # type: ignore
+			from .controllers.rendimiento import rendimiento_bp  # type: ignore
 		else:
 			# Re-lanzar errores de dependencias internas (p.ej., 'nltk' ausente)
 			raise
@@ -40,6 +42,7 @@ def create_app():
 	app.register_blueprint(hyper_bp, url_prefix="/api")
 	app.register_blueprint(predict_bp, url_prefix="/api")
 	app.register_blueprint(reports_bp, url_prefix="/api")
+	app.register_blueprint(rendimiento_bp, url_prefix="/api")
 
 	return app
 

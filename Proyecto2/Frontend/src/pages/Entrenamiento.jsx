@@ -32,6 +32,10 @@ export default function Entrenamiento() {
   const [tfidfMaxFeatures, setTfidfMaxFeatures] = useState(5000);
   const [tfidfMinDf, setTfidfMinDf] = useState(1);
   const [tfidfMaxDf, setTfidfMaxDf] = useState(1.0);
+  const [ngramMin, setNgramMin] = useState(1);
+  const [ngramMax, setNgramMax] = useState(2);
+  const [sublinearTF, setSublinearTF] = useState(true);
+  const [tfidfNorm, setTfidfNorm] = useState("l2"); // 'l2' | 'l1' | 'none'
 
   // Cargar parámetros actuales del backend al montar
   useEffect(() => {
@@ -61,6 +65,12 @@ export default function Entrenamiento() {
           if (p.tfidf_max_features != null) setTfidfMaxFeatures(Number(p.tfidf_max_features));
           if (p.tfidf_min_df != null) setTfidfMinDf(p.tfidf_min_df);
           if (p.tfidf_max_df != null) setTfidfMaxDf(Number(p.tfidf_max_df));
+          if (p.ngram_range && Array.isArray(p.ngram_range) && p.ngram_range.length === 2) {
+            setNgramMin(Number(p.ngram_range[0]));
+            setNgramMax(Number(p.ngram_range[1]));
+          }
+          if (p.sublinear_tf != null) setSublinearTF(Boolean(p.sublinear_tf));
+          if (p.norm !== undefined) setTfidfNorm(p.norm == null ? 'none' : String(p.norm));
         }
       } catch (e) {
         // Silencioso; se puede mostrar en UI si se desea
@@ -96,6 +106,9 @@ export default function Entrenamiento() {
           tfidf_max_features: tfidfMaxFeatures,
           tfidf_min_df: tfidfMinDf,
           tfidf_max_df: tfidfMaxDf,
+          ngram_range: [Math.max(1, parseInt(ngramMin) || 1), Math.max(Math.max(1, parseInt(ngramMin) || 1), parseInt(ngramMax) || 1)],
+          sublinear_tf: Boolean(sublinearTF),
+          norm: tfidfNorm === 'none' ? null : tfidfNorm,
         });
       }
       setAlert({ type: "success", message: "Configuración guardada correctamente" });
@@ -262,6 +275,35 @@ export default function Entrenamiento() {
                 <div>
                   <label className="text-slate-300 text-sm">tfidf_max_df</label>
                   <input type="number" step="0.01" min={0.01} max={1} value={tfidfMaxDf} onChange={(e) => setTfidfMaxDf(Math.min(1, Math.max(0.01, parseFloat(e.target.value) || 1)))} className="mt-1 w-full rounded-md bg-slate-800 border border-slate-700 px-3 py-2 text-slate-100" />
+                </div>
+                <div>
+                  <label className="text-slate-300 text-sm">ngram_range (min)</label>
+                  <input type="number" min={1} value={ngramMin} onChange={(e) => {
+                    const v = Math.max(1, parseInt(e.target.value) || 1);
+                    setNgramMin(v);
+                    if (ngramMax < v) setNgramMax(v);
+                  }} className="mt-1 w-full rounded-md bg-slate-800 border border-slate-700 px-3 py-2 text-slate-100" />
+                </div>
+                <div>
+                  <label className="text-slate-300 text-sm">ngram_range (max)</label>
+                  <input type="number" min={1} value={ngramMax} onChange={(e) => {
+                    const v = Math.max(1, parseInt(e.target.value) || 1);
+                    setNgramMax(Math.max(v, ngramMin));
+                  }} className="mt-1 w-full rounded-md bg-slate-800 border border-slate-700 px-3 py-2 text-slate-100" />
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2">
+                    <input id="sublinearTfChk" type="checkbox" checked={sublinearTF} onChange={(e) => setSublinearTF(e.target.checked)} className="h-4 w-4" />
+                    <label htmlFor="sublinearTfChk" className="text-slate-300 text-sm">sublinear_tf</label>
+                  </div>
+                </div>
+                <div>
+                  <label className="text-slate-300 text-sm">norm</label>
+                  <select value={tfidfNorm} onChange={(e) => setTfidfNorm(e.target.value)} className="mt-1 w-full rounded-md bg-slate-800 border border-slate-700 px-3 py-2 text-slate-100">
+                    <option value="l2">l2 (recomendado)</option>
+                    <option value="l1">l1</option>
+                    <option value="none">none (sin normalizar)</option>
+                  </select>
                 </div>
                 <div>
                   <label className="text-slate-300 text-sm">n_clusters</label>

@@ -26,6 +26,9 @@ class ModelStore:
     hierarchical_model: Optional[Any] = None  # AgglomerativeClustering
     kmeans_labels: Optional[List[int]] = None
     hierarchical_labels: Optional[List[int]] = None
+    # Separación de Auto-K para evitar sobrescribir el K-Means manual
+    kmeans_auto_model: Optional[KMeans] = None
+    kmeans_auto_labels: Optional[List[int]] = None
     kmeans_params: Dict[str, Any] = {
         "n_clusters":7,
         "init": "k-means++",
@@ -45,13 +48,17 @@ class ModelStore:
     text_kmeans_labels: Optional[List[int]] = None
     text_vectorizer: Optional[Any] = None
     text_kmeans_params: Dict[str, Any] = {
-        "n_clusters": 6,
+        "n_clusters": 2,
         "init": "k-means++",
-        "n_init": 10,
-        "max_iter": 500,
+        "n_init": 20,
+        "max_iter": 600,
         "random_state": 42,
         # Parámetros TF-IDF opcionales
-        "tfidf_max_features": 5000,
-        "tfidf_min_df": 1,
-        "tfidf_max_df": 1.0,
+        "tfidf_max_features": 2000,
+        "tfidf_min_df": 3,
+        "tfidf_max_df": 0.7,
+        # Nuevos parámetros TF-IDF
+        "ngram_range": (1, 2),
+        "sublinear_tf": True,
+        "norm": "l2",
     }
