@@ -18,6 +18,12 @@ export default function Sidebar() {
         <NavLink to="/entrenamiento" className={({ isActive }) => `${base} ${isActive ? active : inactive}`}>
           Entrenamiento
         </NavLink>
+        <NavLink to="/evaluacion" className={({ isActive }) => `${base} ${isActive ? active : inactive}`}>
+          Evaluación
+        </NavLink>
+        <NavLink to="/reportes" className={({ isActive }) => `${base} ${isActive ? active : inactive}`}>
+          Reportes
+        </NavLink>
       </nav>
     </aside>
   );

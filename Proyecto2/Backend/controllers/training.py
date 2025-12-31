@@ -12,56 +12,80 @@ import seaborn as sns
 import os
 
 from models import DataStore, ModelStore
+from utils.modelsStatus import build_models_status
 
 training_bp = Blueprint("training", __name__)
 
 
-def _find_optimal_k(data: np.ndarray, max_k: int = 10) -> int: 
-    # Metodo del codo
+def _find_optimal_k(data: np.ndarray, max_k: int = 10) -> int:
+    # Método mixto: calcula inercia (codo) para todos los k válidos y usa silhouette para seleccionar k óptimo.
+    n_samples = data.shape[0]
+    upper_k = max(1, min(max_k, n_samples - 1))
+    k_range = range(1, upper_k + 1)
+
     inertias = []
     silhouette_scores = []
-    k_range = range(1, max_k + 1)
+    silhouette_ks = []
+
     for k in k_range:
         kmeans = KMeans(
             n_clusters=k,
             init="k-means++",
             n_init=10,
             random_state=42,
-            max_iter=500, # editable
+            max_iter=500,
         )
-        kmeans.fit(data)
+        labels = kmeans.fit_predict(data)
         inertias.append(kmeans.inertia_)
-        silhouette_scores.append(silhouette_score(data, kmeans.labels_))
-    # Usar silhouette score para encontrar el óptimo
-    optimal_k = list(k_range)[np.argmax(silhouette_scores)]
+        # Silhouette solo es válido para k >= 2
+        if k >= 2:
+            silhouette_scores.append(silhouette_score(data, labels))
+            silhouette_ks.append(k)
+
+    if silhouette_scores:
+        optimal_k = silhouette_ks[int(np.argmax(silhouette_scores))]
+    else:
+        # Fallback seguro si no hay suficientes muestras para silhouette
+        optimal_k = max(2, 1)
+
     ModelStore.optimal_k = optimal_k
     return optimal_k
 
-def preprocess_dataframe()->np.ndarray:
-    num_cols = [
-            "frecuencia_compra",
-            "monto_total_gastado",
-            "monto_promedio_compra",
-            "dias_desde_ultima_compra",
-            "antiguedad_cliente_meses",
-            "numero_productos_distintos"
+def preprocess_dataframe() -> np.ndarray:
+    # Verificar datos limpios disponibles
+    if getattr(DataStore, 'df_numeric_cleaned', None) is None:
+        raise ValueError("Primero ejecute la limpieza numérica (/clean)")
 
-    ]    
-    cat_cols = ['canal_principal', 'producto_categoria']
-    DataStore.df_cleaned = DataStore.df_cleaned.drop(columns=["producto_categoria", "canal_principal"])
+    df = DataStore.df_numeric_cleaned.copy()
 
-    if getattr(DataStore, 'df_cleaned', None) is None:
-        return jsonify({"error": "Primero ejecute la limpieza de datos (/clean)"}), 400
-    
+    # Columnas numéricas esperadas (usar solo las presentes)
+    expected_num_cols = [
+        "frecuencia_compra",
+        "monto_total_gastado",
+        "monto_promedio_compra",
+        "dias_desde_ultima_compra",
+        "antiguedad_cliente_meses",
+        "numero_productos_distintos",
+    ]
+    num_cols = [c for c in expected_num_cols if c in df.columns]
+
+    # Quitar columnas categóricas si existen (se omiten en este pipeline)
+    for col in ["producto_categoria", "canal_principal"]:
+        if col in df.columns:
+            df = df.drop(columns=[col])
+
+    if len(num_cols) == 0:
+        raise ValueError("No hay columnas numéricas válidas para el preprocesado")
+
     preprocessor = ColumnTransformer(
-    transformers=[
-        ('num', StandardScaler(), num_cols),
-        # ('cat', OneHotEncoder(handle_unknown='ignore'), cat_cols)
-    ])
+        transformers=[
+            ('num', StandardScaler(), num_cols),
+            # ('cat', OneHotEncoder(handle_unknown='ignore'), cat_cols)
+        ]
+    )
 
-    X_processed = preprocessor.fit_transform(DataStore.df_cleaned)
+    X_processed = preprocessor.fit_transform(df)
     return X_processed
-    
 
     # 4. Visualización PCA (Reducción a 2D para graficar)
     pca = PCA(n_components=2)
@@ -87,19 +111,15 @@ def preprocess_dataframe()->np.ndarray:
     plt.tight_layout()
     plt.savefig('outputs/kmeans_analysis.png')
     plt.show()
-        
-
-    
+               
 
 
 @training_bp.get("/training/kmeans")
 def train_kmeans():
-    X_processed = preprocess_dataframe()
     """Entrenar modelo K-means para segmentación de clientes"""
-    if DataStore.df_cleaned is None:
-        return jsonify({"error": "Los datos no han sido preprocesados aún"}), 400
 
     try:
+        X_processed = preprocess_dataframe()
         # si se desea encontra el k optimo utilizar ModelStore.optimal_k (calculado arriba) 
         
         n_clusters = ModelStore.kmeans_params.get("n_clusters", 6) #Se trabaja 6 para el modelo
@@ -115,6 +135,13 @@ def train_kmeans():
         labels = kmeans.fit_predict(X_processed)
         ModelStore.kmeans_model = kmeans
         ModelStore.kmeans_labels = labels.tolist()
+        # Añadir etiquetas al dataframe numérico
+        if getattr(DataStore, 'df_numeric_cleaned', None) is not None:
+            try:
+                DataStore.df_numeric_cleaned["kmeans_cluster"] = labels
+            except Exception:
+                # Si hay desalineación, no romper
+                pass
 
         # Calcular métricas
         silhouette = silhouette_score(X_processed, labels)
@@ -153,11 +180,10 @@ def train_kmeans():
 
 @training_bp.get("/training/hierarchical")
 def train_hierarchical():
-    X_processed = preprocess_dataframe()
-
     """Entrenar modelo Hierarchical Clustering para segmentación de clientes"""
   
     try:
+        X_processed = preprocess_dataframe()
         # Obtener características para clustering
         
         # Normalizar características
@@ -182,7 +208,8 @@ def train_hierarchical():
         calinski_harabasz = calinski_harabasz_score(X_processed, labels)
 
         # Agregar etiquetas al dataframe preprocesado
-        DataStore.df_cleaned["hierarchical_cluster"] = labels
+        if getattr(DataStore, 'df_numeric_cleaned', None) is not None:
+            DataStore.df_numeric_cleaned["hierarchical_cluster"] = labels
 
         return jsonify({
             "success": True,
@@ -212,21 +239,80 @@ def train_hierarchical():
         }), 500
 
 
+@training_bp.get("/training/auto-k")
+def train_auto_k():
+    """Determina k óptimo usando silhouette y entrena K-Means."""
+
+    try:
+        X_processed = preprocess_dataframe()
+        # Definir rango máximo de k en función de las muestras
+        n_samples = X_processed.shape[0]
+        if n_samples < 3:
+            return jsonify({
+                "error": "Insuficientes muestras para calcular silhouette (se requieren >= 3)."
+            }), 400
+        max_k = min(10, n_samples - 1)
+        optimal_k = _find_optimal_k(X_processed, max_k=max_k)
+
+        # Entrenar con k óptimo
+        kmeans = KMeans(
+            n_clusters=optimal_k,
+            init=ModelStore.kmeans_params.get("init", "k-means++"),
+            n_init=ModelStore.kmeans_params.get("n_init", 10),
+            max_iter=ModelStore.kmeans_params.get("max_iter", 500),
+            random_state=ModelStore.kmeans_params.get("random_state", 42),
+        )
+        labels = kmeans.fit_predict(X_processed)
+        # Guardar en espacio Auto-K para no sobreescribir el K-Means manual
+        ModelStore.kmeans_auto_model = kmeans
+        ModelStore.kmeans_auto_labels = labels.tolist()
+        ModelStore.optimal_k = int(optimal_k)
+        # Añadir etiquetas al dataframe numérico
+        if getattr(DataStore, 'df_numeric_cleaned', None) is not None:
+            try:
+                # Etiquetas específicas de Auto-K
+                DataStore.df_numeric_cleaned["kmeans_auto_cluster"] = labels
+            except Exception:
+                pass
+
+        silhouette = silhouette_score(X_processed, labels)
+        davies_bouldin = davies_bouldin_score(X_processed, labels)
+        calinski_harabasz = calinski_harabasz_score(X_processed, labels)
+
+        return jsonify({
+            "success": True,
+            "message": f"Auto-K entrenado exitosamente con k={optimal_k}",
+            "model_info": {
+                "algorithm": "K-means (Auto-K)",
+                "n_clusters": int(optimal_k),
+                "n_features": X_processed.shape[1],
+                "n_samples": X_processed.shape[0],
+            },
+            "metrics": {
+                "inertia": float(kmeans.inertia_),
+                "silhouette_score": float(silhouette),
+                "davies_bouldin_score": float(davies_bouldin),
+                "calinski_harabasz_score": float(calinski_harabasz),
+            },
+            "cluster_distribution": {
+                str(i): int(np.sum(np.array(labels) == i))
+                for i in range(int(optimal_k))
+            }
+        }), 200
+    except ValueError as ve:
+        return jsonify({
+            "error": str(ve)
+        }), 400
+    except Exception as e:
+        return jsonify({
+            "error": "Error al entrenar Auto-K",
+            "detail": str(e)
+        }), 500
+ 
+
+
 @training_bp.get("/models/status")
 def get_models_status():
     """Obtener estado de los modelos entrenados"""
-    status = {
-        "kmeans": {
-            "trained": ModelStore.kmeans_model is not None,
-            "n_clusters": ModelStore.kmeans_params.get("n_clusters"),
-            "labels_count": len(ModelStore.kmeans_labels) if ModelStore.kmeans_labels else 0,
-        },
-        "hierarchical": {
-            "trained": ModelStore.hierarchical_model is not None,
-            "n_clusters": ModelStore.hierarchical_params.get("n_clusters"),
-            "labels_count": len(ModelStore.hierarchical_labels) if ModelStore.hierarchical_labels else 0,
-        },
-        "optimal_k": ModelStore.optimal_k,
-    }
-
+    status = build_models_status()
     return jsonify(status), 200

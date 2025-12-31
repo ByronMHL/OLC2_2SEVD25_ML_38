@@ -15,20 +15,34 @@ def create_app():
 		from controllers.upload import upload_bp
 		from controllers.clean import clean_bp
 		from controllers.training import training_bp
-		from controllers.hyperparameters import hyper_bp	
+		from controllers.trainingText import training_text_bp
+		from controllers.hyperparameters import hyper_bp 
 		from controllers.predict import predict_bp
-	except ModuleNotFoundError:
-		from .controllers.upload import upload_bp  # type: ignore
-		from .controllers.clean import clean_bp  # type: ignore
-		from .controllers.training import training_bp  # type: ignore
-		from .controllers.hyperparameters import hyper_bp  # type: ignore
-		from .controllers.predict import predict_bp  # type: ignore
+		from controllers.reports_controller import reports_bp
+		from controllers.rendimiento import rendimiento_bp
+	except ModuleNotFoundError as e:
+		# Solo usar imports relativos si el error es por no encontrar 'controllers'
+		if "No module named 'controllers'" in str(e) or "controllers" == getattr(e, "name", ""):
+			from .controllers.upload import upload_bp  # type: ignore
+			from .controllers.clean import clean_bp  # type: ignore
+			from .controllers.training import training_bp  # type: ignore
+			from .controllers.trainingText import training_text_bp  # type: ignore
+			from .controllers.hyperparameters import hyper_bp  # type: ignore
+			from .controllers.predict import predict_bp  # type: ignore
+			from .controllers.reports_controller import reports_bp  # type: ignore
+			from .controllers.rendimiento import rendimiento_bp  # type: ignore
+		else:
+			# Re-lanzar errores de dependencias internas (p.ej., 'nltk' ausente)
+			raise
 
 	app.register_blueprint(upload_bp, url_prefix="/api")
 	app.register_blueprint(clean_bp, url_prefix="/api")
 	app.register_blueprint(training_bp, url_prefix="/api")
+	app.register_blueprint(training_text_bp, url_prefix="/api")
 	app.register_blueprint(hyper_bp, url_prefix="/api")
 	app.register_blueprint(predict_bp, url_prefix="/api")
+	app.register_blueprint(reports_bp, url_prefix="/api")
+	app.register_blueprint(rendimiento_bp, url_prefix="/api")
 
 	return app
 

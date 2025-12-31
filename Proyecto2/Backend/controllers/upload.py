@@ -52,11 +52,25 @@ def upload_csv():
     if not file.filename.lower().endswith(".csv"):
         return jsonify({"error": "Formato inválido. Solo se aceptan archivos .csv"}), 400
 
-    # Intentar leer CSV con pandas para validar estructura
+    # Intentar leer CSV con pandas para validar estructura (UTF-8 por defecto)
     DataStore.df_raw = None
+    encoding_param = (request.args.get("encoding") or request.form.get("encoding") or "utf-8").lower()
+    encoding_used = encoding_param
     try:
-        df = pd.read_csv(file)
+        df = pd.read_csv(file, encoding=encoding_param)
         DataStore.df_raw = df
+    except UnicodeDecodeError:
+        # Fallback a UTF-8 con BOM si viene con cabecera BOM y se especificó utf-8
+        if encoding_param == "utf-8":
+            try:
+                file.stream.seek(0)
+                df = pd.read_csv(file, encoding="utf-8-sig")
+                DataStore.df_raw = df
+                encoding_used = "utf-8-sig"
+            except Exception as e:
+                return jsonify({"error": "No se pudo leer el CSV (utf-8/utf-8-sig)", "detail": str(e)}), 400
+        else:
+            return jsonify({"error": f"Error de decodificación con encoding '{encoding_param}'"}), 400
     except Exception as e:
         return jsonify({"error": "No se pudo leer el CSV", "detail": str(e)}), 400
 
@@ -77,6 +91,7 @@ def upload_csv():
         "rows": len(df),
         "columns": len(df.columns),
         "message": "Archivo cargado exitosamente",
+        "encoding_used": encoding_used,
     }
 
     if extra:
@@ -91,9 +106,12 @@ def get_raw_data():
     if DataStore.df_raw is None:
         return jsonify({"error": "No se ha cargado ningún archivo"}), 400
 
+    # Asegurar que los tipos sean serializables (convertir a str)
+    dtypes_dict = {k: str(v) for k, v in DataStore.df_raw.dtypes.to_dict().items()}
+
     return jsonify({
         "rows": len(DataStore.df_raw),
         "columns": list(DataStore.df_raw.columns),
-        "data_types": DataStore.df_raw.dtypes.to_dict(),
+        "data_types": dtypes_dict,
         "head": DataStore.df_raw.head(5).to_dict(orient="records"),
     }), 200
