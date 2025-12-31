@@ -1,260 +1,149 @@
-# Proyecto 2: Segmentación de Clientes y Agrupamiento de Reseñas
+# Backend Proyecto 2 - API de Clustering
 
 ## Descripción General
-
-Aplicación integrada que implementa técnicas de aprendizaje no supervisado para realizar la segmentación de clientes y agrupamiento de reseñas de productos, con el fin de descubrir patrones ocultos en los datos.
-
-## Características Principales
-
-### 1. Carga Masiva de Datos
-- Validación de formato CSV
-- Verificación de columnas requeridas
-- Manejo de archivos hasta 50MB
-- Vista previa de datos cargados
-
-### 2. Limpieza y Preprocesamiento
-- Eliminación automática de duplicados
-- Conversión segura de tipos de datos
-- Manejo inteligente de valores faltantes:
-  - Mediana para variables numéricas
-  - Moda para variables categóricas
-- Validación de valores negativos
-- Codificación de variables categóricas
-- Cálculo de características derivadas
-
-### 3. Configuración de Modelos
-- Parámetros ajustables para K-means:
-  - Número de clusters (n_clusters)
-  - Método de inicialización
-  - Número de inicializaciones
-  - Máximo de iteraciones
-  - Semilla aleatoria (reproducibilidad)
-  
-- Parámetros ajustables para Hierarchical Clustering:
-  - Número de clusters
-  - Método de enlace (ward, complete, average, single)
-
-### 4. Dos Algoritmos de Clustering
-
-#### K-means
-- Algoritmo de particionamiento rápido y eficiente
-- Ideal para datasets grandes
-- Requiere especificar número de clusters
-- Métricas: Inertia, Silhouette, Davies-Bouldin, Calinski-Harabasz
-
-#### Hierarchical Clustering (Agglomerative)
-- Método jerárquico sin necesidad de especificar k
-- Producción de dendrogramas informativos
-- Mejor para análisis exploratorio
-- Métricas: Silhouette, Davies-Bouldin, Calinski-Harabasz
-
-### 5. Evaluación de Modelos
-- **Silhouette Score**: Similitud dentro de clusters vs. separación entre clusters
-- **Davies-Bouldin Index**: Compacidad vs. separación (menor es mejor)
-- **Calinski-Harabasz Index**: Razón entre varianza inter-cluster e intra-cluster
-- **Inertia** (K-means): Suma de distancias cuadradas
-
-### 6. Predicción y Análisis
-- Asignación de nuevos clientes a clusters
-- Estadísticas por cluster
-- Distribución de clientes
-- Comparación de resultados entre modelos
-
-## Arquitectura
-
-```
-Proyecto2/
-├── Backend/
-│   ├── main.py                 # Aplicación Flask principal
-│   ├── models.py              # Almacén de datos y modelos
-│   ├── requirements.txt        # Dependencias
-│   ├── readme.md              # Documentación detallada
-│   ├── test_api.py            # Suite de pruebas
-│   └── controllers/
-│       ├── upload.py          # Carga de CSV
-│       ├── clean.py           # Limpieza/preprocesamiento
-│       ├── training.py        # Entrenamiento de modelos
-│       ├── hyperparameters.py # Configuración
-│       └── predict.py         # Predicción/análisis
-├── data/
-│   └── data_prueba_proyecto2.csv  # Datos de prueba
-├── Frontend/                  # (Por desarrollar)
-├── notebooks/                 # (Por desarrollar)
-├── QUICKSTART.md             # Guía de inicio rápido
-└── readme.md                 # Este archivo
-```
-
-## Variables del Dataset
-
-### Campos de Clientes
-- **cliente_id**: Identificador único del cliente
-- **frecuencia_compra**: Número de compras realizadas en un periodo
-- **monto_total_gastado**: Gasto acumulado del cliente
-- **monto_promedio_compra**: Promedio gastado por compra
-- **dias_desde_ultima_compra**: Tiempo transcurrido desde la última compra
-- **antiguedad_cliente_meses**: Tiempo que lleva como cliente
-- **canal_principal**: Canal más utilizado (web, móvil, tienda física, marketplace, call center)
-- **numero_productos_distintos**: Cantidad de categorías/productos comprados
-
-### Campos de Reseñas
-- **reseña_id**: Identificador único de la reseña
-- **texto_reseña**: Opinión escrita por el cliente
-- **fecha_reseña**: Fecha en que se realizó la reseña
-- **producto_categoria**: Categoría del producto (ropa, electronica, alimentos, etc.)
-- **longitud_reseña**: Número de caracteres (calculado automáticamente)
-
-## Endpoints Principales
-
-### Carga
-- `POST /api/upload` - Cargar CSV
-- `GET /api/raw-data` - Ver datos cargados
-
-### Limpieza
-- `GET /api/clean` - Limpiar y preprocesar
-- `GET /api/cleaned-data` - Ver datos limpios
-
-### Configuración
-- `GET /api/hyperparameters/all` - Ver todos los parámetros
-- `POST /api/hyperparameters/kmeans` - Configurar K-means
-- `POST /api/hyperparameters/hierarchical` - Configurar Hierarchical
-
-### Entrenamiento
-- `POST /api/train/kmeans` - Entrenar K-means
-- `POST /api/train/hierarchical` - Entrenar Hierarchical
-- `POST /api/train/auto-k` - Entrenar K-means con K automático
-- `GET /api/models/status` - Ver estado de modelos
-
-### Resultados
-- `GET /api/results/kmeans` - Resultados de K-means
-- `GET /api/results/hierarchical` - Resultados de Hierarchical
-- `GET /api/results/comparison` - Comparar modelos
-
-### Predicción
-- `POST /api/predict/kmeans` - Predecir con K-means
-- `POST /api/predict/hierarchical` - Info de Hierarchical Clustering
-
-## Instalación y Uso
-
-### Instalación
-```bash
-cd Backend
-pip install -r requirements.txt
-```
-
-### Ejecución
-```bash
-python main.py
-```
-
-### Pruebas
-```bash
-python test_api.py
-```
-
-Ver `QUICKSTART.md` para ejemplos de uso.
-
-## Flujo de Uso Típico
-
-1. **Cargar CSV** → Validar estructura
-2. **Limpiar datos** → Preprocesamiento automático
-3. **Configurar parámetros** (opcional) → Ajustar modelos
-4. **Entrenar modelos** → Ejecutar K-means y/o Hierarchical
-5. **Analizar resultados** → Ver métricas y estadísticas
-6. **Comparar** → Evaluar rendimiento de ambos modelos
-7. **Predecir** → Asignar nuevos clientes a clusters
-
-## Tecnologías Utilizadas
-
-### Backend
-- **Flask 3.0.0** - Framework web
-- **pandas 2.2.3** - Manipulación de datos
-- **scikit-learn 1.4.2** - Machine Learning
-- **numpy 1.24.3** - Computación numérica
-- **flask-cors 4.0.0** - CORS para frontend
-
-### Algoritmos
-- **K-means** - Clustering por particionamiento
-- **Hierarchical Clustering** - Clustering jerárquico
-- **StandardScaler** - Normalización de features
-- **Silhouette, Davies-Bouldin, Calinski-Harabasz** - Métricas
-
-## Datos de Prueba
-
-El proyecto incluye `data_prueba_proyecto2.csv` con 132 registros de clientes para pruebas inmediatas.
-
-Contenidos:
-- 132 clientes únicos
-- 8 canales de compra diferentes
-- 7 categorías de productos
-- Datos con algunos valores faltantes (realistas)
-
-## Métricas de Evaluación
-
-### Silhouette Score
-- **Rango**: -1 a 1
-- **Interpretación**: >0.5 = bueno, >0.7 = excelente
-- **Mide**: Similitud intra-cluster vs. separación inter-cluster
-
-### Davies-Bouldin Index
-- **Rango**: 0 a ∞
-- **Interpretación**: Menor es mejor
-- **Mide**: Promedio de similaridad entre cada cluster y su más similar
-
-### Calinski-Harabasz Index
-- **Rango**: 0 a ∞
-- **Interpretación**: Mayor es mejor
-- **Mide**: Razón entre varianza inter-cluster e intra-cluster
-
-### Inertia (solo K-means)
-- **Rango**: 0 a ∞
-- **Interpretación**: Menor es mejor
-- **Mide**: Suma de distancias cuadradas al centroide más cercano
-
-## Casos de Uso
-
-1. **Segmentación de Clientes para Marketing**
-   - Identificar grupos con comportamiento similar
-   - Diseñar estrategias personalizadas por segmento
-
-2. **Análisis de Reseñas**
-   - Agrupar reseñas por sentimiento o categoría
-   - Identificar temas recurrentes
-
-3. **RFM Analysis (Recency, Frequency, Monetary)**
-   - Usar clustering para identificar clientes valiosos
-   - Definir estrategias de retención
-
-4. **Detección de Anomalías**
-   - Identificar clientes con comportamiento atípico
-   - Validar integridad de datos
-
-## Próximos Pasos
-
-- [ ] Implementar Frontend (Vite + React)
-- [ ] Agregar análisis de texto (NLP) para reseñas
-- [ ] Implementar más algoritmos (DBSCAN, Gaussian Mixture Models)
-- [ ] Exportar resultados a CSV/JSON
-- [ ] Visualizaciones interactivas
-- [ ] Base de datos persistente
-- [ ] Autenticación de usuarios
-
-## Notas Importantes
-
-- Los datos se almacenan en memoria durante la sesión
-- Se recomienda usar K automático para datasets pequeños
-- Para reproducibilidad: usar `random_state=42`
-- Normalización automática mediante StandardScaler
-- Todos los valores faltantes se tratan automáticamente
-
-## Soporte y Contacto
-
-Para preguntas o reportar problemas, consultar la documentación en:
-- `readme.md` - Documentación técnica completa
-- `QUICKSTART.md` - Guía de inicio rápido
-- `Backend/readme.md` - Documentación de API
+API para cargar archivos CSV, limpiar datos, entrenar modelos de clustering (K-Means y Hierarchical Clustering) y realizar análisis textual mediante TF-IDF y K-Means. Utiliza Flask como framework web y scikit-learn para el procesamiento y modelado.
 
 ---
 
-**Versión**: 1.0  
-**Última actualización**: Diciembre 2025  
-**Estado**: Funcional y listo para usar
+## Endpoints Principales
+- **GET /api/health**: Verifica el estado del servicio.
+- **POST /api/upload**: Recibe un archivo CSV y valida columnas requeridas.
+- **GET /api/clean**: Limpia y preprocesa los datos.
+- **GET /api/clean-text**: Limpieza textual para clustering basado en texto.
+- **POST /api/train/kmeans**: Entrena modelo K-means.
+- **POST /api/train/hierarchical**: Entrena modelo Hierarchical Clustering.
+- **GET /api/results/kmeans**: Obtiene resultados de K-means.
+- **GET /api/results/hierarchical**: Obtiene resultados de Hierarchical.
+- **GET /api/training/text/kmeans**: Entrena K-Means sobre datos textuales.
+
+Columnas requeridas en el CSV:
+`cliente_id`, `frecuencia_compra`, `monto_total_gastado`, `monto_promedio_compra`, `dias_desde_ultima_compra`, `antiguedad_cliente_meses`, `canal_principal`, `numero_productos_distintos`, `texto_reseña`.
+
+---
+
+## Algoritmos Utilizados
+
+### K-Means Clustering
+El algoritmo K-Means se utiliza para agrupar datos numéricos en clústeres. Se implementó con las siguientes características:
+- **Librería**: scikit-learn
+- **Hiperparámetros**:
+  - `n_clusters`: Número de clústeres (por defecto 6).
+  - `init`: Método de inicialización (`k-means++` o `random`).
+  - `n_init`: Número de inicializaciones (por defecto 10).
+  - `max_iter`: Iteraciones máximas (por defecto 500).
+  - `random_state`: Semilla para reproducibilidad.
+
+### Hierarchical Clustering
+Se implementó el algoritmo de clustering jerárquico para agrupar datos numéricos. Este utiliza métricas de distancia para construir una jerarquía de clústeres.
+
+### Clustering Textual (TF-IDF + K-Means)
+Para datos textuales, se utilizó una combinación de TF-IDF y K-Means:
+- **TF-IDF**: Vectorización de texto para convertirlo en una representación numérica.
+- **K-Means**: Agrupación de los vectores TF-IDF en clústeres.
+- **Métricas**:
+  - `silhouette_score` (cosine).
+  - `davies_bouldin_score`.
+  - `calinski_harabasz_score`.
+
+---
+
+## Proceso de Limpieza de Datos
+
+### Limpieza Numérica
+- Eliminación de columnas irrelevantes.
+- Imputación de valores faltantes con la mediana o media.
+- Conversión de columnas categóricas a valores conocidos.
+
+### Limpieza Textual
+- Conversión a minúsculas.
+- Eliminación de signos de puntuación.
+
+---
+
+## Hiperparámetros (Entrenamiento)
+
+### K-Means
+- `n_clusters`: Número de clústeres (mínimo 2).
+- `init`: Método de inicialización (`k-means++` o `random`).
+- `n_init`: Número de inicializaciones (mínimo 1).
+- `max_iter`: Iteraciones máximas (mínimo 1).
+- `random_state`: Semilla para reproducibilidad.
+
+### TF-IDF
+- `max_features`: Número máximo de características (por defecto 2000).
+- `min_df`: Frecuencia mínima de documentos (por defecto 3).
+- `max_df`: Frecuencia máxima de documentos (por defecto 0.7).
+- `ngram_range`: Rango de n-gramas (por defecto (1, 2)).
+- `sublinear_tf`: Escalado sublineal (por defecto True).
+
+---
+
+## Justificación 
+
+### Enfoque General
+El enfoque adoptado para este proyecto se centra en la implementación de algoritmos de clustering debido a su capacidad para identificar patrones y agrupar datos sin necesidad de etiquetas predefinidas. 
+### Justificación de K-Means
+
+- **Simplicidad y Eficiencia**: Se utilizo debido a su simplicidad y eficiencia computacional, especialmente en conjuntos de datos grandes.
+- **Flexibilidad**: Permite ajustar el número de clústeres (`n_clusters`) para adaptarse a diferentes necesidades analíticas.
+- **Interpretabilidad**: Los resultados son fáciles de interpretar, ya que cada punto se asigna al clúster más cercano.
+
+### Justificación de Hierarchical Clustering
+- **Visualización**: Facilidad para la visualización de las relaciones jerárquicas entre los datos.
+- **Sin necesidad de predefinir clústeres**: A diferencia de K-Means, no requiere especificar el número de clústeres de antemano.
+- **Complementariedad**: Es útil para validar los resultados obtenidos con K-Means y explorar diferentes niveles de granularidad en los datos.
+
+### Justificación del Clustering Textual (TF-IDF + K-Means)
+- **Representación Numérica del Texto**: TF-IDF convierte texto en vectores numéricos, lo que permite aplicar algoritmos de clustering.
+- **Identificación de Patrones en Texto**: La combinación de TF-IDF y K-Means facilito la agrupación de documentos o frases similares, por lo que en el análisis de sentimientos, categorización de temas, se obtuvo un mejor resultado .
+- **Métricas de Evaluación**: Se utilizan métricas como `silhouette_score`, `davies_bouldin_score` y `calinski_harabasz_score` para evaluar la calidad de los clústeres generados.
+
+### Consideraciones Finales
+El enfoque seleccionado equilibra simplicidad, eficiencia y flexibilidad, permitiendo abordar tanto datos numéricos como textuales. Además, la capacidad de ajustar hiperparámetros clave asegura que los modelos puedan optimizarse para diferentes conjuntos de datos y objetivos analíticos.
+
+---
+
+## Conclusiones
+
+1. **Eficiencia de los Algoritmos**: Los algoritmos de clustering implementados demostraron ser efectivos para agrupar datos tanto numéricos como textuales, pero se contempla el archivo de entrada y su ruido.
+2. **Importancia de la Limpieza de Datos**: La calidad de los datos de entrada es crucial para obtener resultados precisos en los modelos de clustering.
+3. **Flexibilidad**: La API permite ajustar hiperparámetros clave, lo que facilita la experimentación y optimización de los modelos.
+4. **Desafíos para el entranmiento**: La limpieza textual y la vectorización TF-IDF pueden ser costosas en términos de tiempo para grandes volúmenes de datos.
+
+---
+
+## Instalación y Ejecución
+
+1. Crear y activar un entorno virtual (opcional).
+2. Instalar dependencias:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Ejecutar el servidor:
+   ```bash
+   python main.py
+   ```
+
+---
+
+## Pruebas
+
+Probar en Postman:
+- **Método**: POST
+- **URL**: http://localhost:5000/api/upload
+- **Body**: form-data, key: `file` (tipo File), valor: seleccionar CSV.
+
+Respuesta exitosa (200):
+```json
+{
+  "message": "Archivo CSV recibido y validado",
+  "saved_to": "ruta",
+  "rows": 132,
+  "columns": ["..."],
+  "extra_columns": ["..."]
+}
+```
+
+Errores comunes:
+- **400**: Nombre de archivo vacío o faltan columnas requeridas.
+- **400**: Formato inválido (no CSV) o CSV no legible.
